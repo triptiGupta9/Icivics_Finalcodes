@@ -1,0 +1,2229 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ICIVICS TEST REPORT</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ICIVICS AUTOMATION DASHBOARD</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Jun 2, 2022 06:46:11 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='32%'><span class='strong'>8</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='68%'>17</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='73.626%'><span class='strong'>134</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='26.374%'>48</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:05:22 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:05:22 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:05:39 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+40ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:05:39 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/722407590.jpg" width="10%" src="./../images/722407590.jpg" data-src="./../images/722407590.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:06:27 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:06:27 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:06:35 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+48ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:06:35 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/113029294.jpg" width="10%" src="./../images/113029294.jpg" data-src="./../images/113029294.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:07:21 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:07:21 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:07:33 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='6'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+52ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:07:31 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/233462677.jpg" width="10%" src="./../images/233462677.jpg" data-src="./../images/233462677.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:07:31 AM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//label[@for='edit-classcode'] Not Found with value: //label[@for='edit-classcode']<img data-featherlight="./../images/326669451.jpg" width="10%" src="./../images/326669451.jpg" data-src="./../images/326669451.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:07:32 AM</td>
+													<td class='step-details'>* is not present in the Class Code label<img data-featherlight="./../images/435527268.jpg" width="10%" src="./../images/435527268.jpg" data-src="./../images/435527268.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:07:32 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57124}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: e4ba7fa99b091d234ea7ce4cfff3b5cd<img data-featherlight="./../images/830928174.jpg" width="10%" src="./../images/830928174.jpg" data-src="./../images/830928174.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:07:32 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/637013452.jpg" width="10%" src="./../images/637013452.jpg" data-src="./../images/637013452.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:07:32 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57124}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: e4ba7fa99b091d234ea7ce4cfff3b5cd<img data-featherlight="./../images/506038485.jpg" width="10%" src="./../images/506038485.jpg" data-src="./../images/506038485.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:07:32 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/818841528.jpg" width="10%" src="./../images/818841528.jpg" data-src="./../images/818841528.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:07:33 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57124}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: e4ba7fa99b091d234ea7ce4cfff3b5cd<img data-featherlight="./../images/279650614.jpg" width="10%" src="./../images/279650614.jpg" data-src="./../images/279650614.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:07:33 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/628923193.jpg" width="10%" src="./../images/628923193.jpg" data-src="./../images/628923193.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:07:33 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/901074607.jpg" width="10%" src="./../images/901074607.jpg" data-src="./../images/901074607.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:09:29 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:09:29 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:09:40 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='8'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+60ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:09:38 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/90905693.jpg" width="10%" src="./../images/90905693.jpg" data-src="./../images/90905693.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:09:38 AM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//label[@for='edit-classcode'] Not Found with value: //label[@for='edit-classcode']<img data-featherlight="./../images/75143929.jpg" width="10%" src="./../images/75143929.jpg" data-src="./../images/75143929.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:09:38 AM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//label[@for='edit-classcode'] Not Found with value: //label[@for='edit-classcode']<img data-featherlight="./../images/824925935.jpg" width="10%" src="./../images/824925935.jpg" data-src="./../images/824925935.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:09:38 AM</td>
+													<td class='step-details'>* is not present in the Class Code label<img data-featherlight="./../images/608905333.jpg" width="10%" src="./../images/608905333.jpg" data-src="./../images/608905333.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:09:39 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 7212e569be100f85cb987e7f5e933f16<img data-featherlight="./../images/642204640.jpg" width="10%" src="./../images/642204640.jpg" data-src="./../images/642204640.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:09:39 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/605507973.jpg" width="10%" src="./../images/605507973.jpg" data-src="./../images/605507973.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:09:39 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 7212e569be100f85cb987e7f5e933f16<img data-featherlight="./../images/785948125.jpg" width="10%" src="./../images/785948125.jpg" data-src="./../images/785948125.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:09:39 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/758146898.jpg" width="10%" src="./../images/758146898.jpg" data-src="./../images/758146898.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:09:39 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 7212e569be100f85cb987e7f5e933f16<img data-featherlight="./../images/634136514.jpg" width="10%" src="./../images/634136514.jpg" data-src="./../images/634136514.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:09:39 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/729106041.jpg" width="10%" src="./../images/729106041.jpg" data-src="./../images/729106041.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:09:40 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/395608799.jpg" width="10%" src="./../images/395608799.jpg" data-src="./../images/395608799.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:11:05 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:11:05 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:11:16 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='10'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+68ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:11:14 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/40064403.jpg" width="10%" src="./../images/40064403.jpg" data-src="./../images/40064403.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:11:15 AM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//label[@for='edit-classcode'] Not Found with value: //label[@for='edit-classcode']<img data-featherlight="./../images/830324240.jpg" width="10%" src="./../images/830324240.jpg" data-src="./../images/830324240.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:11:15 AM</td>
+													<td class='step-details'>The Element with locator:XPATH&amp;//label[@for='edit-classcode'] Not Found with value: //label[@for='edit-classcode']<img data-featherlight="./../images/464197176.jpg" width="10%" src="./../images/464197176.jpg" data-src="./../images/464197176.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:11:15 AM</td>
+													<td class='step-details'>* is not present in the Class Code label<img data-featherlight="./../images/171505735.jpg" width="10%" src="./../images/171505735.jpg" data-src="./../images/171505735.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:11:15 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57334}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 25b480ce8c38fbc2cc5b0883c8b2fe05<img data-featherlight="./../images/521063165.jpg" width="10%" src="./../images/521063165.jpg" data-src="./../images/521063165.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:11:15 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/685376960.jpg" width="10%" src="./../images/685376960.jpg" data-src="./../images/685376960.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:11:15 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57334}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 25b480ce8c38fbc2cc5b0883c8b2fe05<img data-featherlight="./../images/307196156.jpg" width="10%" src="./../images/307196156.jpg" data-src="./../images/307196156.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:11:16 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/714276354.jpg" width="10%" src="./../images/714276354.jpg" data-src="./../images/714276354.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:11:16 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57334}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 25b480ce8c38fbc2cc5b0883c8b2fe05<img data-featherlight="./../images/834422500.jpg" width="10%" src="./../images/834422500.jpg" data-src="./../images/834422500.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:11:16 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/599444697.jpg" width="10%" src="./../images/599444697.jpg" data-src="./../images/599444697.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:11:16 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/761487007.jpg" width="10%" src="./../images/761487007.jpg" data-src="./../images/761487007.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:13:46 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:13:46 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:13:54 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+75ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:13:54 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/864461389.jpg" width="10%" src="./../images/864461389.jpg" data-src="./../images/864461389.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:15:04 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:15:04 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:15:13 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+78ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:15:13 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/542162612.jpg" width="10%" src="./../images/542162612.jpg" data-src="./../images/542162612.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:21:40 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:21:40 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:21:50 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='16'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+82ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:21:48 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/211126989.jpg" width="10%" src="./../images/211126989.jpg" data-src="./../images/211126989.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:21:49 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: missing ) after argument list (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57806}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 7349ca804e17e1469fe22a123aa2474b<img data-featherlight="./../images/181482383.jpg" width="10%" src="./../images/181482383.jpg" data-src="./../images/181482383.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:21:49 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: missing ) after argument list (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57806}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 7349ca804e17e1469fe22a123aa2474b<img data-featherlight="./../images/516829190.jpg" width="10%" src="./../images/516829190.jpg" data-src="./../images/516829190.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:21:49 AM</td>
+													<td class='step-details'>Asteriks * is present in the Class Code label<img data-featherlight="./../images/480451463.jpg" width="10%" src="./../images/480451463.jpg" data-src="./../images/480451463.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:21:49 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57806}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 7349ca804e17e1469fe22a123aa2474b<img data-featherlight="./../images/261707190.jpg" width="10%" src="./../images/261707190.jpg" data-src="./../images/261707190.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:21:49 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/646802254.jpg" width="10%" src="./../images/646802254.jpg" data-src="./../images/646802254.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:21:49 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57806}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 7349ca804e17e1469fe22a123aa2474b<img data-featherlight="./../images/759831870.jpg" width="10%" src="./../images/759831870.jpg" data-src="./../images/759831870.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:21:50 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/635167120.jpg" width="10%" src="./../images/635167120.jpg" data-src="./../images/635167120.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:21:50 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57806}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 7349ca804e17e1469fe22a123aa2474b<img data-featherlight="./../images/733900673.jpg" width="10%" src="./../images/733900673.jpg" data-src="./../images/733900673.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:21:50 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/111491447.jpg" width="10%" src="./../images/111491447.jpg" data-src="./../images/111491447.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:21:50 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/348767301.jpg" width="10%" src="./../images/348767301.jpg" data-src="./../images/348767301.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:23:03 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:23:03 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:23:13 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='18'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+88ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:23:12 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/388181723.jpg" width="10%" src="./../images/388181723.jpg" data-src="./../images/388181723.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:23:12 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: missing ) after argument list (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57896}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: fae54be661f4b91ba4e5f13abd37f2a1<img data-featherlight="./../images/273362416.jpg" width="10%" src="./../images/273362416.jpg" data-src="./../images/273362416.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:23:12 AM</td>
+													<td class='step-details'>Asteriks * is present in the Class Code label<img data-featherlight="./../images/865180636.jpg" width="10%" src="./../images/865180636.jpg" data-src="./../images/865180636.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:23:12 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57896}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: fae54be661f4b91ba4e5f13abd37f2a1<img data-featherlight="./../images/114533610.jpg" width="10%" src="./../images/114533610.jpg" data-src="./../images/114533610.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:23:13 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/196828772.jpg" width="10%" src="./../images/196828772.jpg" data-src="./../images/196828772.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:23:13 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57896}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: fae54be661f4b91ba4e5f13abd37f2a1<img data-featherlight="./../images/539424068.jpg" width="10%" src="./../images/539424068.jpg" data-src="./../images/539424068.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:23:13 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/868216896.jpg" width="10%" src="./../images/868216896.jpg" data-src="./../images/868216896.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:23:13 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:57896}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: fae54be661f4b91ba4e5f13abd37f2a1<img data-featherlight="./../images/659992397.jpg" width="10%" src="./../images/659992397.jpg" data-src="./../images/659992397.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:23:13 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/443622880.jpg" width="10%" src="./../images/443622880.jpg" data-src="./../images/443622880.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:23:13 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/903881403.jpg" width="10%" src="./../images/903881403.jpg" data-src="./../images/903881403.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:25:39 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:25:39 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:25:50 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='20'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+95ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:25:49 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/108152932.jpg" width="10%" src="./../images/108152932.jpg" data-src="./../images/108152932.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:25:49 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: missing ) after argument list (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:58029}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 974f96cc00a80f32a3c30e6c77d0aa11<img data-featherlight="./../images/137627582.jpg" width="10%" src="./../images/137627582.jpg" data-src="./../images/137627582.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:25:49 AM</td>
+													<td class='step-details'>* is not present in the Class Code label<img data-featherlight="./../images/879391825.jpg" width="10%" src="./../images/879391825.jpg" data-src="./../images/879391825.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:25:49 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:58029}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 974f96cc00a80f32a3c30e6c77d0aa11<img data-featherlight="./../images/819788158.jpg" width="10%" src="./../images/819788158.jpg" data-src="./../images/819788158.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:25:49 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/780995159.jpg" width="10%" src="./../images/780995159.jpg" data-src="./../images/780995159.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:25:50 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:58029}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 974f96cc00a80f32a3c30e6c77d0aa11<img data-featherlight="./../images/779891205.jpg" width="10%" src="./../images/779891205.jpg" data-src="./../images/779891205.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:25:50 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/751308808.jpg" width="10%" src="./../images/751308808.jpg" data-src="./../images/751308808.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:25:50 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '10.10.7.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:58029}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 974f96cc00a80f32a3c30e6c77d0aa11<img data-featherlight="./../images/297955409.jpg" width="10%" src="./../images/297955409.jpg" data-src="./../images/297955409.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:25:50 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/804213746.jpg" width="10%" src="./../images/804213746.jpg" data-src="./../images/804213746.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:25:50 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/192131906.jpg" width="10%" src="./../images/192131906.jpg" data-src="./../images/192131906.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:31:49 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:31:49 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:32:00 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='22'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+101ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:31:58 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/210080871.jpg" width="10%" src="./../images/210080871.jpg" data-src="./../images/210080871.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:31:58 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: missing ) after argument list (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53075}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 43b1ea11339e7203c0aaab31105b0736<img data-featherlight="./../images/782433601.jpg" width="10%" src="./../images/782433601.jpg" data-src="./../images/782433601.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:31:59 AM</td>
+													<td class='step-details'>* is not present in the Class Code label<img data-featherlight="./../images/645882663.jpg" width="10%" src="./../images/645882663.jpg" data-src="./../images/645882663.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:31:59 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53075}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 43b1ea11339e7203c0aaab31105b0736<img data-featherlight="./../images/243275879.jpg" width="10%" src="./../images/243275879.jpg" data-src="./../images/243275879.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:31:59 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/112148511.jpg" width="10%" src="./../images/112148511.jpg" data-src="./../images/112148511.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:31:59 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53075}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 43b1ea11339e7203c0aaab31105b0736<img data-featherlight="./../images/528158052.jpg" width="10%" src="./../images/528158052.jpg" data-src="./../images/528158052.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:31:59 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/567843732.jpg" width="10%" src="./../images/567843732.jpg" data-src="./../images/567843732.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:32:00 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53075}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 43b1ea11339e7203c0aaab31105b0736<img data-featherlight="./../images/369218971.jpg" width="10%" src="./../images/369218971.jpg" data-src="./../images/369218971.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:32:00 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/361265982.jpg" width="10%" src="./../images/361265982.jpg" data-src="./../images/361265982.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:32:00 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/643467616.jpg" width="10%" src="./../images/643467616.jpg" data-src="./../images/643467616.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:33:09 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:33:09 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:33:19 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='24'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+107ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:33:18 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/384948471.jpg" width="10%" src="./../images/384948471.jpg" data-src="./../images/384948471.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:33:18 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: missing ) after argument list (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: afb5d88d186156ec1fbb78094a00dd7e<img data-featherlight="./../images/91348896.jpg" width="10%" src="./../images/91348896.jpg" data-src="./../images/91348896.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:33:18 AM</td>
+													<td class='step-details'>* is not present in the Class Code label<img data-featherlight="./../images/688250060.jpg" width="10%" src="./../images/688250060.jpg" data-src="./../images/688250060.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:33:18 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: afb5d88d186156ec1fbb78094a00dd7e<img data-featherlight="./../images/198627019.jpg" width="10%" src="./../images/198627019.jpg" data-src="./../images/198627019.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:33:19 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/200134891.jpg" width="10%" src="./../images/200134891.jpg" data-src="./../images/200134891.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:33:19 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: afb5d88d186156ec1fbb78094a00dd7e<img data-featherlight="./../images/37850286.jpg" width="10%" src="./../images/37850286.jpg" data-src="./../images/37850286.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:33:19 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/641677581.jpg" width="10%" src="./../images/641677581.jpg" data-src="./../images/641677581.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:33:19 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: afb5d88d186156ec1fbb78094a00dd7e<img data-featherlight="./../images/378519373.jpg" width="10%" src="./../images/378519373.jpg" data-src="./../images/378519373.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:33:19 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/886770366.jpg" width="10%" src="./../images/886770366.jpg" data-src="./../images/886770366.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:33:19 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/108517029.jpg" width="10%" src="./../images/108517029.jpg" data-src="./../images/108517029.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:37:14 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:37:14 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:37:23 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='26'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+112ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:37:23 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/200756741.jpg" width="10%" src="./../images/200756741.jpg" data-src="./../images/200756741.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:38:55 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:38:55 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:39:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='28'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+115ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:03 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/245112165.jpg" width="10%" src="./../images/245112165.jpg" data-src="./../images/245112165.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:03 AM</td>
+													<td class='step-details'>Asteriks * is present in the Class Code label<img data-featherlight="./../images/267323498.jpg" width="10%" src="./../images/267323498.jpg" data-src="./../images/267323498.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:39:03 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53429}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 6e2f6593208ba1421833dddfb66483bc<img data-featherlight="./../images/832397608.jpg" width="10%" src="./../images/832397608.jpg" data-src="./../images/832397608.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:04 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/845425660.jpg" width="10%" src="./../images/845425660.jpg" data-src="./../images/845425660.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:39:04 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53429}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 6e2f6593208ba1421833dddfb66483bc<img data-featherlight="./../images/466243430.jpg" width="10%" src="./../images/466243430.jpg" data-src="./../images/466243430.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:04 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/469363399.jpg" width="10%" src="./../images/469363399.jpg" data-src="./../images/469363399.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:39:04 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53429}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: 6e2f6593208ba1421833dddfb66483bc<img data-featherlight="./../images/840152041.jpg" width="10%" src="./../images/840152041.jpg" data-src="./../images/840152041.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:04 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/71274388.jpg" width="10%" src="./../images/71274388.jpg" data-src="./../images/71274388.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:04 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/900881789.jpg" width="10%" src="./../images/900881789.jpg" data-src="./../images/900881789.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:39:49 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:39:49 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:39:57 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='30'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+121ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:55 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/516211775.jpg" width="10%" src="./../images/516211775.jpg" data-src="./../images/516211775.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:56 AM</td>
+													<td class='step-details'>Asteriks * is present in the Class Code label<img data-featherlight="./../images/48650348.jpg" width="10%" src="./../images/48650348.jpg" data-src="./../images/48650348.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:39:56 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53500}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: bfee4c5ef5458044664e5ed0558b0baf<img data-featherlight="./../images/244317043.jpg" width="10%" src="./../images/244317043.jpg" data-src="./../images/244317043.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:56 AM</td>
+													<td class='step-details'>* is not present in the firstname label<img data-featherlight="./../images/293707179.jpg" width="10%" src="./../images/293707179.jpg" data-src="./../images/293707179.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:39:56 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53500}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: bfee4c5ef5458044664e5ed0558b0baf<img data-featherlight="./../images/575575274.jpg" width="10%" src="./../images/575575274.jpg" data-src="./../images/575575274.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:56 AM</td>
+													<td class='step-details'>* is not present in the lastname label<img data-featherlight="./../images/187273171.jpg" width="10%" src="./../images/187273171.jpg" data-src="./../images/187273171.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:39:56 AM</td>
+													<td class='step-details'>Unable to find the given element content :org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'. (Session info: chrome=101.0.4951.67) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'AMX-RL-20-608-W', ip: '192.168.29.248', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\VENKAT~1.T\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53500}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true} Session ID: bfee4c5ef5458044664e5ed0558b0baf<img data-featherlight="./../images/437742253.jpg" width="10%" src="./../images/437742253.jpg" data-src="./../images/437742253.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:57 AM</td>
+													<td class='step-details'>* is not present in the email label<img data-featherlight="./../images/185605784.jpg" width="10%" src="./../images/185605784.jpg" data-src="./../images/185605784.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:39:57 AM</td>
+													<td class='step-details'>* is not present in the verify email label<img data-featherlight="./../images/323448403.jpg" width="10%" src="./../images/323448403.jpg" data-src="./../images/323448403.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration classcode</span>
+						<span class='test-time'>Jun 2, 2022 12:46:46 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:46:46 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:46:55 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='32'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C431 -Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+125ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:46:54 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/200413541.jpg" width="10%" src="./../images/200413541.jpg" data-src="./../images/200413541.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:46:55 AM</td>
+													<td class='step-details'>Asteriks * is present in the Class Code label<img data-featherlight="./../images/508414259.jpg" width="10%" src="./../images/508414259.jpg" data-src="./../images/508414259.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:46:55 AM</td>
+													<td class='step-details'>Asteriks * is present in the firstname label<img data-featherlight="./../images/241488056.jpg" width="10%" src="./../images/241488056.jpg" data-src="./../images/241488056.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:46:55 AM</td>
+													<td class='step-details'>Asteriks * is present in the lastname label<img data-featherlight="./../images/741493497.jpg" width="10%" src="./../images/741493497.jpg" data-src="./../images/741493497.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:46:55 AM</td>
+													<td class='step-details'>Asteriks * is present in the email label<img data-featherlight="./../images/318009855.jpg" width="10%" src="./../images/318009855.jpg" data-src="./../images/318009855.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:46:55 AM</td>
+													<td class='step-details'>Asteriks * is present in the verifyemail label<img data-featherlight="./../images/494353362.jpg" width="10%" src="./../images/494353362.jpg" data-src="./../images/494353362.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>Student Registration Email</span>
+						<span class='test-time'>Jun 2, 2022 12:52:42 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 12:52:42 AM</span>
+	<span class='label end-time'>Jun 2, 2022 12:52:49 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='34'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C391 - Are required fields marked with an asterisk?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+130ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:52:48 AM</td>
+													<td class='step-details'>* is not present in the username label<img data-featherlight="./../images/905161882.jpg" width="10%" src="./../images/905161882.jpg" data-src="./../images/905161882.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:52:49 AM</td>
+													<td class='step-details'>Asteriks * is present in the firstname label<img data-featherlight="./../images/905589167.jpg" width="10%" src="./../images/905589167.jpg" data-src="./../images/905589167.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:52:49 AM</td>
+													<td class='step-details'>Asteriks * is present in the lastname label<img data-featherlight="./../images/648370735.jpg" width="10%" src="./../images/648370735.jpg" data-src="./../images/648370735.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:52:49 AM</td>
+													<td class='step-details'>Asteriks * is present in the email label<img data-featherlight="./../images/168571806.jpg" width="10%" src="./../images/168571806.jpg" data-src="./../images/168571806.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:52:49 AM</td>
+													<td class='step-details'>Asteriks * is present in the verifyemail label<img data-featherlight="./../images/66337692.jpg" width="10%" src="./../images/66337692.jpg" data-src="./../images/66337692.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeader</span>
+						<span class='test-time'>Jun 2, 2022 03:49:21 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 03:49:21 PM</span>
+	<span class='label end-time'>Jun 2, 2022 03:50:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='36'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C6 - Do all buttons have hover/click states?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+133ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:49:57 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/451780675.jpg" width="10%" src="./../images/451780675.jpg" data-src="./../images/451780675.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:49:57 PM</td>
+													<td class='step-details'>Ipad potrait resize is successfull<img data-featherlight="./../images/672394776.jpg" width="10%" src="./../images/672394776.jpg" data-src="./../images/672394776.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:50:01 PM</td>
+													<td class='step-details'>Hamburger Icon is not displayed successfully<img data-featherlight="./../images/543458947.jpg" width="10%" src="./../images/543458947.jpg" data-src="./../images/543458947.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:50:01 PM</td>
+													<td class='step-details'>Ipad landscape resize is successfull<img data-featherlight="./../images/708656780.jpg" width="10%" src="./../images/708656780.jpg" data-src="./../images/708656780.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:50:04 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/832429861.jpg" width="10%" src="./../images/832429861.jpg" data-src="./../images/832429861.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:50:05 PM</td>
+													<td class='step-details'>Iphone potrait resize is successfull<img data-featherlight="./../images/519770072.jpg" width="10%" src="./../images/519770072.jpg" data-src="./../images/519770072.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeader</span>
+						<span class='test-time'>Jun 2, 2022 04:19:10 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 04:19:10 PM</span>
+	<span class='label end-time'>Jun 2, 2022 04:19:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 43s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='38'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C6 - Do all buttons have hover/click states?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+137ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:19:46 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/456604761.jpg" width="10%" src="./../images/456604761.jpg" data-src="./../images/456604761.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:19:46 PM</td>
+													<td class='step-details'>Ipad potrait resize is successfull<img data-featherlight="./../images/193879331.jpg" width="10%" src="./../images/193879331.jpg" data-src="./../images/193879331.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:19:49 PM</td>
+													<td class='step-details'>Hamburger Icon is not displayed successfully<img data-featherlight="./../images/593262854.jpg" width="10%" src="./../images/593262854.jpg" data-src="./../images/593262854.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:19:49 PM</td>
+													<td class='step-details'>GalaxyFold landscape resize is successfull<img data-featherlight="./../images/521052780.jpg" width="10%" src="./../images/521052780.jpg" data-src="./../images/521052780.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:19:53 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/669723110.jpg" width="10%" src="./../images/669723110.jpg" data-src="./../images/669723110.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:19:53 PM</td>
+													<td class='step-details'>Iphone potrait resize is successfull<img data-featherlight="./../images/177811730.jpg" width="10%" src="./../images/177811730.jpg" data-src="./../images/177811730.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeader</span>
+						<span class='test-time'>Jun 2, 2022 04:21:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 04:21:15 PM</span>
+	<span class='label end-time'>Jun 2, 2022 04:21:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 38s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='40'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C6 - Do all buttons have hover/click states?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+140ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:21:49 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/299190234.jpg" width="10%" src="./../images/299190234.jpg" data-src="./../images/299190234.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:21:49 PM</td>
+													<td class='step-details'>Ipad potrait resize is successfull<img data-featherlight="./../images/649457084.jpg" width="10%" src="./../images/649457084.jpg" data-src="./../images/649457084.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:21:52 PM</td>
+													<td class='step-details'>Hamburger Icon is not displayed successfully<img data-featherlight="./../images/441749919.jpg" width="10%" src="./../images/441749919.jpg" data-src="./../images/441749919.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:21:53 PM</td>
+													<td class='step-details'>GalaxyFold landscape resize is successfull<img data-featherlight="./../images/237527564.jpg" width="10%" src="./../images/237527564.jpg" data-src="./../images/237527564.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeader</span>
+						<span class='test-time'>Jun 2, 2022 04:23:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 04:23:29 PM</span>
+	<span class='label end-time'>Jun 2, 2022 04:24:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 42s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='42'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C6 - Do all buttons have hover/click states?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+144ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:04 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/782790428.jpg" width="10%" src="./../images/782790428.jpg" data-src="./../images/782790428.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:04 PM</td>
+													<td class='step-details'>Ipad potrait resize is successfull<img data-featherlight="./../images/31945308.jpg" width="10%" src="./../images/31945308.jpg" data-src="./../images/31945308.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:07 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/717126051.jpg" width="10%" src="./../images/717126051.jpg" data-src="./../images/717126051.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:07 PM</td>
+													<td class='step-details'>Samsung Galaxy resize is successfull<img data-featherlight="./../images/580880969.jpg" width="10%" src="./../images/580880969.jpg" data-src="./../images/580880969.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:10 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/849872770.jpg" width="10%" src="./../images/849872770.jpg" data-src="./../images/849872770.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:24:11 PM</td>
+													<td class='step-details'>Iphone potrait resize is successfull<img data-featherlight="./../images/600090359.jpg" width="10%" src="./../images/600090359.jpg" data-src="./../images/600090359.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeader</span>
+						<span class='test-time'>Jun 2, 2022 04:50:56 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 04:50:56 PM</span>
+	<span class='label end-time'>Jun 2, 2022 04:51:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 52s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='44'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C6 - Do all buttons have hover/click states?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 37s+147ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:51:31 PM</td>
+													<td class='step-details'>Ipad potrait resize is successfull<img data-featherlight="./../images/426637213.jpg" width="10%" src="./../images/426637213.jpg" data-src="./../images/426637213.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:51:31 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/887318130.jpg" width="10%" src="./../images/887318130.jpg" data-src="./../images/887318130.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:51:35 PM</td>
+													<td class='step-details'>Ipad landscape resize is successfull<img data-featherlight="./../images/140996962.jpg" width="10%" src="./../images/140996962.jpg" data-src="./../images/140996962.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:51:35 PM</td>
+													<td class='step-details'>Hamburger Icon is not displayed successfully<img data-featherlight="./../images/650342021.jpg" width="10%" src="./../images/650342021.jpg" data-src="./../images/650342021.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:51:38 PM</td>
+													<td class='step-details'>Iphone potrait resize is successfull<img data-featherlight="./../images/819477429.jpg" width="10%" src="./../images/819477429.jpg" data-src="./../images/819477429.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:51:38 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/537706565.jpg" width="10%" src="./../images/537706565.jpg" data-src="./../images/537706565.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:51:41 PM</td>
+													<td class='step-details'>Iphone landscape resize is successfull<img data-featherlight="./../images/477148812.jpg" width="10%" src="./../images/477148812.jpg" data-src="./../images/477148812.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:51:42 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/325571742.jpg" width="10%" src="./../images/325571742.jpg" data-src="./../images/325571742.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:51:45 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/813559428.jpg" width="10%" src="./../images/813559428.jpg" data-src="./../images/813559428.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:51:48 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/720531356.jpg" width="10%" src="./../images/720531356.jpg" data-src="./../images/720531356.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='45'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeader</span>
+						<span class='test-time'>Jun 2, 2022 05:55:18 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 05:55:18 PM</span>
+	<span class='label end-time'>Jun 2, 2022 05:56:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 53s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='46'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C6 - Do all buttons have hover/click states?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 3m 36s+151ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:55:54 PM</td>
+													<td class='step-details'>Ipad potrait resize is successfull<img data-featherlight="./../images/106419339.jpg" width="10%" src="./../images/106419339.jpg" data-src="./../images/106419339.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:55:54 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/42809506.jpg" width="10%" src="./../images/42809506.jpg" data-src="./../images/42809506.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:55:57 PM</td>
+													<td class='step-details'>Ipad landscape resize is successfull<img data-featherlight="./../images/74043522.jpg" width="10%" src="./../images/74043522.jpg" data-src="./../images/74043522.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>5:55:58 PM</td>
+													<td class='step-details'>Hamburger Icon is not displayed successfully<img data-featherlight="./../images/117543842.jpg" width="10%" src="./../images/117543842.jpg" data-src="./../images/117543842.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:01 PM</td>
+													<td class='step-details'>Iphone potrait resize is successfull<img data-featherlight="./../images/627189693.jpg" width="10%" src="./../images/627189693.jpg" data-src="./../images/627189693.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:01 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/834222318.jpg" width="10%" src="./../images/834222318.jpg" data-src="./../images/834222318.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:04 PM</td>
+													<td class='step-details'>Iphone landscape resize is successfull<img data-featherlight="./../images/28223724.jpg" width="10%" src="./../images/28223724.jpg" data-src="./../images/28223724.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:04 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/313006284.jpg" width="10%" src="./../images/313006284.jpg" data-src="./../images/313006284.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:08 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/779052622.jpg" width="10%" src="./../images/779052622.jpg" data-src="./../images/779052622.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:56:11 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/534768921.jpg" width="10%" src="./../images/534768921.jpg" data-src="./../images/534768921.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='47'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeader</span>
+						<span class='test-time'>Jun 2, 2022 06:42:36 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 06:42:36 PM</span>
+	<span class='label end-time'>Jun 2, 2022 06:43:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 52s+0ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='48'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C6 - Do all buttons have hover/click states?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:46:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 2m 44s+156ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:10 PM</td>
+													<td class='step-details'>Ipad potrait resize is successfull<img data-featherlight="./../images/399867622.jpg" width="10%" src="./../images/399867622.jpg" data-src="./../images/399867622.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:10 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/268795728.jpg" width="10%" src="./../images/268795728.jpg" data-src="./../images/268795728.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:10 PM</td>
+													<td class='step-details'>cardtitle is displayed successfully<img data-featherlight="./../images/715360106.jpg" width="10%" src="./../images/715360106.jpg" data-src="./../images/715360106.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:14 PM</td>
+													<td class='step-details'>Ipad landscape resize is successfull<img data-featherlight="./../images/806713004.jpg" width="10%" src="./../images/806713004.jpg" data-src="./../images/806713004.jpg"></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>6:43:14 PM</td>
+													<td class='step-details'>Hamburger Icon is not displayed successfully<img data-featherlight="./../images/362422333.jpg" width="10%" src="./../images/362422333.jpg" data-src="./../images/362422333.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:18 PM</td>
+													<td class='step-details'>Iphone potrait resize is successfull<img data-featherlight="./../images/487095264.jpg" width="10%" src="./../images/487095264.jpg" data-src="./../images/487095264.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:18 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/184279369.jpg" width="10%" src="./../images/184279369.jpg" data-src="./../images/184279369.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:21 PM</td>
+													<td class='step-details'>Iphone landscape resize is successfull<img data-featherlight="./../images/844819343.jpg" width="10%" src="./../images/844819343.jpg" data-src="./../images/844819343.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:21 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/801729700.jpg" width="10%" src="./../images/801729700.jpg" data-src="./../images/801729700.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:25 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/354546920.jpg" width="10%" src="./../images/354546920.jpg" data-src="./../images/354546920.jpg"></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:43:28 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight="./../images/98496311.jpg" width="10%" src="./../images/98496311.jpg" data-src="./../images/98496311.jpg"></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='49'>
+					<div class='test-heading'>
+						<span class='test-name'>HomepageHeader</span>
+						<span class='test-time'>Jun 2, 2022 06:46:12 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 2, 2022 06:46:12 PM</span>
+	<span class='label end-time'>Jun 2, 2022 06:47:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 51s+360ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='50'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>C6 - Do all buttons have hover/click states?</h5>
+						<span class="node-time label grey lighten-1 white-text">Jun 2, 2022 06:47:03 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 48s+856ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:46:45 PM</td>
+													<td class='step-details'>Ipad potrait resize is successfull<img data-featherlight='./../images/574034081.jpg' width='10%' src='./../images/574034081.jpg' data-src='./../images/574034081.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:46:45 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight='./../images/35486790.jpg' width='10%' src='./../images/35486790.jpg' data-src='./../images/35486790.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:46:46 PM</td>
+													<td class='step-details'>cardtitle is displayed successfully<img data-featherlight='./../images/83655856.jpg' width='10%' src='./../images/83655856.jpg' data-src='./../images/83655856.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:46:49 PM</td>
+													<td class='step-details'>Ipad landscape resize is successfull<img data-featherlight='./../images/207504454.jpg' width='10%' src='./../images/207504454.jpg' data-src='./../images/207504454.jpg'></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>6:46:49 PM</td>
+													<td class='step-details'>Hamburger Icon is not displayed successfully<img data-featherlight='./../images/249035134.jpg' width='10%' src='./../images/249035134.jpg' data-src='./../images/249035134.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:46:49 PM</td>
+													<td class='step-details'>cardtitle is displayed successfully<img data-featherlight='./../images/472228517.jpg' width='10%' src='./../images/472228517.jpg' data-src='./../images/472228517.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:46:53 PM</td>
+													<td class='step-details'>Iphone potrait resize is successfull<img data-featherlight='./../images/94479802.jpg' width='10%' src='./../images/94479802.jpg' data-src='./../images/94479802.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:46:53 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight='./../images/503095833.jpg' width='10%' src='./../images/503095833.jpg' data-src='./../images/503095833.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:46:56 PM</td>
+													<td class='step-details'>Iphone landscape resize is successfull<img data-featherlight='./../images/784883404.jpg' width='10%' src='./../images/784883404.jpg' data-src='./../images/784883404.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:46:56 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight='./../images/240742316.jpg' width='10%' src='./../images/240742316.jpg' data-src='./../images/240742316.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:47:00 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight='./../images/616612984.jpg' width='10%' src='./../images/616612984.jpg' data-src='./../images/616612984.jpg'></td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>6:47:03 PM</td>
+													<td class='step-details'>Hamburger Icon is displayed successfully<img data-featherlight='./../images/736297845.jpg' width='10%' src='./../images/736297845.jpg' data-src='./../images/736297845.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>25</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>182</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jun 2, 2022 06:46:11 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jun 2, 2022 06:47:04 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 52s+360ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 8,
+				failParent: 17,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 17,
+				
+				passChild: 134,
+				failChild: 48,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 48,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
