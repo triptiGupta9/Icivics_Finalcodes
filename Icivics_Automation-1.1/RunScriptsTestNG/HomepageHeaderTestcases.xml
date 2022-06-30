@@ -4,8 +4,8 @@
   <test thread-count="5" name="RegressionTest">
     <classes>
       <class name="icivics_testcases.Icivics_HP_1Header_Test"/>
+      <class name="icivics_testcases.Icivics_HP_1TeacherHeader_Test"/>
       <class name="icivics_testcases.Icivics_HP_2Headerplay_Test"/>
-      <class name="icivics_testcases.Icivics_HP_3TeacherHeader_Test"/>
       <class name="icivics_testcases.Icivics_HP_3HeaderTeach_Test"/>
       <class name="icivics_testcases.Icivics_HP_3Headerteach2_Test"/>
       <class name="icivics_testcases.Icivics_HP_4HeaderAbout_Test"/>

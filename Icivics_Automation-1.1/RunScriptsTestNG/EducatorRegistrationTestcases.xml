@@ -9,12 +9,6 @@
 			<class name="icivics_testcases.Icivics_EducatorRegistration3_Test" />
 			<class name="icivics_testcases.Icivics_EducatorRegistration4_Test" />
 			<class name="icivics_testcases.Icivics_EducatorRegistration5_Test" />
-			<class name="icivics_testcases.Icivics_StudentRegistration1Email_Test" />
-			<class name="icivics_testcases.Icivics_StudentRegistration1classcode_Test" />
-			<class name="icivics_testcases.Icivics_StudentRegistration2Email_Test" />
-			<class name="icivics_testcases.Icivics_StudentRegistration2classcode_Test" />
-			<class name="icivics_testcases.Icivics_StudentRegistration3Email_Test" />
-			<class name="icivics_testcases.Icivics_StudentRegistration3classcode_Test" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
