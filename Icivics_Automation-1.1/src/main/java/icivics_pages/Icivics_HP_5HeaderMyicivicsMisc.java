@@ -241,7 +241,7 @@ public class Icivics_HP_5HeaderMyicivicsMisc extends ProjectSpecificMethods {
 		WebElement myicivicsbutton = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
 		myicivicsbutton.click();
 		waitTime(3000);
-		String cssValue = propElement(getPropfile(gpropname7, "Myicivicslink")).getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname7, "Myicivicslink")).getCssValue("text-decoration-line");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {
 
@@ -264,7 +264,7 @@ public class Icivics_HP_5HeaderMyicivicsMisc extends ProjectSpecificMethods {
 		WebElement myicivicsbutton = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
 		myicivicsbutton.click();
 		waitTime(3000);
-		String cssValue = propElement(getPropfile(gpropname7, "Myclasslink")).getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname7, "Myclasslink")).getCssValue("text-decoration-line");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {
 
@@ -286,7 +286,7 @@ public class Icivics_HP_5HeaderMyicivicsMisc extends ProjectSpecificMethods {
 		WebElement myicivicsbutton = propElement(getPropfile(gpropname2, "Myicivicsbutton"));
 		myicivicsbutton.click();
 		waitTime(3000);
-		String cssValue = propElement(getPropfile(gpropname7, "MyFavoriteslink")).getCssValue("text-decoration");
+		String cssValue = propElement(getPropfile(gpropname7, "MyFavoriteslink")).getCssValue("text-decoration-line");
 		System.out.println(cssValue);
 		if (cssValue.contains("underline")) {
 

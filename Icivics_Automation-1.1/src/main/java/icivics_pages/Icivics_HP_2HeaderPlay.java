@@ -199,7 +199,7 @@ public class Icivics_HP_2HeaderPlay extends ProjectSpecificMethods {
 				waitTime(3000);
 				WebElement options1 = propElement(getPropfile(gpropname3, "Dropdownplaylist"));
 
-				String cssvalue = options1.getCssValue("text-decoration");
+				String cssvalue = options1.getCssValue("text-decoration-line");
 				System.out.println(cssvalue);
 				waitTime(3000);
 				if (cssvalue.contains("underline")) {
