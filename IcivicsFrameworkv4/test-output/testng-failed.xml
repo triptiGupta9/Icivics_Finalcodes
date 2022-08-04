@@ -5,12 +5,12 @@
     <classes>
       <class name="icivics_testcases.MainsGamePage_Test">
         <methods>
-          <include name="C73_Verifycarouseldots"/>
           <include name="setUpClass"/>
           <include name="afterMethod"/>
           <include name="setValues"/>
           <include name="tearDownClass"/>
           <include name="stopReport"/>
+          <include name="C73_Verifybannerasastudentlogin"/>
           <include name="beforeMethod"/>
           <include name="report"/>
           <include name="startReport"/>

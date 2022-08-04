@@ -52,4 +52,30 @@ public class MainsGamePage_Test extends ProjectSpecificMethods {
 		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().Verifycarouseldots();
 	}
 
+	// C73 - Game carousel dots navigation
+
+	@Test(priority = 4)
+	public void C73_Verifycarouseldots3rdpage() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Game carousel dots navigation");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().Verifycarouseldots3rdgame();
+	}
+	// C73 - Register banner not logged in
+
+	@Test(priority = 5)
+	public void C73_Verifybannerasananonymoususer() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Register banner not logged in");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.Verifyregisterasastudentbanner();
+	}
+
+	// C73 - Register banner logged in
+	@Test(priority = 6)
+	public void C73_Verifybannerasastudentlogin() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Register banner logged in");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL)
+				.Verifyloginasastudentregisterasastudentbanner();
+	}
 }

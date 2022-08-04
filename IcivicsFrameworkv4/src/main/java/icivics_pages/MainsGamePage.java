@@ -91,23 +91,111 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	@Given("Game carousel dots")
 	public MainsGamePage Verifycarouseldots() {
 
-		
-		
-		
-		WebElement options1 = driver.findElement(By.xpath("//li[@class='active']"));
+		List<WebElement> carouseldots = driver.findElements(By.xpath("//ol[@class='carousel-indicators']/li"));
+		int number = carouseldots.size();
+		System.out.println(number);
 		String Yellowcolor = "rgba(255, 208, 91, 1)";
-		String cssvalue = options1.getCssValue("background-color");
-		System.out.println(cssvalue);
-		waitTime(3000);
-		if (cssvalue.equals(Yellowcolor)) {
-			reportStep("Crouseldot is lighted", "Pass");
-		} else {
-			reportStep("Crouseldot is not lighted", "Fail");
-		}
-	
 
-		
+		for (int i = 0; i < number; i++) {
+			carouseldots.get(i).click();
+			waitTime(3000);
+			String cssvalue1 = carouseldots.get(i).getCssValue("background-color");
+			waitTime(6000);
+
+			System.out.println(cssvalue1);
+
+			if (cssvalue1.equals(Yellowcolor)) {
+
+				reportStep("Crouseldot is lighted", "Pass");
+
+			} else {
+
+				reportStep("Crouseldot is not lighted", "Fail");
+			}
+		}
+
+		return this;
+
+	}
+
+	@Given("Verify Carousel goes the 3rd game")
+	public MainsGamePage Verifycarouseldots3rdgame() {
+		List<WebElement> carouseldots = driver.findElements(By.xpath("//ol[@class='carousel-indicators']/li"));
+		int number = carouseldots.size();
+		String Yellowcolor = "rgba(255, 208, 91, 1)";
+
+		for (int i = 0; i < number; i++) {
+			String cssvalue1 = carouseldots.get(i).getCssValue("background-color");
+			waitTime(5000);
+			System.out.println(cssvalue1);
+
+			if (cssvalue1.equals(Yellowcolor)) {
+				carouseldots.get(2).click();
+				waitTime(3000);
+				reportStep("On clicking 3rd dot Crousel goes to the 3rd game successfully", "Pass");
+				break;
+			} else {
+
+				reportStep("Crouseldot is not lighted", "Fail");
+			}
+		}
 		return this;
 	}
 
+	@Given("Verify Banner to register as a student appears")
+	public MainsGamePage Verifyregisterasastudentbanner() {
+		WebElement registerbanner = driver
+				.findElement(By.xpath("//div[@class='callout-banner register-student-banner callout-banner-blue']"));
+		waitTime(3000);
+		if (registerbanner.isDisplayed()) {
+			registerbanner.click();
+			reportStep("Banner to register as a student display", "Pass");
+		} else {
+			reportStep("Banner to register as a student do not display", "Fail");
+		}
+
+		return this;
+	}
+
+	@Given("Verify when login as a student Banner to register as a student DOES NOT appear")
+	public MainsGamePage Verifyloginasastudentregisterasastudentbanner() {
+		String url = "/user/login";
+		if (Environment.equals("Stage.d9")) {
+			navigateto(StageURL + url);
+		} else {
+			navigateto(Stage1URL + url);
+		}
+		WebElement signinwithgooglebutton = driver.findElement(By.xpath("//img[@src='/themes/custom/refresh/images/google_signin.png']"));
+		signinwithgooglebutton.click();
+		waitTime(3000);
+		WebElement emailfield = driver.findElement(By.xpath("//input[@type='email']"));
+		waitTime(3000);
+		emailfield.sendKeys("amatt.student1@gedu.demo.icivics.org");
+
+		WebElement nextbutton = driver.findElement(By.xpath("//span[text()='Next']"));
+		nextbutton.click();
+		waitTime(3000);
+		WebElement pwdfield = driver.findElement(By.xpath("//input[@type='password']"));
+
+		pwdfield.sendKeys("Freedom17@");
+		waitTime(3000);
+		WebElement nextbutton1 = driver.findElement(By.xpath("//span[text()='Next']"));
+		if (nextbutton1.isDisplayed()) {
+			nextbutton1.click();
+			waitTime(3000);
+			reportStep("My Icivics page open for this account", "Pass");
+		} else {
+			reportStep("My Icivics page not open for this account", "Fail");
+		}
+		String url1= "/games";
+		if (Environment.equals("Stage.d9")) {
+			navigateto(StageURL + url1);
+		} else {
+			navigateto(Stage1URL + url1);
+		}
+		waitTime(3000);
+		scrollToTheGivenWebElement("//h3[text()='Argument Wars']");
+		reportStep("Banner to register as a student do not display", "Pass");
+		return this;
+	}
 }
