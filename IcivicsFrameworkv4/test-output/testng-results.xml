@@ -1,49 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="8" passed="0" failed="1" skipped="0">
+<testng-results ignored="10" total="11" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-04T22:02:51 IST" name="Default suite" finished-at="2022-08-04T22:04:12 IST" duration-ms="81596">
+  <suite started-at="2022-08-05T22:13:08 IST" name="Default suite" finished-at="2022-08-05T22:13:31 IST" duration-ms="22993">
     <groups>
     </groups>
-    <test started-at="2022-08-04T22:02:51 IST" name="Default test" finished-at="2022-08-04T22:04:12 IST" duration-ms="81596">
+    <test started-at="2022-08-05T22:13:08 IST" name="Default test" finished-at="2022-08-05T22:13:31 IST" duration-ms="22993">
       <class name="icivics_testcases.MainsGamePage_Test">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.MainsGamePage_Test@5a59ca5e]" started-at="2022-08-04T22:02:50 IST" name="startReport" finished-at="2022-08-04T22:02:51 IST" duration-ms="360" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.MainsGamePage_Test@6c4906d3]" started-at="2022-08-05T22:13:08 IST" name="startReport" finished-at="2022-08-05T22:13:08 IST" duration-ms="661" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.MainsGamePage_Test@5a59ca5e]" started-at="2022-08-04T22:02:51 IST" name="setValues" finished-at="2022-08-04T22:02:51 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.MainsGamePage_Test@6c4906d3]" started-at="2022-08-05T22:13:08 IST" name="setValues" finished-at="2022-08-05T22:13:08 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValues -->
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:icivics_testcases.MainsGamePage_Test@5a59ca5e]" started-at="2022-08-04T22:02:51 IST" name="setUpClass" finished-at="2022-08-04T22:02:51 IST" duration-ms="207" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:icivics_testcases.MainsGamePage_Test@6c4906d3]" started-at="2022-08-05T22:13:08 IST" name="setUpClass" finished-at="2022-08-05T22:13:09 IST" duration-ms="466" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5aa62ee7]]>
+                <![CDATA[org.testng.TestRunner@310a7859]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.MainsGamePage_Test@5a59ca5e]" started-at="2022-08-04T22:02:51 IST" name="report" finished-at="2022-08-04T22:02:51 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.MainsGamePage_Test@6c4906d3]" started-at="2022-08-05T22:13:09 IST" name="report" finished-at="2022-08-05T22:13:09 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.MainsGamePage_Test@5a59ca5e]" started-at="2022-08-04T22:02:51 IST" name="beforeMethod" finished-at="2022-08-04T22:02:53 IST" duration-ms="2596" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.MainsGamePage_Test@6c4906d3]" started-at="2022-08-05T22:13:09 IST" name="beforeMethod" finished-at="2022-08-05T22:13:13 IST" duration-ms="3583" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C73_Verifybannerasastudentlogin()[pri:6, instance:icivics_testcases.MainsGamePage_Test@5a59ca5e]" started-at="2022-08-04T22:02:53 IST" name="C73_Verifybannerasastudentlogin" finished-at="2022-08-04T22:04:12 IST" duration-ms="78311" status="FAIL">
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
+        <test-method signature="C73_VerifygamesTilesclick()[pri:9, instance:icivics_testcases.MainsGamePage_Test@6c4906d3]" started-at="2022-08-05T22:13:13 IST" name="C73_VerifygamesTilesclick" finished-at="2022-08-05T22:13:30 IST" duration-ms="17577" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[Index 1 out of bounds for length 1]]>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'AMX-RL-20-457-W', ip: '10.10.7.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9644e8206fa1a1251ab70190dd1c36f4, clickElement {id=6ebb2bd2-81cc-47db-b13c-c6ff911ec96f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\TRIPTI~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:49957}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49957/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (9644e8206fa1a1251ab70190dd1c36f4)] -> xpath: //div[@class='form-group']/descendant::h3]
+Session ID: 9644e8206fa1a1251ab70190dd1c36f4]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
-at selenium.base.SeleniumBase.scrollToTheGivenWebElement(SeleniumBase.java:562)
-at icivics_pages.MainsGamePage.Verifyloginasastudentregisterasastudentbanner(MainsGamePage.java:197)
-at icivics_testcases.MainsGamePage_Test.C73_Verifybannerasastudentlogin(MainsGamePage_Test.java:79)
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'AMX-RL-20-457-W', ip: '10.10.7.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9644e8206fa1a1251ab70190dd1c36f4, clickElement {id=6ebb2bd2-81cc-47db-b13c-c6ff911ec96f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\TRIPTI~1.GUP\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:49957}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49957/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (9644e8206fa1a1251ab70190dd1c36f4)] -> xpath: //div[@class='form-group']/descendant::h3]
+Session ID: 9644e8206fa1a1251ab70190dd1c36f4
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at icivics_pages.MainsGamePage.Verifygamestitlesclick(MainsGamePage.java:249)
+at icivics_testcases.MainsGamePage_Test.C73_VerifygamesTilesclick(MainsGamePage_Test.java:104)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -74,19 +105,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C73_Verifybannerasastudentlogin -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.MainsGamePage_Test@5a59ca5e]" started-at="2022-08-04T22:04:12 IST" name="afterMethod" finished-at="2022-08-04T22:04:12 IST" duration-ms="428" status="PASS">
+        </test-method> <!-- C73_VerifygamesTilesclick -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.MainsGamePage_Test@6c4906d3]" started-at="2022-08-05T22:13:30 IST" name="afterMethod" finished-at="2022-08-05T22:13:31 IST" duration-ms="1290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.MainsGamePage_Test@5a59ca5e]" started-at="2022-08-04T22:04:12 IST" name="tearDownClass" finished-at="2022-08-04T22:04:12 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.MainsGamePage_Test@6c4906d3]" started-at="2022-08-05T22:13:31 IST" name="tearDownClass" finished-at="2022-08-05T22:13:31 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.MainsGamePage_Test@5a59ca5e]" started-at="2022-08-04T22:04:12 IST" name="stopReport" finished-at="2022-08-04T22:04:13 IST" duration-ms="417" status="PASS">
+        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.MainsGamePage_Test@6c4906d3]" started-at="2022-08-05T22:13:31 IST" name="stopReport" finished-at="2022-08-05T22:13:32 IST" duration-ms="526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopReport -->
