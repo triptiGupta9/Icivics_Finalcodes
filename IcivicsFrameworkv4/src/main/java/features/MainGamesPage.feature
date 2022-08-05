@@ -23,4 +23,13 @@ Scenario: C73 - Register banner logged in
 Given Verify when login as a student Banner to register as a student DOES NOT appear
 And Verify when login as a teacher Banner to register as a student DOES NOT appear
 
+Scenario: C73 - Register banner button click
+Given Verify Goes to link /user/register?role=student&email=1
+
+Scenario: C73 - Game tiles
+Given  Verify Game tile appears for each game and Each tile contains Image Title of game Expected play time Short description
+
+Scenario: C73 - Game tiles click
+Given  Verify Click on game tile 
+
 

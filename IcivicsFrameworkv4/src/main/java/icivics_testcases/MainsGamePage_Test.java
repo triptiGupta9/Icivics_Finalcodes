@@ -78,4 +78,29 @@ public class MainsGamePage_Test extends ProjectSpecificMethods {
 		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL)
 				.Verifyloginasastudentregisterasastudentbanner();
 	}
+	// C73 - Register banner button click
+
+	@Test(priority = 7)
+	public void C73_Verifyregisterbuttonclick() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Register banner button click");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.Verifylregisterbannerbuttonclick();
+	}
+	// C73 - Game tiles
+
+	@Test(priority = 8)
+	public void C73_VerifygamesTiles() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Game tiles");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().Verifygamestitles();
+	}
+	// C73 - Click on game tile
+
+	@Test(priority = 9)
+	public void C73_VerifygamesTilesclick() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Click on game tile");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().Verifygamestitlesclick();
+	}
 }
