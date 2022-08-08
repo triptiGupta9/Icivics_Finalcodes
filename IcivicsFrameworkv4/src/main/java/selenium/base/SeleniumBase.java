@@ -1965,6 +1965,7 @@ public class SeleniumBase extends Reporter implements Browser, Element {
 
 	public WebElement Verifylinks(WebElement element, String Expectedtext, String urlexpected, String expectedtitle)
 			throws IOException {
+		
 		verifyDisplayed(element);
 		verifyExactText(element, Expectedtext);
 		click(element);
@@ -1972,6 +1973,16 @@ public class SeleniumBase extends Reporter implements Browser, Element {
 		verifyTitle(expectedtitle);
 		return element;
 	}
+	
+	public WebElement Verifyexternallinks(WebElement element, String Expectedtext, String urlexpected, String expectedtitle)
+			throws IOException {
+		verifyDisplayed(element);
+		verifyExactText(element, Expectedtext);
+		verifyUrlOfThePage(urlexpected);
+		verifyTitle(expectedtitle);
+		return element;
+	}
+	
 
 	public WebElement getprop(String propname, String value) throws IOException {
 		return propElement(getPropfile(propname, value));

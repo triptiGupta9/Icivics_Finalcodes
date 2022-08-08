@@ -1,7 +1,6 @@
 package icivics_pages;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -31,13 +30,16 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	String url = "/games";
+	String URL;
 
 	@Given("Launch the icivics URL")
 	public MainsGamePage launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL + url);
+			URL = StageURL + url;
+			navigateto(URL);
 		} else {
-			navigateto(Stage1URL + url);
+			URL = StageURL + url;
+			navigateto(URL);
 		}
 		return this;
 
@@ -244,18 +246,44 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	public MainsGamePage Verifygamestitlesclick() throws IOException {
 
 		// Arguments war
-		WebElement awTilelist = getprop(gpropname2, "awElement");
-
-		awTilelist.click();
-		verifyDisplayed(getprop(gpropname2, "awheaderele"));
-		verifyExactText(getprop(gpropname2, "awElement"), getpropstring(gpropname2, "awText"));
-		verifyUrlOfThePage(getpropstring(gpropname2, "awgameUrL"));
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "awtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "awtileele"));
+		verifyExactText(getprop(gpropname2, "awheaderele"), getpropstring(gpropname2, "awheadertxt"));
+		verifyUrlOfThePage(getpropstring(gpropname2, "awUrL"));
 		verifyTitle(getpropstring(gpropname2, "awTitle"));
-		navigateto("https://staging.d9.icivics.org/games");
 		
+//		//Branches of Power
+//		navigateto(URL);
+//		scrollToTheGivenWebElement(getpropstring(gpropname2, "boptileele"));
+//		waitTime(2000);
+//		click(getprop(gpropname2, "boptileele"));
+//		verifyExactText(getprop(gpropname2, "bopheaderele"), getpropstring(gpropname2, "bopheadertxt"));
+//		verifyUrlOfThePage(getpropstring(gpropname2, "bopUrL"));
+//		verifyTitle(getpropstring(gpropname2, "bopTitle"));
+//		
+//		//Cast Your Vote
+//		navigateto(URL);
+//		scrollToTheGivenWebElement(getpropstring(gpropname2, "cyvtileele"));
+//		waitTime(2000);
+//		click(getprop(gpropname2, "cyvtileele"));
+//		verifyExactText(getprop(gpropname2, "cyvheaderele"), getpropstring(gpropname2, "cyvheadertxt"));
+//		verifyUrlOfThePage(getpropstring(gpropname2, "cyvUrL"));
+//		verifyTitle(getpropstring(gpropname2, "cyvTitle"));
+//		
+//		//Convene the Council
+//		navigateto(URL);
+//		scrollToTheGivenWebElement(getpropstring(gpropname2, "ctctileele"));
+//		waitTime(2000);
+//		click(getprop(gpropname2, "ctctileele"));
+//		verifyExactText(getprop(gpropname2, "ctcheaderele"), getpropstring(gpropname2, "ctcheadertxt"));
+//		verifyUrlOfThePage(getpropstring(gpropname2, "ctcUrL"));
+//		verifyTitle(getpropstring(gpropname2, "ctcTitle"));
 		
-
 		return this;
+		
+		
 	}
 
 	@Given("Verify Green tile with teacher links appears after all games")
