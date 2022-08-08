@@ -103,4 +103,29 @@ public class MainsGamePage_Test extends ProjectSpecificMethods {
 		extent.attachReporter(spark);
 		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().Verifygamestitlesclick();
 	}
+	// C73 - Teacher tile
+
+	@Test(priority = 10)
+	public void C73_Verifygreenteachertile() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Teacher tile");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.Verifygreentilewithteacherlink();
+	}
+	// C73 - Teacher tile teach button
+
+	@Test(priority = 11)
+	public void C73_Verifyteachbutton() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Teacher tile teach button");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().Verifyteachbuttonclick();
+	}
+	// C73 - Teacher tile
+
+	@Test(priority = 12)
+	public void C73_Verifygetstartedbutton() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Teacher tile");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).launchURL(). Verifygetstartedbuttonclick() ;
+	}
 }

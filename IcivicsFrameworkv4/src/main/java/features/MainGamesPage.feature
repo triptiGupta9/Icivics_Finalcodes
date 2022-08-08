@@ -32,4 +32,14 @@ Given  Verify Game tile appears for each game and Each tile contains Image Title
 Scenario: C73 - Game tiles click
 Given  Verify Click on game tile 
 
+Scenario: C73 - Teacher tile
+Given  Verify Green tile with teacher links appears after all games
+
+Scenario: C73 - Teacher tile teach button
+Given  Verify on clicking teach button goes to teachers
+
+Scenario: C73 - Teacher tile
+Given  Verify Click get started on teachers tile goes to getstarted
+
+
 

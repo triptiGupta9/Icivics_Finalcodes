@@ -1,5 +1,6 @@
 package icivics_pages;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -17,6 +18,7 @@ import projectSpecific.base.ProjectSpecificMethods;
 
 public class MainsGamePage extends ProjectSpecificMethods {
 	public String gpropname1 = "PlayHub/Maingamespage";
+	public String gpropname2 = "PlayHub/gametile";
 
 	public MainsGamePage(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
 			String Stage1URL) {
@@ -239,28 +241,70 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Click on game tile")
-	public MainsGamePage Verifygamestitlesclick() {
-		List<WebElement> Tilelist = driver.findElements(By.xpath("//div[@class='form-group']/descendant::h3"));
-		System.out.println(Tilelist.size());
-		for (int i = 0; i < Tilelist.size(); i++) {
+	public MainsGamePage Verifygamestitlesclick() throws IOException {
 
-			driver.navigate().to("https://staging.d9.icivics.org/games");
-			waitTime(5000);
-			Tilelist.get(i).click();
-			// String titlename = Tilelist.get(i).getText();
-			waitTime(3000);
-			String Currentpage = driver.getTitle();
-			System.out.println(Currentpage);
+		// Arguments war
+		WebElement awTilelist = getprop(gpropname2, "awElement");
 
-			if (driver.getTitle().equalsIgnoreCase(Currentpage)) {
+		awTilelist.click();
+		verifyDisplayed(getprop(gpropname2, "awheaderele"));
+		verifyExactText(getprop(gpropname2, "awElement"), getpropstring(gpropname2, "awText"));
+		verifyUrlOfThePage(getpropstring(gpropname2, "awgameUrL"));
+		verifyTitle(getpropstring(gpropname2, "awTitle"));
+		navigateto("https://staging.d9.icivics.org/games");
+		
+		
 
-				reportStep(driver.getTitle() + ":Name of each game", "Pass");
-				waitTime(3000);
+		return this;
+	}
 
-				System.out.println(driver.getTitle());
-			}
-
+	@Given("Verify Green tile with teacher links appears after all games")
+	public MainsGamePage Verifygreentilewithteacherlink() {
+		String greencolor = "rgba(0, 178, 124, 1)";
+		WebElement Teachertile = driver.findElement(By.xpath("//div[@class='teachers-callout-cta']"));
+		waitTime(3000);
+		Teachertile.click();
+		String cssvalue = Teachertile.getCssValue("background-color");
+		waitTime(3000);
+		System.out.println(cssvalue);
+		if (Teachertile.isDisplayed() && cssvalue.equals(greencolor)) {
+			reportStep(Teachertile.getText() + "Green Tile with teacher links display after all the games ", "Pass");
+		} else {
+			reportStep("Green Tile with teacher links do not display", "Fail");
 		}
+		return this;
+
+	}
+
+	@Given("Verify on clicking teach button goes to teachers")
+	public MainsGamePage Verifyteachbuttonclick() {
+		WebElement Teachbutton = driver.findElement(By.xpath("(//a[@class='btn btn-white'])[2]"));
+
+		if (Teachbutton.isDisplayed()) {
+			Teachbutton.click();
+			verifyTitle("Teachers | iCivics");
+			reportStep(driver.getTitle() + ":On clicking teach button it redirects to teacherspage successfully",
+					"Pass");
+		} else {
+			reportStep("On clicking teach button it will not redirects to teacherspage", "Pass");
+		}
+
+		return this;
+	}
+
+	@Given("Verify Click get started on teachers tile goes to getstarted")
+	public MainsGamePage Verifygetstartedbuttonclick() {
+		WebElement getstartedbutton = driver.findElement(By.xpath("(//a[@class='btn btn-white'])[3]"));
+
+		if (getstartedbutton.isDisplayed()) {
+			getstartedbutton.click();
+			verifyTitle("Get Started | iCivics");
+			reportStep(driver.getTitle() + ":On clicking teach button it redirects to teacherspage successfully",
+					"Pass");
+		} else {
+			reportStep("On clicking teach button it will not redirects to teacherspage", "Pass");
+		}
+
 		return this;
 	}
 
