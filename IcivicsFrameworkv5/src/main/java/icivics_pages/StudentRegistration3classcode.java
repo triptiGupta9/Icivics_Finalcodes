@@ -30,13 +30,15 @@ public class StudentRegistration3classcode extends ProjectSpecificMethods {
 	}
 
 	String url = "/user/register?role=student";
-	
+	String URL;
 	@Given("Launch the icivis Studentregistration email URL")
 	public StudentRegistration3classcode launchstudentURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
+			URL = StageURL + url;
+			navigateto(URL);
+		} else {
+			URL = Stage1URL + url;
+			navigateto(URL);
 		}
 		return this;
 	}

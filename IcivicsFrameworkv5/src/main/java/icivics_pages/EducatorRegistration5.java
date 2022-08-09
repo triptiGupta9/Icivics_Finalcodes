@@ -31,13 +31,16 @@ public class EducatorRegistration5 extends ProjectSpecificMethods {
 	}
 	
 	String url = "/user/register?role=teacher";
-
+	String URL;
+	
 	@Given("Launch the icivis educatorregistration URL")
 	public EducatorRegistration5 launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
+			URL = StageURL + url;
+			navigateto(URL);
+		} else {
+			URL = Stage1URL + url;
+			navigateto(URL);
 		}
 		return this;
 

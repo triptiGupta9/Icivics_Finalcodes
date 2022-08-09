@@ -36,4 +36,48 @@ public class ArgumentsWar_Test extends ProjectSpecificMethods {
 		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifylinkpopup();
 	}
 
+	// C83 - Game load
+	@Test(priority = 2)
+	public void C83_Verifygameload() throws IOException, InterruptedException {
+		node = test.createNode("C83 - Game load");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyload();
+	}
+	// C84 - Educator buttons
+
+	@Test(priority = 3)
+	public void C84_Verifyeducatorbutton() throws IOException, InterruptedException {
+		node = test.createNode("C84 - Educator buttons");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.verifydownloadteacherresourcesandassignbuttons();
+	}
+	// C85 - Educator buttons
+
+	@Test(priority = 4)
+	public void C85_Verifyeducatorbuttonforstudent() throws IOException, InterruptedException {
+		node = test.createNode("C85 - Educator buttons");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.verifydownloadteacherresourcesandassignbuttonsforstudent();
+	}
+	// C86 - Download teacher resources
+
+	@Test(priority = 5)
+	public void C86_Verifyteacherresourcespopup() throws IOException, InterruptedException {
+		node = test.createNode("C86 - Download teacher resources");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.verifydownloadteacherresourcesandassignclick();
+	}
+	// C87 - Assign button - no classes
+
+	@Test(priority = 6)
+	public void C87_Verifyassignpopup() throws IOException, InterruptedException {
+		node = test.createNode("C87 - Assign button - no classes");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyassignpopup();
+	}
+	
+
 }

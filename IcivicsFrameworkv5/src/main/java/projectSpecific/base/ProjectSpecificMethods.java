@@ -27,7 +27,7 @@ public class ProjectSpecificMethods extends SeleniumBase {
 		Environment = "Stage.d9";
 		
 		StageURL = "https://staging.d9.icivics.org";
-		Stage1URL = "https://staging.d11.icivics.org";
+		Stage1URL = "https://www.icivics.org";
 		
 		String browser = "chrome";
 		

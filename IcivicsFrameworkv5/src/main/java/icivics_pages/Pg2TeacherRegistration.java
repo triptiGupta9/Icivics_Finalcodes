@@ -31,13 +31,15 @@ public class Pg2TeacherRegistration extends ProjectSpecificMethods {
 	}
 
 	String url = "/user/login";
-
+	String URL;
 	@Given("Launch the icivis URL")
 	public Pg2TeacherRegistration launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL + url);
+			URL = StageURL + url;
+			navigateto(URL);
 		} else {
-			navigateto(Stage1URL + url);
+			URL = Stage1URL + url;
+			navigateto(URL);
 		}
 		return this;
 

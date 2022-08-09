@@ -19,7 +19,8 @@ public class HP_2HeaderPlay extends ProjectSpecificMethods {
 	public String gpropname2 = "Homepage/homepageteacherheader";
 	public String gpropname3 = "Homepage/homepageheaderplay";
 
-	public HP_2HeaderPlay(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL, String Stage1URL) {
+	public HP_2HeaderPlay(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
+			String Stage1URL) {
 		this.driver = driver;
 		this.node = node;
 		this.prop = prop;
@@ -27,18 +28,20 @@ public class HP_2HeaderPlay extends ProjectSpecificMethods {
 		this.StageURL = StageURL;
 		this.Stage1URL = Stage1URL;
 	}
-	
+
 	String url = "/games";
+	String URL;
 
 	@Given("Launch the icivics URL")
 	public HP_2HeaderPlay launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
+			URL = StageURL + url;
+			navigateto(URL);
+		} else {
+			URL = Stage1URL + url;
+			navigateto(URL);
 		}
 		return this;
-
 	}
 
 	@Then("Verify Click on play button at top play submenu open")
@@ -76,117 +79,109 @@ public class HP_2HeaderPlay extends ProjectSpecificMethods {
 
 		String propname = "Homepage/playdropdown";
 		String PlayButton = getPropfile(propname, "PlayButtonElement");
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 
 		// All Games
 		mouseOverAndClickAction(PlayButton);
 		Verifylinks(getprop(propname, "AllgamesElement"), getpropstring(propname, "AllgameText"),
-				getpropstring(propname, "AllgameUrL"), getpropstring(propname, "AllgameTitle"));
+				URL + getpropstring(propname, "AllgameUrL"), getpropstring(propname, "AllgameTitle"));
 
 		// cast your vote
 		mouseOverAndClickAction(PlayButton);
 		Verifylinks(getprop(propname, "cyvElement"), getpropstring(propname, "cyvText"),
-				getpropstring(propname, "cyvUrL"), getpropstring(propname, "cyvTitle"));
+				URL + getpropstring(propname, "cyvUrL"), getpropstring(propname, "cyvTitle"));
 		verifyPartialText(getprop(propname, "cyvheaderele"), getpropstring(propname, "cyvheader"));
 
 		// counties work Texas
 		mouseOverAndClickAction(PlayButton);
 		Verifylinks(getprop(propname, "cwtElement"), getpropstring(propname, "cwtText"),
-				getpropstring(propname, "cwtUrL"), getpropstring(propname, "cwtTitle"));
+				URL + getpropstring(propname, "cwtUrL"), getpropstring(propname, "cwtTitle"));
 		verifyPartialText(getprop(propname, "cwtheaderele"), getpropstring(propname, "cwtheader"));
 
 		// Execute Command
 		mouseOverAndClickAction(PlayButton);
-		Verifylinks(getprop(propname, "ecElement"), getpropstring(propname, "ecText"), getpropstring(propname, "ecUrL"),
-				getpropstring(propname, "ecTitle"));
+		Verifylinks(getprop(propname, "ecElement"), getpropstring(propname, "ecText"),
+				URL + getpropstring(propname, "ecUrL"), getpropstring(propname, "ecTitle"));
 		verifyPartialText(getprop(propname, "echeaderele"), getpropstring(propname, "echeader"));
 
 		// Lawcraft
 		mouseOverAndClickAction(PlayButton);
-		Verifylinks(getprop(propname, "lcElement"), getpropstring(propname, "lcText"), getpropstring(propname, "lcUrL"),
-				getpropstring(propname, "lcTitle"));
+		Verifylinks(getprop(propname, "lcElement"), getpropstring(propname, "lcText"),
+				URL + getpropstring(propname, "lcUrL"), getpropstring(propname, "lcTitle"));
 		verifyPartialText(getprop(propname, "lcheaderele"), getpropstring(propname, "lcheader"));
 
 		// Sortify:U.S.CITIZENSHIP
 		mouseOverAndClickAction(PlayButton);
-		Verifylinks(getprop(propname, "scElement"), getpropstring(propname, "scText"), getpropstring(propname, "scUrL"),
-				getpropstring(propname, "scTitle"));
+		Verifylinks(getprop(propname, "scElement"), getpropstring(propname, "scText"),
+				URL + getpropstring(propname, "scUrL"), getpropstring(propname, "scTitle"));
 		verifyPartialText(getprop(propname, "scheaderele"), getpropstring(propname, "scheader"));
 
 		// ARGUMENT WARS
 		mouseOverAndClickAction(PlayButton);
-		Verifylinks(getprop(propname, "awElement"), getpropstring(propname, "awText"), getpropstring(propname, "awUrL"),
-				getpropstring(propname, "awTitle"));
+		Verifylinks(getprop(propname, "awElement"), getpropstring(propname, "awText"),
+				URL + getpropstring(propname, "awUrL"), getpropstring(propname, "awTitle"));
 		verifyPartialText(getprop(propname, "awheaderele"), getpropstring(propname, "awheader"));
 
 		// Convene The Council
 		mouseOverAndClickAction(PlayButton);
 		Verifylinks(getprop(propname, "ctcElement"), getpropstring(propname, "ctcText"),
-				getpropstring(propname, "ctcUrL"), getpropstring(propname, "ctcTitle"));
+				URL + getpropstring(propname, "ctcUrL"), getpropstring(propname, "ctcTitle"));
 		verifyPartialText(getprop(propname, "ctcheaderele"), getpropstring(propname, "ctcheader"));
 
 		// Court Quest
 		mouseOverAndClickAction(PlayButton);
-		Verifylinks(getprop(propname, "cqElement"), getpropstring(propname, "cqText"), getpropstring(propname, "cqUrL"),
-				getpropstring(propname, "cqTitle"));
+		Verifylinks(getprop(propname, "cqElement"), getpropstring(propname, "cqText"),
+				URL + getpropstring(propname, "cqUrL"), getpropstring(propname, "cqTitle"));
 		verifyPartialText(getprop(propname, "cqheaderele"), getpropstring(propname, "cqheader"));
 
 		// Game Odyssey
 		mouseOverAndClickAction(PlayButton);
-		Verifylinks(getprop(propname, "goElement"), getpropstring(propname, "goText"), getpropstring(propname, "goUrL"),
-				getpropstring(propname, "goTitle"));
+		Verifylinks(getprop(propname, "goElement"), getpropstring(propname, "goText"),
+				URL + getpropstring(propname, "goUrL"), getpropstring(propname, "goTitle"));
 		verifyPartialText(getprop(propname, "goheaderele"), getpropstring(propname, "goheader"));
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 		waitTime(3000);
 
 		// newsfeeders defenders
 		mouseOverAndClickAction(PlayButton);
 		Verifylinks(getprop(propname, "nfdElement"), getpropstring(propname, "nfdText"),
-				getpropstring(propname, "nfdUrL"), getpropstring(propname, "nfdTitle"));
+				URL + getpropstring(propname, "nfdUrL"), getpropstring(propname, "nfdTitle"));
 		verifyPartialText(getprop(propname, "nfdheaderele"), getpropstring(propname, "nfdheader"));
 
 		// Win the white house
 		mouseOverAndClickAction(PlayButton);
 		Verifylinks(getprop(propname, "wtwhElement"), getpropstring(propname, "wtwhText"),
-				getpropstring(propname, "wtwhUrL"), getpropstring(propname, "wtwhTitle"));
+				URL + getpropstring(propname, "wtwhUrL"), getpropstring(propname, "wtwhTitle"));
 		verifyPartialText(getprop(propname, "wtwhheaderele"), getpropstring(propname, "wtwhheader"));
 
 		// Branches of Power
 		mouseOverAndClickAction(PlayButton);
 		Verifylinks(getprop(propname, "bopElement"), getpropstring(propname, "bopText"),
-				getpropstring(propname, "bopUrL"), getpropstring(propname, "bopTitle"));
+				URL + getpropstring(propname, "bopUrL"), getpropstring(propname, "bopTitle"));
 		verifyPartialText(getprop(propname, "bopheaderele"), getpropstring(propname, "bopheader"));
 
 		// Counties Work
 		mouseOverAndClickAction(PlayButton);
-		Verifylinks(getprop(propname, "cwElement"), getpropstring(propname, "cwText"), getpropstring(propname, "cwUrL"),
-				getpropstring(propname, "cwTitle"));
+		Verifylinks(getprop(propname, "cwElement"), getpropstring(propname, "cwText"),URL + getpropstring(propname, "cwUrL"),
+				 getpropstring(propname, "cwTitle"));
 		verifyPartialText(getprop(propname, "cwheaderele"), getpropstring(propname, "cwheader"));
 
 		// Do I have A Birth?
 		mouseOverAndClickAction(PlayButton);
-		Verifylinks(getprop(propname, "drElement"), getpropstring(propname, "drText"), getpropstring(propname, "drUrL"),
-				getpropstring(propname, "drTitle"));
+		Verifylinks(getprop(propname, "drElement"), getpropstring(propname, "drText"),URL + getpropstring(propname, "drUrL"),
+			 getpropstring(propname, "drTitle"));
 		verifyPartialText(getprop(propname, "drheaderele"), getpropstring(propname, "drheader"));
 
 		// Immigration Nation
 		mouseOverAndClickAction(PlayButton);
-		Verifylinks(getprop(propname, "inElement"), getpropstring(propname, "inText"), getpropstring(propname, "inUrL"),
-				getpropstring(propname, "inTitle"));
+		Verifylinks(getprop(propname, "inElement"), getpropstring(propname, "inText"), URL +getpropstring(propname, "inUrL"),
+				 getpropstring(propname, "inTitle"));
 		verifyPartialText(getprop(propname, "inheaderele"), getpropstring(propname, "inheader"));
 
 		// Race To Ratify
 		mouseOverAndClickAction(PlayButton);
 		Verifylinks(getprop(propname, "rtrElement"), getpropstring(propname, "rtrText"),
-				getpropstring(propname, "rtrUrL"), getpropstring(propname, "rtrTitle"));
+				URL + getpropstring(propname, "rtrUrL"), getpropstring(propname, "rtrTitle"));
 		verifyPartialText(getprop(propname, "rtrheaderele"), getpropstring(propname, "rtrheader"));
 
 		reportStep("All links in the play dropdown is verified sucessfully", "Pass");
@@ -196,13 +191,8 @@ public class HP_2HeaderPlay extends ProjectSpecificMethods {
 
 	@Given("Verify selected page is underlined")
 	public HP_2HeaderPlay verifyselectedoptionunderlined() {
-		
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+"/teachers");
-		}else {
-			navigateto(Stage1URL+"/teachers");
-		}
-		
+		navigateto(URL + "/teachers");
+
 		click(propElement(getPropfile(gpropname2, "Playbutton")));
 		waitTime(3000);
 		String locatorvalue = getPropfile(gpropname3, "Dropdownlist");
@@ -213,12 +203,12 @@ public class HP_2HeaderPlay extends ProjectSpecificMethods {
 			WebElement Options = propElement(getPropfile(gpropname3, "Dropdownlistplay"));
 			Options.click();
 			waitTime(3000);
-			String URL = driver.getCurrentUrl();
-			if (URL == StageURL+"/game-odyssey") {
-				navigateto(StageURL+url);
-			} else if(URL == Stage1URL+"/game-odyssey") {
-				navigateto(Stage1URL+url);
-			}else {
+			String currenturl = driver.getCurrentUrl();
+			navigateto(URL + "/game-odyssey");
+			if (currenturl == URL + "/game-odyssey") {
+				navigateto(URL + url);
+
+			} else {
 				click(propElement(getPropfile(gpropname2, "Playbutton")));
 				waitTime(3000);
 				WebElement options1 = propElement(getPropfile(gpropname3, "Dropdownplaylist"));
@@ -231,13 +221,9 @@ public class HP_2HeaderPlay extends ProjectSpecificMethods {
 				} else {
 					reportStep("Selected page is not underlined", "Fail");
 				}
-				
-				if (Environment.equals("Stage.d9")) {
-					navigateto(StageURL+"/teachers");
-				}else {
-					navigateto(Stage1URL+"/teachers");
-				}
-	
+
+				navigateto(URL + "/teachers");
+
 				click(propElement(getPropfile(gpropname2, "Playbutton")));
 				waitTime(3000);
 
