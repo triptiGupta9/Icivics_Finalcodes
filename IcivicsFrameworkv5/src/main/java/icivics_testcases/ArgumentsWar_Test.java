@@ -78,6 +78,22 @@ public class ArgumentsWar_Test extends ProjectSpecificMethods {
 		extent.attachReporter(spark);
 		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyassignpopup();
 	}
-	
+	// C93 - Extension pack section
+
+	@Test(priority = 6)
+	public void C93_Verifyextensionpack() throws IOException, InterruptedException {
+		node = test.createNode("C93 - Extension pack section");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyextensionpacklink();
+	}
+	// C94 - Link to extension pack
+
+	@Test(priority = 6)
+	public void C94_Verifyextensionpackclick() throws IOException, InterruptedException {
+		node = test.createNode("C94 - Link to extension pack");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.verifyextensionpacklinkclick();
+	}
 
 }

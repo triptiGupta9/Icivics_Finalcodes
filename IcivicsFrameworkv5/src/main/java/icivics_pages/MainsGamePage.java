@@ -245,112 +245,112 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	@Given("Verify Click on game tile")
 	public MainsGamePage Verifygamestitlesclick() throws IOException {
 
-//		// Arguments war
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "awtileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "awtileele"));
-//		verifyExactText(getprop(gpropname2, "awheaderele"), getpropstring(gpropname2, "awheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "awUrL"));
-//		verifyTitle(getpropstring(gpropname2, "awTitle"));
-//
-//		//Branches of Power
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "boptileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "boptileele"));
-//		verifyExactText(getprop(gpropname2, "bopheaderele"), getpropstring(gpropname2, "bopheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "bopUrL"));
-//		verifyTitle(getpropstring(gpropname2, "bopTitle"));
-//
-//		// Cast Your Vote
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "cyvtileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "cyvtileele"));
-//		verifyExactText(getprop(gpropname2, "cyvheaderele"), getpropstring(gpropname2, "cyvheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cyvUrL"));
-//		verifyTitle(getpropstring(gpropname2, "cyvTitle"));
-//
-//		// Convene the Council
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "ctctileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "ctctileele"));
-//		verifyExactText(getprop(gpropname2, "ctcheaderele"), getpropstring(gpropname2, "ctcheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "ctcUrL"));
-//		verifyTitle(getpropstring(gpropname2, "ctcTitle"));
-//
-//		// Counties Work
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "cwtileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "cwtileele"));
-//		verifyExactText(getprop(gpropname2, "cwheaderele"), getpropstring(gpropname2, "cwheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cwUrL"));
-//		verifyTitle(getpropstring(gpropname2, "cwTitle"));
-//
-//		// Counties Work/Texas
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "cwttileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "cwttileele"));
-//		verifyExactText(getprop(gpropname2, "cwtheaderele"), getpropstring(gpropname2, "cwtheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cwtUrL"));
-//		verifyTitle(getpropstring(gpropname2, "cwtTitle"));
-//
-//		// Court Quest
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "cqtileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "cqtileele"));
-//		verifyExactText(getprop(gpropname2, "cqheaderele"), getpropstring(gpropname2, "cqheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cqUrL"));
-//		verifyTitle(getpropstring(gpropname2, "cqTitle"));
-//
-//		// Do I have a Right
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "dihrtileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "dihrtileele"));
-//		verifyExactText(getprop(gpropname2, "dihrheaderele"), getpropstring(gpropname2, "dihrheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "dihrUrL"));
-//		verifyTitle(getpropstring(gpropname2, "dihrTitle"));
-//
-//		// Executive Command
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "ectileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "ectileele"));
-//		verifyExactText(getprop(gpropname2, "echeaderele"), getpropstring(gpropname2, "echeadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "ecUrL"));
-//		verifyTitle(getpropstring(gpropname2, "ecTitle"));
-//
-//		// Immigrationnation
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "intileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "intileele"));
-//		verifyExactText(getprop(gpropname2, "inheaderele"), getpropstring(gpropname2, "inheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "inUrL"));
-//		verifyTitle(getpropstring(gpropname2, "inTitle"));
-//
-//		// Lawcraft
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "lctileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "lctileele"));
-//		verifyExactText(getprop(gpropname2, "lcheaderele"), getpropstring(gpropname2, "lcheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "lcUrL"));
-//		verifyTitle(getpropstring(gpropname2, "lcTitle"));
-//		// NewsFeedDefenders
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "nfdtileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "nfdtileele"));
-//		verifyExactText(getprop(gpropname2, "nfdheaderele"), getpropstring(gpropname2, "nfdheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "nfdUrL"));
-//		verifyTitle(getpropstring(gpropname2, "nfdTitle"));
+		// Arguments war
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "awtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "awtileele"));
+		verifyExactText(getprop(gpropname2, "awheaderele"), getpropstring(gpropname2, "awheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "awUrL"));
+		verifyTitle(getpropstring(gpropname2, "awTitle"));
+
+		//Branches of Power
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "boptileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "boptileele"));
+		verifyExactText(getprop(gpropname2, "bopheaderele"), getpropstring(gpropname2, "bopheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "bopUrL"));
+		verifyTitle(getpropstring(gpropname2, "bopTitle"));
+
+		// Cast Your Vote
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "cyvtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "cyvtileele"));
+		verifyExactText(getprop(gpropname2, "cyvheaderele"), getpropstring(gpropname2, "cyvheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cyvUrL"));
+		verifyTitle(getpropstring(gpropname2, "cyvTitle"));
+
+		// Convene the Council
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "ctctileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "ctctileele"));
+		verifyExactText(getprop(gpropname2, "ctcheaderele"), getpropstring(gpropname2, "ctcheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "ctcUrL"));
+		verifyTitle(getpropstring(gpropname2, "ctcTitle"));
+
+		// Counties Work
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "cwtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "cwtileele"));
+		verifyExactText(getprop(gpropname2, "cwheaderele"), getpropstring(gpropname2, "cwheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cwUrL"));
+		verifyTitle(getpropstring(gpropname2, "cwTitle"));
+
+		// Counties Work/Texas
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "cwttileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "cwttileele"));
+		verifyExactText(getprop(gpropname2, "cwtheaderele"), getpropstring(gpropname2, "cwtheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cwtUrL"));
+		verifyTitle(getpropstring(gpropname2, "cwtTitle"));
+
+		// Court Quest
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "cqtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "cqtileele"));
+		verifyExactText(getprop(gpropname2, "cqheaderele"), getpropstring(gpropname2, "cqheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cqUrL"));
+		verifyTitle(getpropstring(gpropname2, "cqTitle"));
+
+		// Do I have a Right
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "dihrtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "dihrtileele"));
+		verifyExactText(getprop(gpropname2, "dihrheaderele"), getpropstring(gpropname2, "dihrheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "dihrUrL"));
+		verifyTitle(getpropstring(gpropname2, "dihrTitle"));
+
+		// Executive Command
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "ectileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "ectileele"));
+		verifyExactText(getprop(gpropname2, "echeaderele"), getpropstring(gpropname2, "echeadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "ecUrL"));
+		verifyTitle(getpropstring(gpropname2, "ecTitle"));
+
+		// Immigrationnation
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "intileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "intileele"));
+		verifyExactText(getprop(gpropname2, "inheaderele"), getpropstring(gpropname2, "inheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "inUrL"));
+		verifyTitle(getpropstring(gpropname2, "inTitle"));
+
+		// Lawcraft
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "lctileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "lctileele"));
+		verifyExactText(getprop(gpropname2, "lcheaderele"), getpropstring(gpropname2, "lcheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "lcUrL"));
+		verifyTitle(getpropstring(gpropname2, "lcTitle"));
+		// NewsFeedDefenders
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "nfdtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "nfdtileele"));
+		verifyExactText(getprop(gpropname2, "nfdheaderele"), getpropstring(gpropname2, "nfdheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "nfdUrL"));
+		verifyTitle(getpropstring(gpropname2, "nfdTitle"));
 		
 		// People'sPie
 		navigateto(URL);
@@ -361,33 +361,33 @@ public class MainsGamePage extends ProjectSpecificMethods {
 		verifyUrlOfThePage(URL + getpropstring(gpropname2, "ppUrL"));
 		verifyTitle(getpropstring(gpropname2, "ppTitle"));
 
-//		// Race to ratify
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "rtrtileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "rtrtileele"));
-//		verifyExactText(getprop(gpropname2, "rtrheaderele"), getpropstring(gpropname2, "rtrheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "rtrUrL"));
-//		verifyTitle(getpropstring(gpropname2, "rtrTitle"));
-//
-//		// Sortify:U.S.Citizenship
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "stileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "stileele"));
-//		verifyExactText(getprop(gpropname2, "sheaderele"), getpropstring(gpropname2, "sheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "sUrL"));
-//		verifyTitle(getpropstring(gpropname2, "sTitle"));
-//
-//
-//		// Win The White House
-//		navigateto(URL);
-//		scrollToTheGivenWebElement(getpropstring(gpropname2, "wtwhtileele"));
-//		waitTime(2000);
-//		click(getprop(gpropname2, "wtwhtileele"));
-//		verifyExactText(getprop(gpropname2, "wtwhheaderele"), getpropstring(gpropname2, "wtwhheadertxt"));
-//		verifyUrlOfThePage(URL + getpropstring(gpropname2, "wtwhUrL"));
-//		verifyTitle(getpropstring(gpropname2, "wtwhTitle"));
+		// Race to ratify
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "rtrtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "rtrtileele"));
+		verifyExactText(getprop(gpropname2, "rtrheaderele"), getpropstring(gpropname2, "rtrheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "rtrUrL"));
+		verifyTitle(getpropstring(gpropname2, "rtrTitle"));
+
+		// Sortify:U.S.Citizenship
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "stileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "stileele"));
+		verifyExactText(getprop(gpropname2, "sheaderele"), getpropstring(gpropname2, "sheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "sUrL"));
+		verifyTitle(getpropstring(gpropname2, "sTitle"));
+
+
+		// Win The White House
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "wtwhtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "wtwhtileele"));
+		verifyExactText(getprop(gpropname2, "wtwhheaderele"), getpropstring(gpropname2, "wtwhheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "wtwhUrL"));
+		verifyTitle(getpropstring(gpropname2, "wtwhTitle"));
 		
 		return this;
 

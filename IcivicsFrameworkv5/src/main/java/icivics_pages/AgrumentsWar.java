@@ -1,10 +1,13 @@
 package icivics_pages;
 
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -16,6 +19,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	public String gpropname1 = "PlayHub/Maingamespage";
 	public String gpropname2 = "PlayHub/gametile";
 	public String gpropname3 = "PlayHub/Argumentwars";
+
 	public AgrumentsWar(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
 			String Stage1URL) {
 		this.driver = driver;
@@ -61,11 +65,16 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 		reportStep("Popup dialog appears for leaderboard and achievements", "Pass");
 		return this;
 	}
+
 	@Given("Verify Game loads within iFrame")
 	public AgrumentsWar verifyload() {
-		WebElement loadtime = driver.findElement(By.xpath("//a[@id='clickToPlayBtn']"));
-		waitTime(9000);
-		loadtime.click();
+		
+		switchToFrame(0);
+		WebElement loadtime = driver.findElement(By.xpath("//a[@id='clickToPlayBtn']/i"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='clickToPlayBtn']/i")));
+		click(loadtime);
+		reportStep("Play button clicked", "Pass");
 		return this;
 	}
 
@@ -122,6 +131,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 		reportStep("Download teacher resources and assign buttons do not display for logged in as student", "Pass");
 		return this;
 	}
+
 	@Given("Verify click link to download teacher resources Popup dialog appears with links to teacher resources")
 	public AgrumentsWar verifydownloadteacherresourcesandassignclick() {
 		WebElement signinbutton = driver.findElement(By.xpath("(//span[@class='link-title'])[2]"));
@@ -139,21 +149,20 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 		waitTime(3000);
 		loginbutton.click();
 		waitTime(3000);
-		driver.navigate().to("https://staging.d9.icivics.org/games/argument-wars");
+		navigateto(URL);
 		waitTime(5000);
 		WebElement downloadteach = driver.findElement(By.xpath("//button[@id='dropdownMenu1']"));
 		waitTime(3000);
-		if(downloadteach.isDisplayed()) {
+		if (downloadteach.isDisplayed()) {
 			downloadteach.click();
 			waitTime(3000);
 			reportStep("Popup dialog display with links to teacher resources", "Pass");
-		}
-		else
-		{
+		} else {
 			reportStep("Popup dialog do not display with links to teacher resources", "Fail");
 		}
 		return this;
 	}
+
 	@Given("Verify click link to assign Popup dialog appears with message that the teacher has no classes")
 	public AgrumentsWar verifyassignpopup() {
 		WebElement signinbutton = driver.findElement(By.xpath("(//span[@class='link-title'])[2]"));
@@ -171,27 +180,54 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 		waitTime(3000);
 		loginbutton.click();
 		waitTime(3000);
-		driver.navigate().to("https://staging.d9.icivics.org/games/argument-wars");
+		navigateto(URL);
 		waitTime(5000);
 		WebElement assign = driver.findElement(By.xpath("//button[@class='button']"));
 		waitTime(3000);
-		if(assign.isDisplayed()) {
+		if (assign.isDisplayed()) {
 			assign.click();
 			waitTime(3000);
 			scrollToTheGivenWebElement(getPropfile(gpropname3, "noclasses"));
 			reportStep("Popup dialog display with links to teacher resources", "Pass");
-		}
-		else
-		{
+		} else {
 			reportStep("Popup dialog do not display with links to teacher resources", "Fail");
 		}
 		return this;
-	}	
-		
-	@Given("Verify Go to game page Extension pack link appears")	
+	}
+
+	@Given("Verify Go to game page Extension pack link appears")
 	public AgrumentsWar verifyextensionpacklink() {
+		WebElement extensionpack = driver.findElement(By.xpath("//a[text()='Extension Pack']"));
+		if (extensionpack.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "extensionpack"));
+			reportStep("extension pack link display", "Pass");
+		} else {
+			reportStep("extension pack link do not display", "Fail");
+		}
 		return this;
 	}
-		
+
+	@Given("Verify click link to extension pack Page goes to lesson plan containing game extension pack")
+	public AgrumentsWar verifyextensionpacklinkclick() {
+
+		WebElement extensionpack = driver.findElement(By.xpath("//a[text()='Extension Pack']"));
+
+		if (extensionpack.isDisplayed()) {
+			extensionpack.click();
+			waitTime(3000);
+			switchToWindow("Teaching Argument Wars - Supreme Court Simulation | iCivics");
+			waitTime(3000);
+
+			WebElement gameextensionpack = driver.findElement(By.xpath("//h4[@class='title']"));
+			if (gameextensionpack.isDisplayed()) {
+				reportStep("Page goes to lesson plan containing game's extension pack", "Pass");
+			} else {
+				reportStep("Page goes to lesson plan containing game's extension pack", "Fail");
+			}
+
+		}
+
+		return this;
+	}
 	
 }

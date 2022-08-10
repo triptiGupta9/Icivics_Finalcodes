@@ -42,6 +42,15 @@ Given Verify click link to Google play store Page goes to Google play store with
 Scenario: C93 - Extension pack section
 Given Verify Go to game page Extension pack link appears
 
+Scenario: C94 - Extension pack section
+Given Verify Go to game page, not logged in or logged in as a student Extension pack link DOES NOT appear
+
+Scenario: C95 - Link to extension pack
+Given Verify click link to extension pack Page goes to lesson plan containing game extension pack
+
+
+
+
 
 
 
