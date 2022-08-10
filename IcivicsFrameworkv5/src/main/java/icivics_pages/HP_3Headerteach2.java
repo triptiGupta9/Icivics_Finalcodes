@@ -29,13 +29,16 @@ public class HP_3Headerteach2 extends ProjectSpecificMethods {
 	}
 	
 	String url = "/teachers";
-
+	String URL;
+	
 	@Given("Launch the icivics URL")
 	public HP_3Headerteach2 launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
+			URL = StageURL+url;
+			navigateto(URL);
 		}else {
-			navigateto(Stage1URL+url);
+			URL = Stage1URL+url;
+			navigateto(URL);
 		}
 		return this;
 
@@ -155,7 +158,8 @@ public class HP_3Headerteach2 extends ProjectSpecificMethods {
 	@Then("Verify educatorcommunity page display with underlined")
 	public HP_3Headerteach2 verifytextisunderlined4() {
 
-		navigateto("https://staging.d9.icivics.org/teachers");
+		//navigateto("https://staging.d9.icivics.org/teachers");
+		navigateto(URL);
 		click(propElement(getPropfile(gpropname1, "Teachbutton")));
 		waitTime(3000);
 		mouseOverAction(getPropfile(gpropname4, "Eclink"));

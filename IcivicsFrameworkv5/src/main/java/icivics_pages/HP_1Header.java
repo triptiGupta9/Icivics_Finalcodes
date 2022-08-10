@@ -28,12 +28,16 @@ public class HP_1Header extends ProjectSpecificMethods {
 		this.Stage1URL = Stage1URL;
 	}
 
+	String URL;
+	
 	@Given("Launch the icivics URL")
 	public HP_1Header launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL);
+			URL = StageURL;
+			navigateto(URL);
 		}else {
-			navigateto(Stage1URL);
+			URL = Stage1URL;
+			navigateto(URL);
 		}
 		return this;
 
@@ -41,14 +45,8 @@ public class HP_1Header extends ProjectSpecificMethods {
 
 	@When("homepage is loaded successfully")
 	public HP_1Header verifyhomepage() {
-		if (Environment.equals("Stage.d9")) {
-			verifyUrl(StageURL);
+			verifyUrl(URL);
 			reportStep("URL Verified successfully", "Pass");
-		}else {
-			verifyUrl(Stage1URL);
-			reportStep("URL Verified successfully", "Pass");
-		}
-		
 		return this;
 	}
 

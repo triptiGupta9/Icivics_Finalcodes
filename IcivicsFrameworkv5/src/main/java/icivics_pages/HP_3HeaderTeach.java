@@ -29,13 +29,16 @@ public class HP_3HeaderTeach extends ProjectSpecificMethods {
 	}
 
 	String url = "/about";
+	String URL;
 	
 	@Given("Launch the icivics URL")
 	public HP_3HeaderTeach launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
+			URL = StageURL+url;
+			navigateto(URL);
 		}else {
-			navigateto(Stage1URL+url);
+			URL = Stage1URL+url;
+			navigateto(URL);
 		}
 		return this;
 
@@ -76,11 +79,7 @@ public class HP_3HeaderTeach extends ProjectSpecificMethods {
 	public HP_3HeaderTeach Teachbuttonelementsverification() throws IOException {
 		String propname = "Homepage/teachdropdown";
 		String TeachButton = getPropfile(propname, "TeachButtonElement");
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 
 		// Search Our Library
 		mouseOverAndClickAction(TeachButton);
@@ -114,11 +113,8 @@ public class HP_3HeaderTeach extends ProjectSpecificMethods {
 		verifyTitle(getpropstring(propname, "Community � iCivics"));
 
 		// FAQ
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+
+		navigateto(URL);
 		waitTime(3000);
 		mouseOverAndClickAction(TeachButton);
 		Verifylinks(getprop(propname, "faqElement"), getpropstring(propname, "faqText"),

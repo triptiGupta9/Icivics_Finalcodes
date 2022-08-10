@@ -31,13 +31,17 @@ public class HP_5HeaderSigninMisc extends ProjectSpecificMethods {
 		this.StageURL = StageURL;
 		this.Stage1URL = Stage1URL;
 	}
+	
+	String URL;
 
 	@Given("Launch the icivics URL")
 	public HP_5HeaderSigninMisc launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL);
+			URL = StageURL;
+			navigateto(URL);
 		}else {
-			navigateto(Stage1URL);
+			URL = Stage1URL;
+			navigateto(URL);
 		}
 		return this;
 
@@ -62,9 +66,9 @@ public class HP_5HeaderSigninMisc extends ProjectSpecificMethods {
 		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
 		donatebutton.click();
 		waitTime(3000);
-		String URL = driver.getCurrentUrl();
-		System.out.println(URL);
-		reportStep("'Donatebutton is clicked'" + "redirect to corresponding page" + driver.getCurrentUrl(), "Pass");
+		String currentURL = driver.getCurrentUrl();
+		System.out.println(currentURL);
+		reportStep("'Donatebutton is clicked'" + "redirect to corresponding page" + currentURL, "Pass");
 		return this;
 
 	}
@@ -87,9 +91,9 @@ public class HP_5HeaderSigninMisc extends ProjectSpecificMethods {
 		WebElement shopbutton = propElement(getPropfile(gpropname6, "shopbuttonele"));
 		shopbutton.click();
 		waitTime(3000);
-		String URL = driver.getCurrentUrl();
-		System.out.println(URL);
-		reportStep("'Shopbutton is clicked'" + "redirect to corresponding page" + driver.getCurrentUrl(), "Pass");
+		String currentURL = driver.getCurrentUrl();
+		System.out.println(currentURL);
+		reportStep("'Shopbutton is clicked'" + "redirect to corresponding page" + currentURL, "Pass");
 		return this;
 
 	}
@@ -137,11 +141,7 @@ public class HP_5HeaderSigninMisc extends ProjectSpecificMethods {
 	public HP_5HeaderSigninMisc Signinbuttonelementsverification() throws IOException {
 		String propname = "Homepage/signindropdown";
 		String SigninButton = getPropfile(propname, "SigninButtonElement");
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL);
-		}else {
-			navigateto(Stage1URL);
-		}
+		navigateto(URL);
 
 		// Signin
 		mouseOverAndClickAction(SigninButton);

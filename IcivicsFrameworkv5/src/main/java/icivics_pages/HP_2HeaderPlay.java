@@ -191,7 +191,12 @@ public class HP_2HeaderPlay extends ProjectSpecificMethods {
 
 	@Given("Verify selected page is underlined")
 	public HP_2HeaderPlay verifyselectedoptionunderlined() {
-		navigateto(URL + "/teachers");
+		if (Environment.equals("Stage.d9")) {
+			
+			navigateto(StageURL + "/teachers");
+		}else {
+			navigateto(Stage1URL + "/teachers");
+		}
 
 		click(propElement(getPropfile(gpropname2, "Playbutton")));
 		waitTime(3000);
@@ -222,7 +227,13 @@ public class HP_2HeaderPlay extends ProjectSpecificMethods {
 					reportStep("Selected page is not underlined", "Fail");
 				}
 
-				navigateto(URL + "/teachers");
+				if (Environment.equals("Stage.d9")) {
+					
+					navigateto(StageURL + "/teachers");
+				}else {
+					navigateto(Stage1URL + "/teachers");
+				}
+
 
 				click(propElement(getPropfile(gpropname2, "Playbutton")));
 				waitTime(3000);

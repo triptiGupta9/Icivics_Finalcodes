@@ -30,13 +30,16 @@ public class HP_1TeacherHeader extends ProjectSpecificMethods {
 	}
 	
 	String url = "/teachers";
+	String URL;
 
 	@Given("Launch the icivics URL")
 	public HP_1TeacherHeader launchteacherpageURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
+			URL = StageURL+url;
+			navigateto(URL);
 		}else {
-			navigateto(Stage1URL+url);
+			URL = Stage1URL+url;
+			navigateto(URL);
 		}
 		return this;
 

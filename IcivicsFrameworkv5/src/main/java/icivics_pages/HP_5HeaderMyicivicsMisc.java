@@ -32,13 +32,17 @@ public class HP_5HeaderMyicivicsMisc extends ProjectSpecificMethods {
 		this.StageURL = StageURL;
 		this.Stage1URL = Stage1URL;
 	}
+	
+	String URL;
 
 	@Given("Launch the icivics URL")
 	public HP_5HeaderMyicivicsMisc launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL);
+			URL = StageURL;
+			navigateto(URL);
 		}else {
-			navigateto(Stage1URL);
+			URL = Stage1URL;
+			navigateto(URL);
 		}
 		return this;
 
@@ -80,8 +84,8 @@ public class HP_5HeaderMyicivicsMisc extends ProjectSpecificMethods {
 		WebElement donatebutton = propElement(getPropfile(gpropname1, "Donatebutton"));
 		donatebutton.click();
 		waitTime(3000);
-		String URL = driver.getCurrentUrl();
-		System.out.println(URL);
+		String currentURL = driver.getCurrentUrl();
+		System.out.println(currentURL);
 		reportStep("'Donatebutton is clicked'" + "redirect to corresponding page" + driver.getCurrentUrl(), "Pass");
 		return this;
 
@@ -105,8 +109,8 @@ public class HP_5HeaderMyicivicsMisc extends ProjectSpecificMethods {
 		WebElement shopbutton = propElement(getPropfile(gpropname7, "Shopbutton"));
 		shopbutton.click();
 		waitTime(3000);
-		String URL = driver.getCurrentUrl();
-		System.out.println(URL);
+		String currentURL = driver.getCurrentUrl();
+		System.out.println(currentURL);
 		reportStep("'Shopbutton is clicked'" + "redirect to corresponding page" + driver.getCurrentUrl(), "Pass");
 		return this;
 
@@ -212,12 +216,8 @@ public class HP_5HeaderMyicivicsMisc extends ProjectSpecificMethods {
 	public HP_5HeaderMyicivicsMisc Myicivicsbuttonelementsverification() throws IOException {
 		String propname = "Homepage/myicivicsdropdown";
 		String MyicivicsButton = getPropfile(propname, "MyicivicsButtonElement");
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL);
-		}else {
-			navigateto(Stage1URL);
-		}
-
+		navigateto(URL);
+		
 		// MyIcivics
 		mouseOverAndClickAction(MyicivicsButton);
 		Verifylinks(getprop(propname, "MyicivicsElement"), getpropstring(propname, "MyicivicsText"),

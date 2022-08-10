@@ -32,13 +32,16 @@ public class HP_4HeaderAbout extends ProjectSpecificMethods {
 	
 	
 	String url = "/teachers";
+	String URL;
 
 	@Given(" Launch the icivics URL")
 	public HP_4HeaderAbout launchURL() {
 		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
+			URL = StageURL+url;
+			navigateto(URL);
 		}else {
-			navigateto(Stage1URL+url);
+			URL = Stage1URL+url;
+			navigateto(URL);
 		}
 		return this;
 
@@ -85,11 +88,7 @@ public class HP_4HeaderAbout extends ProjectSpecificMethods {
 	public HP_4HeaderAbout aboutbuttonelementsverification() throws IOException {
 		String propname = "Homepage/aboutdropdown";
 		String AboutButton = getPropfile(propname, "AboutButtonElement");
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 
 		// About iCivics
 		mouseOverAndClickAction(AboutButton);
@@ -101,62 +100,38 @@ public class HP_4HeaderAbout extends ProjectSpecificMethods {
 		mouseOverAndClickAction(AboutButton);
 		Verifylinks(getprop(propname, "wwaElement"), getpropstring(propname, "wwaText"),
 				getpropstring(propname, "wwaUrL"), getpropstring(propname, "wwaTitle"));
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 
 		// Our Strategy
 		mouseOverAndClickAction(AboutButton);
 		Verifylinks(getprop(propname, "osElement"), getpropstring(propname, "osText"), getpropstring(propname, "osUrL"),
 				getpropstring(propname, "osTitle"));
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 
 		// CivXNow
 		mouseOverAndClickAction(AboutButton);
 		Verifylinks(getprop(propname, "cxnElement"), getpropstring(propname, "cxnText"),
 				getpropstring(propname, "cxnUrL"), getpropstring(propname, "cxnTitle"));
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 
 		// Our Team
 		mouseOverAndClickAction(AboutButton);
 		Verifylinks(getprop(propname, "otElement"), getpropstring(propname, "otText"), getpropstring(propname, "otUrL"),
 				getpropstring(propname, "otTitle"));
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 
 		// Blog
 		mouseOverAndClickAction(AboutButton);
 		Verifylinks(getprop(propname, "blogElement"), getpropstring(propname, "blogText"),
 				getpropstring(propname, "blogUrL"), getpropstring(propname, "blogTitle"));
 		verifyPartialText(getprop(propname, "blogheaderele"), getpropstring(propname, "blogheader"));
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 
 		// Contact Us
 		mouseOverAndClickAction(AboutButton);
 		Verifylinks(getprop(propname, "cuElement"), getpropstring(propname, "cuText"), getpropstring(propname, "cuUrL"),
 				getpropstring(propname, "cuTitle"));
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL+url);
-		}else {
-			navigateto(Stage1URL+url);
-		}
+		navigateto(URL);
 
 		reportStep("All links in the About dropdown is verified sucessfully", "Pass");
 		return this;
