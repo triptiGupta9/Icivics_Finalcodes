@@ -3,10 +3,9 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="icivics_testcases.MainsGamePage_Test">
+      <class name="icivics_testcases.Gameload_Test">
         <methods>
           <include name="setUpClass"/>
-          <include name="C73_VerifygamesTilesclick"/>
           <include name="afterMethod"/>
           <include name="setValues"/>
           <include name="tearDownClass"/>
@@ -14,8 +13,9 @@
           <include name="beforeMethod"/>
           <include name="report"/>
           <include name="startReport"/>
+          <include name="C73_Verifymainsgamepage"/>
         </methods>
-      </class> <!-- icivics_testcases.MainsGamePage_Test -->
+      </class> <!-- icivics_testcases.Gameload_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
