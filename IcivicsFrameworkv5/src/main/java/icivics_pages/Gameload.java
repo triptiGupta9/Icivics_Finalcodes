@@ -49,13 +49,17 @@ public class Gameload extends ProjectSpecificMethods {
 	@Then("Verify Game loads for all the games within iFrame")
 	public Gameload verifygameload1() {
 
-		List<WebElement> list = driver.findElements(By.xpath("(//div[@class='square'])[" + i + "]"));
+		List<WebElement> list = driver.findElements(By.xpath("//div[@class='square']"));
 		int tile = list.size();
 		System.out.println(tile);
-		
-		for (int i = 0; i < list.size(); i++) {
-			list.get(i).click();
+
+		for (int i = 0; i < driver.findElements(By.xpath("(//div[@class='square'])/descendant::h3[" + i + "]"))
+				.size(); i++) {
+			List<WebElement> list1 = driver
+					.findElements(By.xpath("(//div[@class='square'])/descendant::h3[" + i + "]"));
+			list1.get(i).click();
 			waitTime(3000);
+			reportStep(list1.get(i) + "is clicked", "Pass");
 			switchToFrame(0);
 			WebElement loadtime = driver.findElement(By.xpath("//a[@id='clickToPlayBtn']/i"));
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
@@ -64,8 +68,8 @@ public class Gameload extends ProjectSpecificMethods {
 			reportStep("Play button clicked", "Pass");
 
 			driver.navigate().back();
-		
-			waitTime(3000);
+
+			break;
 		}
 		return this;
 

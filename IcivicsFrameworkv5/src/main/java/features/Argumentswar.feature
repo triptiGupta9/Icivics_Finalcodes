@@ -48,6 +48,14 @@ Given Verify Go to game page, not logged in or logged in as a student Extension 
 Scenario: C95 - Link to extension pack
 Given Verify click link to extension pack Page goes to lesson plan containing game extension pack
 
+Scenario: C96 - Learning objectives section
+Given Verify Go to game page Learning objectives section appears
+
+Scenario: C97 - Extension pack section
+Given Verify Go to game page not logged in Learning objectives section DOES NOT appear
+Then Verify Go to game page logged in as a student Learning objectives section DOES NOT appear
+
+
 
 
 
