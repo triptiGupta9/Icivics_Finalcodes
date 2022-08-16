@@ -47,9 +47,8 @@ public class MainsGamePage extends ProjectSpecificMethods {
 
 	@Then("Verify Game carousel appears with 5-6 games")
 	public MainsGamePage Verifygamecarousel() {
-		// String selector = "//div[@class='slider-title']/span";
 
-		List<WebElement> items = driver.findElements(By.xpath("//div[@class='slider-title']/span"));
+		List<WebElement> items = propElement1(getPropfile(gpropname1, "Items"));
 		waitTime(3000);
 		int itemslist = items.size();
 		System.out.println(itemslist);
@@ -65,7 +64,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 
 	@Given("Verify Carousel goes to previous game")
 	public MainsGamePage Verifyleftcarousel() {
-		WebElement leftcarousel = driver.findElement(By.xpath("//a[@class='left carousel-control']/span"));
+		WebElement leftcarousel = propElement(getPropfile(gpropname1, "LeftCarousel"));
 		reportStep("Before clicking game name ", "Pass");
 		if (leftcarousel.isDisplayed()) {
 			leftcarousel.click();
@@ -80,10 +79,10 @@ public class MainsGamePage extends ProjectSpecificMethods {
 
 	@Given("Carousel goes to next game")
 	public MainsGamePage Verifyrightcarousel() {
-		WebElement leftcarousel = driver.findElement(By.xpath("//a[@class='right carousel-control']/span"));
+		WebElement rightcarousel = propElement(getPropfile(gpropname1, "RightCarousel"));
 		reportStep("Before clicking game name ", "Pass");
-		if (leftcarousel.isDisplayed()) {
-			leftcarousel.click();
+		if (rightcarousel.isDisplayed()) {
+			rightcarousel.click();
 			waitTime(3000);
 			reportStep("After Clicking Carousel goes to next game successfully", "Pass");
 
@@ -96,7 +95,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	@Given("Game carousel dots")
 	public MainsGamePage Verifycarouseldots() {
 
-		List<WebElement> carouseldots = driver.findElements(By.xpath("//ol[@class='carousel-indicators']/li"));
+		List<WebElement> carouseldots = propElement1(getPropfile(gpropname1, "Carouseldots"));
 		int number = carouseldots.size();
 		System.out.println(number);
 		String Yellowcolor = "rgba(255, 208, 91, 1)";
@@ -125,7 +124,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 
 	@Given("Verify Carousel goes the 3rd game")
 	public MainsGamePage Verifycarouseldots3rdgame() {
-		List<WebElement> carouseldots = driver.findElements(By.xpath("//ol[@class='carousel-indicators']/li"));
+		List<WebElement> carouseldots = propElement1(getPropfile(gpropname1, "Carouseldots"));
 		int number = carouseldots.size();
 		String Yellowcolor = "rgba(255, 208, 91, 1)";
 
@@ -149,8 +148,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 
 	@Given("Verify Banner to register as a student appears")
 	public MainsGamePage Verifyregisterasastudentbanner() {
-		WebElement registerbanner = driver
-				.findElement(By.xpath("//div[@class='callout-banner register-student-banner callout-banner-blue']"));
+		WebElement registerbanner = propElement(getPropfile(gpropname1, "RegisterBanner"));
 		waitTime(3000);
 		if (registerbanner.isDisplayed()) {
 			registerbanner.click();
@@ -170,44 +168,91 @@ public class MainsGamePage extends ProjectSpecificMethods {
 		} else {
 			navigateto(Stage1URL + url);
 		}
-		WebElement signinwithgooglebutton = driver
-				.findElement(By.xpath("//img[@src='/themes/custom/refresh/images/google_signin.png']"));
+		WebElement signinwithgooglebutton = propElement(getPropfile(gpropname1, "Signin"));
 		signinwithgooglebutton.click();
 		waitTime(3000);
-		WebElement emailfield = driver.findElement(By.xpath("//input[@type='email']"));
+		WebElement emailfield = propElement(getPropfile(gpropname1, "Email"));
 		waitTime(3000);
 		emailfield.sendKeys("amatt.student1@gedu.demo.icivics.org");
 
-		WebElement nextbutton = driver.findElement(By.xpath("//span[text()='Next']"));
+		WebElement nextbutton = propElement(getPropfile(gpropname1, "Next"));
 		nextbutton.click();
 		waitTime(3000);
-		WebElement pwdfield = driver.findElement(By.xpath("//input[@type='password']"));
+		WebElement pwdfield = propElement(getPropfile(gpropname1, "Password"));
 
 		pwdfield.sendKeys("Freedom17@");
 		waitTime(3000);
-		WebElement nextbutton1 = driver.findElement(By.xpath("//span[text()='Next']"));
+		WebElement nextbutton1 = propElement(getPropfile(gpropname1, "Next1"));
 		nextbutton1.click();
-		String url1 = "/games";
-		if (Environment.equals("Stage.d9")) {
-			navigateto(StageURL + url1);
-		} else {
-			navigateto(Stage1URL + url1);
-		}
 		waitTime(3000);
 
-		reportStep("Banner to register as a student do not display", "Pass");
+		String url1 = "/games";
+		String URL;
+
+		if (Environment.equals("Stage.d9")) {
+			URL = StageURL + url1;
+			navigateto(URL);
+		} else {
+			URL = Stage1URL + url1;
+			navigateto(URL);
+		}
+
+		waitTime(3000);
+		scrollToTheGivenWebElement(getPropfile(gpropname1, "Dots"));
+		waitTime(3000);
+		reportStep("Banner to register as a student do not display for Students", "Pass");
 		return this;
 	}
 
 	@And("Verify when login as a teacher Banner to register as a student DOES NOT appear")
 	public MainsGamePage Verifyloginasteacherregisterasastudentbanner() {
+		String url = "/user/login";
+		if (Environment.equals("Stage.d9")) {
+			navigateto(StageURL + url);
+		} else {
+			navigateto(Stage1URL + url);
+		}
+		WebElement signinwithgooglebutton = propElement(getPropfile(gpropname1, "Signin"));
+		signinwithgooglebutton.click();
+		waitTime(3000);
+		WebElement emailfield = propElement(getPropfile(gpropname1, "Email"));
+		waitTime(3000);
+		emailfield.sendKeys("amatt.teacher26@gedu.demo.icivics.org");
+
+		WebElement nextbutton = propElement(getPropfile(gpropname1, "Next"));
+		nextbutton.click();
+		waitTime(3000);
+		WebElement pwdfield = propElement(getPropfile(gpropname1, "Password"));
+
+		pwdfield.sendKeys("Freedom17@");
+		waitTime(3000);
+		WebElement nextbutton1 = propElement(getPropfile(gpropname1, "Next1"));
+		nextbutton1.click();
+
+		String url1 = "/games";
+		String URL;
+
+		if (Environment.equals("Stage.d9")) {
+			URL = StageURL + url1;
+			navigateto(URL);
+		} else {
+			URL = Stage1URL + url1;
+			navigateto(URL);
+		}
+
+		waitTime(3000);
+		scrollToTheGivenWebElement(getPropfile(gpropname1, "Dots"));
+		waitTime(3000);
+
+		reportStep("Banner to register as a student do not display for Teachers", "Pass");
 		return this;
+
 	}
 
 	@Given("Verify Goes to link /user/register?role=student&email=1")
 	public MainsGamePage Verifylregisterbannerbuttonclick() {
 
-		WebElement registerbannerbutton = driver.findElement(By.xpath("(//a[@class='btn btn-white'])[1]"));
+		WebElement registerbannerbutton = propElement(getPropfile(gpropname1, "Registerbannerbutton"));
 		String parentWindow = driver.getWindowHandle();
 
 		if (registerbannerbutton.isDisplayed()) {
@@ -230,12 +275,11 @@ public class MainsGamePage extends ProjectSpecificMethods {
 
 	@Given("Verify Game tile appears for each game and Each tile contains Image Title of game Expected play time Short description")
 	public MainsGamePage Verifygamestitles() {
-		List<WebElement> Tilelist = driver
-				.findElements(By.xpath("//div[@class='form-group']/descendant::div[@class='square']"));
+		List<WebElement> Tilelist = propElement1(getPropfile(gpropname1, "Tilelist"));
 		System.out.println(Tilelist.size());
 		for (int i = 0; i < Tilelist.size(); i++) {
 			String Tilename = Tilelist.get(i).getText();
-
+		scrollToTheGivenWebElement(getPropfile(gpropname1, "Tilelist1"));
 			waitTime(3000);
 			reportStep(Tilename + ":Text of each game Tile", "Pass");
 		}
@@ -254,7 +298,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 		verifyUrlOfThePage(URL + getpropstring(gpropname2, "awUrL"));
 		verifyTitle(getpropstring(gpropname2, "awTitle"));
 
-		//Branches of Power
+		// Branches of Power
 		navigateto(URL);
 		scrollToTheGivenWebElement(getpropstring(gpropname2, "boptileele"));
 		waitTime(2000);
@@ -351,7 +395,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 		verifyExactText(getprop(gpropname2, "nfdheaderele"), getpropstring(gpropname2, "nfdheadertxt"));
 		verifyUrlOfThePage(URL + getpropstring(gpropname2, "nfdUrL"));
 		verifyTitle(getpropstring(gpropname2, "nfdTitle"));
-		
+
 		// People'sPie
 		navigateto(URL);
 		scrollToTheGivenWebElement(getpropstring(gpropname2, "pptileele"));
@@ -379,7 +423,6 @@ public class MainsGamePage extends ProjectSpecificMethods {
 		verifyUrlOfThePage(URL + getpropstring(gpropname2, "sUrL"));
 		verifyTitle(getpropstring(gpropname2, "sTitle"));
 
-
 		// Win The White House
 		navigateto(URL);
 		scrollToTheGivenWebElement(getpropstring(gpropname2, "wtwhtileele"));
@@ -388,7 +431,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 		verifyExactText(getprop(gpropname2, "wtwhheaderele"), getpropstring(gpropname2, "wtwhheadertxt"));
 		verifyUrlOfThePage(URL + getpropstring(gpropname2, "wtwhUrL"));
 		verifyTitle(getpropstring(gpropname2, "wtwhTitle"));
-		
+
 		return this;
 
 	}
@@ -396,7 +439,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	@Given("Verify Green tile with teacher links appears after all games")
 	public MainsGamePage Verifygreentilewithteacherlink() {
 		String greencolor = "rgba(0, 178, 124, 1)";
-		WebElement Teachertile = driver.findElement(By.xpath("//div[@class='teachers-callout-cta']"));
+		WebElement Teachertile = propElement(getPropfile(gpropname1, "Teachertile"));
 		waitTime(3000);
 		Teachertile.click();
 		String cssvalue = Teachertile.getCssValue("background-color");
@@ -413,7 +456,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 
 	@Given("Verify on clicking teach button goes to teachers")
 	public MainsGamePage Verifyteachbuttonclick() {
-		WebElement Teachbutton = driver.findElement(By.xpath("(//a[@class='btn btn-white'])[2]"));
+		WebElement Teachbutton = propElement(getPropfile(gpropname1, "Teacherbutton"));
 
 		if (Teachbutton.isDisplayed()) {
 			Teachbutton.click();
@@ -429,7 +472,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 
 	@Given("Verify Click get started on teachers tile goes to getstarted")
 	public MainsGamePage Verifygetstartedbuttonclick() {
-		WebElement getstartedbutton = driver.findElement(By.xpath("(//a[@class='btn btn-white'])[3]"));
+		WebElement getstartedbutton = propElement(getPropfile(gpropname1, "Getstartedbutton"));
 
 		if (getstartedbutton.isDisplayed()) {
 			getstartedbutton.click();

@@ -78,9 +78,18 @@ public class MainsGamePage_Test extends ProjectSpecificMethods {
 		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL)
 				.Verifyloginasastudentregisterasastudentbanner();
 	}
+	// C73 - Register banner logged in
+	@Test(priority = 7)
+	public void C73_Verifybannerasateacherlogin() throws IOException, InterruptedException {
+		node = test.createNode("C73 - Register banner logged in");
+		extent.attachReporter(spark);
+		new MainsGamePage(driver, node, prop, Environment, StageURL, Stage1URL).
+		Verifyloginasteacherregisterasastudentbanner();
+	}
+	
 	// C73 - Register banner button click
 
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void C73_Verifyregisterbuttonclick() throws IOException, InterruptedException {
 		node = test.createNode("C73 - Register banner button click");
 		extent.attachReporter(spark);
@@ -89,7 +98,7 @@ public class MainsGamePage_Test extends ProjectSpecificMethods {
 	}
 	// C73 - Game tiles
 
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void C73_VerifygamesTiles() throws IOException, InterruptedException {
 		node = test.createNode("C73 - Game tiles");
 		extent.attachReporter(spark);
@@ -97,7 +106,7 @@ public class MainsGamePage_Test extends ProjectSpecificMethods {
 	}
 	// C73 - Click on game tile
 
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void C73_VerifygamesTilesclick() throws IOException, InterruptedException {
 		node = test.createNode("C73 - Click on game tile");
 		extent.attachReporter(spark);
@@ -105,7 +114,7 @@ public class MainsGamePage_Test extends ProjectSpecificMethods {
 	}
 	// C73 - Teacher tile
 
-	@Test(priority = 10)
+	@Test(priority = 11)
 	public void C73_Verifygreenteachertile() throws IOException, InterruptedException {
 		node = test.createNode("C73 - Teacher tile");
 		extent.attachReporter(spark);
@@ -114,7 +123,7 @@ public class MainsGamePage_Test extends ProjectSpecificMethods {
 	}
 	// C73 - Teacher tile teach button
 
-	@Test(priority = 11)
+	@Test(priority = 12)
 	public void C73_Verifyteachbutton() throws IOException, InterruptedException {
 		node = test.createNode("C73 - Teacher tile teach button");
 		extent.attachReporter(spark);
@@ -122,7 +131,7 @@ public class MainsGamePage_Test extends ProjectSpecificMethods {
 	}
 	// C73 - Teacher tile
 
-	@Test(priority = 12)
+	@Test(priority = 13)
 	public void C73_Verifygetstartedbutton() throws IOException, InterruptedException {
 		node = test.createNode("C73 - Teacher tile");
 		extent.attachReporter(spark);
