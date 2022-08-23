@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Aug 16, 2022 08:30:15 PM</span></a>
+<a href="#"><span class="badge badge-primary">Aug 23, 2022 10:18:27 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,16 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -66,13 +76,804 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Venkat</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Smoke</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author="Venkat"
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">ArgumentsWar</p>
+            <p class="text-sm">
+              <span>10:18:27 PM</span> / <span>00:18:10:243</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">ArgumentsWar</h5>
+<span class='badge badge-success'>08.23.2022 10:18:27 PM</span>
+<span class='badge badge-danger'>08.23.2022 10:36:37 PM</span>
+<span class='badge badge-default'>00:18:10:243</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div>  <div class="mt-4">  <div class="accordion" role="tablist">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:20:019</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="2"><span>C81 - Link to Leaderboard and Achievements</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:18:50 PM</td>
+        <td>
+          Leaderboard and achievements link display
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.18_591089484.jpg' src="./../Screenshots/23-Aug-22/22.18_591089484.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:24:614</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="3"><span>C82 - Leaderboard and Achievements</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:19:16 PM</td>
+        <td>
+          Popup dialog appears for leaderboard and achievements
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.19_563643365.jpg' src="./../Screenshots/23-Aug-22/22.19_563643365.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:42:184</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="4"><span>C83 - Game load</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:19:59 PM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.19_777357059.jpg' src="./../Screenshots/23-Aug-22/22.19_777357059.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:20:00 PM</td>
+        <td>
+          Play button clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.20_901022309.jpg' src="./../Screenshots/23-Aug-22/22.20_901022309.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:51:341</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="5"><span>C84 - Educator buttons</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:20:52 PM</td>
+        <td>
+          Download teacher resources and assign buttons display
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.20_700196779.jpg' src="./../Screenshots/23-Aug-22/22.20_700196779.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:58:130</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="6"><span>C85 - Educator buttons</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:21:55 PM</td>
+        <td>
+          Download teacher resources and assign buttons do not display for logged in as student
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.21_888725722.jpg' src="./../Screenshots/23-Aug-22/22.21_888725722.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:51:218</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="7"><span>C86 - Download teacher resources</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:22:47 PM</td>
+        <td>
+          Popup dialog display with links to teacher resources
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.22_60543837.jpg' src="./../Screenshots/23-Aug-22/22.22_60543837.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li><span class='badge badge-default'>31:45:772</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="8"><span>C87 - Assign button - no classes</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:24:36 PM</td>
+        <td>
+          Popup dialog do not appears with message that the teacher has no classes
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.24_655963439.jpg' src="./../Screenshots/23-Aug-22/22.24_655963439.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>31:48:083</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="9"><span>C88 - Assign button</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:26:25 PM</td>
+        <td>
+          Popup dialog appears with message that the teacher has no classes
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.26_528741985.jpg' src="./../Screenshots/23-Aug-22/22.26_528741985.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li><span class='badge badge-default'>30:52:052</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="10"><span>C89 - Apple app store button</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:26:58 PM</td>
+        <td>
+          Appleapp do not display for Argument war game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.26_630267994.jpg' src="./../Screenshots/23-Aug-22/22.26_630267994.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:27:18 PM</td>
+        <td>
+          Apple App Store button display for Branch of Power game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.27_305781011.jpg' src="./../Screenshots/23-Aug-22/22.27_305781011.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:55:105</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="11"><span>C90 - Link to Apple app store</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:27:49 PM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.27_390403503.jpg' src="./../Screenshots/23-Aug-22/22.27_390403503.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:28:15 PM</td>
+        <td>
+          On clicking Apple app store  link Page goes to Apple app store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.28_455061900.jpg' src="./../Screenshots/23-Aug-22/22.28_455061900.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li><span class='badge badge-default'>30:54:787</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="12"><span>C91 - Google play store button</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:28:44 PM</td>
+        <td>
+          Googleplay store button do not display for Argument war game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.28_462957388.jpg' src="./../Screenshots/23-Aug-22/22.28_462957388.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:29:11 PM</td>
+        <td>
+          Googleplay Store button display for Branch of Power game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.29_826680144.jpg' src="./../Screenshots/23-Aug-22/22.29_826680144.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:42:356</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="13"><span>C93 - Extension pack section</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:29:54 PM</td>
+        <td>
+          Extension pack link display as a teacher login
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.29_239691480.jpg' src="./../Screenshots/23-Aug-22/22.29_239691480.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>31:09:431</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="14"><span>C93 - Extension pack section</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:31:05 PM</td>
+        <td>
+          Extension pack link do not display for sortifygame
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.31_892000723.jpg' src="./../Screenshots/23-Aug-22/22.31_892000723.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:16:436</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="15"><span>C94 - Extension pack section</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:31:23 PM</td>
+        <td>
+          Extension pack link do not display for an anonymous user
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.31_439473445.jpg' src="./../Screenshots/23-Aug-22/22.31_439473445.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:57:373</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="16"><span>C94 - Extension pack section</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:32:22 PM</td>
+        <td>
+          Extension pack link do not display for an Student
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.32_823545340.jpg' src="./../Screenshots/23-Aug-22/22.32_823545340.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>31:52:590</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="17"><span>C95 - Link to extension pack</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:34:16 PM</td>
+        <td>
+          Page goes to lesson plan containing game's extension pack
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.34_616577513.jpg' src="./../Screenshots/23-Aug-22/22.34_616577513.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>31:05:831</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="18"><span>C96 - Learning objectives section</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:35:23 PM</td>
+        <td>
+          Learning objectives section display
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.35_556678020.jpg' src="./../Screenshots/23-Aug-22/22.35_556678020.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:22:856</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="19"><span>C97 - Extension pack section</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:35:47 PM</td>
+        <td>
+          Learning objectives section do not display for anonymous user
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.35_198553142.jpg' src="./../Screenshots/23-Aug-22/22.35_198553142.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:49:453</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="20"><span>C97 - Extension pack section</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:36:37 PM</td>
+        <td>
+          Learning objectives section do not display for Student
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/23-Aug-22/22.36_270741601.jpg' src="./../Screenshots/23-Aug-22/22.36_270741601.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -82,18 +883,116 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">Smoke</p>
+<p class="duration text-sm">0 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Smoke</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:18:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>ArgumentsWar</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">Venkat</p>
+<p class="duration text-sm">0 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Venkat</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:18:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>ArgumentsWar</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Aug 16, 2022 08:30:15 PM</h3>
+<h3>Aug 23, 2022 10:18:27 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Aug 16, 2022 08:57:51 PM</h3>
+<h3>Aug 23, 2022 10:36:38 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -105,12 +1004,12 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-4">
 <div class="card">
 <div class="card-header">
 <h6 class="card-title">Tests</h6>
@@ -126,8 +1025,48 @@
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='100%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='84%'><b>16</b> steps passed</small></div>
+<div>
+<small data-tooltip='15%'><b>3</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='86%'><b>20</b> events passed</small></div>
+<div>
+<small data-tooltip='13%'><b>3</b> events failed,
+<b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -143,21 +1082,57 @@
 </div></div>
 <script>
 var timeline = {
+"ArgumentsWar":1090.243
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>Venkat</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>Smoke</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 </div>
 </div>
 <script>
 var statusGroup = {
 parentCount: 5,
 passParent: 0,
-failParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 0,
-failChild: 0,
+passChild: 16,
+failChild: 3,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
@@ -168,8 +1143,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 0,
-failEvents: 0,
+passEvents: 20,
+failEvents: 3,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

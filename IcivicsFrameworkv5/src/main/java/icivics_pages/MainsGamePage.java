@@ -53,7 +53,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 		int itemslist = items.size();
 		System.out.println(itemslist);
 		waitTime(3000);
-		for (int i = 0; i < itemslist; i++) {
+		for (int i = 0; i <items.size(); i++) {
 			String itemlist = items.get(i).getText();
 			waitTime(10000);
 			reportStep("verified that " + itemlist + " is present in carousel", "Pass");

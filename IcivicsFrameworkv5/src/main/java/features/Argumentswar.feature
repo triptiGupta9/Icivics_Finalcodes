@@ -32,7 +32,6 @@ Given Verify Apple App Store button appears
 Scenario: C90 - Link to Apple app store
 Given Verify click link to Apple app store Page goes to Apple app store with the correct game
 
-
 Scenario: C91 - Google play store button
 Given Verify Google Play Store button appears
 
@@ -43,8 +42,8 @@ Scenario: C93 - Extension pack section
 Given Verify Go to game page Extension pack link appears
 
 Scenario: C94 - Extension pack section
-Given Verify Go to game page, not logged in or logged in as a student Extension pack link DOES NOT appear
-
+Given Verify Go to game page not logged Extension pack link DOES NOT appear
+Then Verify logged in as a student Extension pack link DOES NOT appear
 Scenario: C95 - Link to extension pack
 Given Verify click link to extension pack Page goes to lesson plan containing game extension pack
 

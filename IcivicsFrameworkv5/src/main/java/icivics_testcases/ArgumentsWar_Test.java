@@ -78,17 +78,77 @@ public class ArgumentsWar_Test extends ProjectSpecificMethods {
 		extent.attachReporter(spark);
 		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyassignpopup();
 	}
+	// C88 - Assign button
+
+	@Test(priority = 7)
+	public void C88_Verifyassignform() throws IOException, InterruptedException {
+		node = test.createNode("C88 - Assign button");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyassignform();
+	}
+	// C89 - Apple app store button
+
+	@Test(priority = 8)
+	public void C89_Verifyappleapp() throws IOException, InterruptedException {
+		node = test.createNode("C89 - Apple app store button");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyappleapp();
+	}
+
+	// C90 - Link to Apple app store
+	@Test(priority = 9)
+	public void C90_Verifyappleapppage() throws IOException, InterruptedException {
+		node = test.createNode("C90 - Link to Apple app store");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyappleapppage();
+	}
+	// C91 - Google play store button
+
+	@Test(priority = 10)
+	public void C91_Verifygoogleplaybutton() throws IOException, InterruptedException {
+		node = test.createNode("C91 - Google play store button");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifygoogleplaybutton();
+	}
 	// C93 - Extension pack section
 
-	@Test(priority = 6)
+	@Test(priority = 11)
 	public void C93_Verifyextensionpack() throws IOException, InterruptedException {
 		node = test.createNode("C93 - Extension pack section");
 		extent.attachReporter(spark);
 		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyextensionpacklink();
 	}
+
+	// C93 - Extension pack section
+
+	@Test(priority = 12)
+	public void C93_Verifyextensionpackforsortifygame() throws IOException, InterruptedException {
+		node = test.createNode("C93 - Extension pack section");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.verifyextensionpacklinkforsortifygame();
+	}
+	// C94 - Extension pack section
+
+	@Test(priority = 13)
+	public void C94_Verifyextensionpackforanonymoususere() throws IOException, InterruptedException {
+		node = test.createNode("C94 - Extension pack section");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.verifyextensionpacklinkforanonymoususer();
+	}
+	// C94 - Extension pack section
+
+	@Test(priority = 14)
+	public void C94_Verifyextensionpackforstudent() throws IOException, InterruptedException {
+		node = test.createNode("C94 - Extension pack section");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL()
+				.verifyextensionpacklinkforastudent();
+	}
 	// C95 - Link to extension pack
 
-	@Test(priority = 6)
+	@Test(priority = 15)
 	public void C95_Verifyextensionpackclick() throws IOException, InterruptedException {
 		node = test.createNode("C95 - Link to extension pack");
 		extent.attachReporter(spark);
@@ -97,7 +157,7 @@ public class ArgumentsWar_Test extends ProjectSpecificMethods {
 	}
 	// C96 - Learning objectives section
 
-	@Test(priority = 7)
+	@Test(priority = 16)
 	public void C96_Verifylearningobjectives() throws IOException, InterruptedException {
 		node = test.createNode("C96 - Learning objectives section");
 		extent.attachReporter(spark);
@@ -106,7 +166,7 @@ public class ArgumentsWar_Test extends ProjectSpecificMethods {
 	}
 	// C97 - Extension pack section
 
-	@Test(priority = 8)
+	@Test(priority = 17)
 	public void C97_Verifylearningobjectivesforanonymoususer() throws IOException, InterruptedException {
 		node = test.createNode("C97 - Extension pack section");
 		extent.attachReporter(spark);
@@ -116,7 +176,7 @@ public class ArgumentsWar_Test extends ProjectSpecificMethods {
 
 	// C97 - Extension pack section
 
-	@Test(priority = 7)
+	@Test(priority = 18)
 	public void C97_Verifylearningobjectivesforstudent() throws IOException, InterruptedException {
 		node = test.createNode("C97 - Extension pack section");
 		extent.attachReporter(spark);
