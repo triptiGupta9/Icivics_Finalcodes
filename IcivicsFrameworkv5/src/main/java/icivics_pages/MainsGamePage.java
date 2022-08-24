@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -48,18 +49,19 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	@Then("Verify Game carousel appears with 5-6 games")
 	public MainsGamePage Verifygamecarousel() {
 
-		List<WebElement> items = propElement1(getPropfile(gpropname1, "Items"));
-		waitTime(3000);
-		int itemslist = items.size();
-		System.out.println(itemslist);
-		waitTime(3000);
-		for (int i = 0; i <items.size(); i++) {
-			String itemlist = items.get(i).getText();
-			waitTime(10000);
-			reportStep("verified that " + itemlist + " is present in carousel", "Pass");
+		List<WebElement> carouseldots = propElement1(getPropfile(gpropname1, "Carouseldots"));
+		int number = carouseldots.size();
+		System.out.println(number);
+
+		for (int i = 0; i < number; i++) {
+			carouseldots.get(i).click();
+			waitTime(3000);
+			reportStep("verified that game carousel display with 5-6 games", "Pass");
+
 		}
 
 		return this;
+
 	}
 
 	@Given("Verify Carousel goes to previous game")
@@ -278,8 +280,16 @@ public class MainsGamePage extends ProjectSpecificMethods {
 		List<WebElement> Tilelist = propElement1(getPropfile(gpropname1, "Tilelist"));
 		System.out.println(Tilelist.size());
 		for (int i = 0; i < Tilelist.size(); i++) {
+			WebElement Tilebox = Tilelist.get(i);
 			String Tilename = Tilelist.get(i).getText();
-		scrollToTheGivenWebElement(getPropfile(gpropname1, "Tilelist1"));
+			if (Tilename.contains("People's Pie")) {
+				reportStep(Tilename + ":Text of each game Tile", "Fail");
+				continue;
+
+			}
+			WebElement element = Tilebox;
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+
 			waitTime(3000);
 			reportStep(Tilename + ":Text of each game Tile", "Pass");
 		}
@@ -397,13 +407,15 @@ public class MainsGamePage extends ProjectSpecificMethods {
 		verifyTitle(getpropstring(gpropname2, "nfdTitle"));
 
 		// People'sPie
+		
 		navigateto(URL);
 		scrollToTheGivenWebElement(getpropstring(gpropname2, "pptileele"));
 		waitTime(2000);
-		click(getprop(gpropname2, "pptileele"));
+		reportStep( "People's Pie should not be included", "Fail");
+		/*click(getprop(gpropname2, "pptileele"));
 		verifyExactText(getprop(gpropname2, "ppheaderele"), getpropstring(gpropname2, "ppheadertxt"));
 		verifyUrlOfThePage(URL + getpropstring(gpropname2, "ppUrL"));
-		verifyTitle(getpropstring(gpropname2, "ppTitle"));
+		verifyTitle(getpropstring(gpropname2, "ppTitle"));*/
 
 		// Race to ratify
 		navigateto(URL);

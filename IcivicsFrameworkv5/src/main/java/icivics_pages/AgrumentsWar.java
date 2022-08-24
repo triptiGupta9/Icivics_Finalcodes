@@ -1,5 +1,6 @@
 package icivics_pages;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -18,6 +19,7 @@ import projectSpecific.base.ProjectSpecificMethods;
 public class AgrumentsWar extends ProjectSpecificMethods {
 	public String gpropname1 = "PlayHub/Maingamespage";
 	public String gpropname2 = "PlayHub/gametile";
+
 	public String gpropname3 = "PlayHub/Argumentwars";
 
 	public AgrumentsWar(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
@@ -242,27 +244,272 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Apple App Store button appears")
-	public AgrumentsWar verifyappleapp() {
+	public AgrumentsWar verifyappleapp() throws IOException {
+		// Arguments war
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "awtileele"));
+		waitTime(3000);
+		click(getprop(gpropname2, "awtileele"));
+		verifyExactText(getprop(gpropname2, "awheaderele"), getpropstring(gpropname2, "awheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "awUrL"));
+		verifyTitle(getpropstring(gpropname2, "awTitle"));
 		waitTime(3000);
 		scrollToTheGivenWebElement(getPropfile(gpropname3, "caseinclude"));
 		reportStep("Appleapp do not display for Argument war game", "Fail");
 		waitTime(3000);
-		WebElement playbutton = propElement(getPropfile(gpropname3, "Playbutton2"));
-		playbutton.click();
-		waitTime(3000);
-		WebElement branchofpower = propElement(getPropfile(gpropname3, "Branchofpower"));
-		branchofpower.click();
-		waitTime(3000);
+
+		// Branches of Power
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "boptileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "boptileele"));
+		verifyExactText(getprop(gpropname2, "bopheaderele"), getpropstring(gpropname2, "bopheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "bopUrL"));
+		verifyTitle(getpropstring(gpropname2, "bopTitle"));
 		WebElement appleapp = propElement(getPropfile(gpropname3, "Appleapp"));
 		waitTime(3000);
 		if (appleapp.isDisplayed()) {
 			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
-			reportStep("Apple App Store button display for Branch of Power game", "Pass");
+			reportStep("Apple App Store button display for game", "Pass");
 		} else {
 
 			reportStep("Apple App Store button do not display", "Fail");
 		}
+
+		// Cast Your Vote
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "cyvtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "cyvtileele"));
+		verifyExactText(getprop(gpropname2, "cyvheaderele"), getpropstring(gpropname2, "cyvheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cyvUrL"));
+		verifyTitle(getpropstring(gpropname2, "cyvTitle"));
+		WebElement appleapp1 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp1.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
+		// Convene the Council
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "ctctileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "ctctileele"));
+		verifyExactText(getprop(gpropname2, "ctcheaderele"), getpropstring(gpropname2, "ctcheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "ctcUrL"));
+		verifyTitle(getpropstring(gpropname2, "ctcTitle"));
+		WebElement appleapp2 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp2.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
+		// Counties Work
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "cwtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "cwtileele"));
+		verifyExactText(getprop(gpropname2, "cwheaderele"), getpropstring(gpropname2, "cwheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cwUrL"));
+		verifyTitle(getpropstring(gpropname2, "cwTitle"));
+		WebElement appleapp3 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp3.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
+		// Counties Work/Texas
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "cwttileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "cwttileele"));
+		verifyExactText(getprop(gpropname2, "cwtheaderele"), getpropstring(gpropname2, "cwtheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cwtUrL"));
+		verifyTitle(getpropstring(gpropname2, "cwtTitle"));
+		waitTime(3000);
+		scrollToTheGivenWebElement(getPropfile(gpropname3, "caseinclude"));
+		reportStep("Appleapp do not display for Counties Work game", "Fail");
+		waitTime(3000);
+
+		// Court Quest
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "cqtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "cqtileele"));
+		verifyExactText(getprop(gpropname2, "cqheaderele"), getpropstring(gpropname2, "cqheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "cqUrL"));
+		verifyTitle(getpropstring(gpropname2, "cqTitle"));
+		WebElement appleapp4 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp4.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
+		// Do I have a Right
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "dihrtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "dihrtileele"));
+		verifyExactText(getprop(gpropname2, "dihrheaderele"), getpropstring(gpropname2, "dihrheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "dihrUrL"));
+		verifyTitle(getpropstring(gpropname2, "dihrTitle"));
+		WebElement appleapp5 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp5.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
+		// Executive Command
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "ectileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "ectileele"));
+		verifyExactText(getprop(gpropname2, "echeaderele"), getpropstring(gpropname2, "echeadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "ecUrL"));
+		verifyTitle(getpropstring(gpropname2, "ecTitle"));
+		WebElement appleapp6 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp6.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
+		// Immigrationnation
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "intileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "intileele"));
+		verifyExactText(getprop(gpropname2, "inheaderele"), getpropstring(gpropname2, "inheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "inUrL"));
+		verifyTitle(getpropstring(gpropname2, "inTitle"));
+		WebElement appleapp7 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp7.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
+		// Lawcraft
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "lctileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "lctileele"));
+		verifyExactText(getprop(gpropname2, "lcheaderele"), getpropstring(gpropname2, "lcheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "lcUrL"));
+		verifyTitle(getpropstring(gpropname2, "lcTitle"));
+		waitTime(3000);
+		scrollToTheGivenWebElement(getPropfile(gpropname3, "caseinclude"));
+		reportStep("Appleapp do not display for Lawcraft game", "Fail");
+		waitTime(3000);
+
+		// NewsFeedDefenders
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "nfdtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "nfdtileele"));
+		verifyExactText(getprop(gpropname2, "nfdheaderele"), getpropstring(gpropname2, "nfdheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "nfdUrL"));
+		verifyTitle(getpropstring(gpropname2, "nfdTitle"));
+		WebElement appleapp8 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp8.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
+		// People'sPie
+
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "pptileele"));
+		waitTime(2000);
+		reportStep("People's Pie should not be included", "Fail");
+		/*
+		 * click(getprop(gpropname2, "pptileele")); verifyExactText(getprop(gpropname2,
+		 * "ppheaderele"), getpropstring(gpropname2, "ppheadertxt"));
+		 * verifyUrlOfThePage(URL + getpropstring(gpropname2, "ppUrL"));
+		 * verifyTitle(getpropstring(gpropname2, "ppTitle"));
+		 */
+
+		// Race to ratify
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "rtrtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "rtrtileele"));
+		verifyExactText(getprop(gpropname2, "rtrheaderele"), getpropstring(gpropname2, "rtrheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "rtrUrL"));
+		verifyTitle(getpropstring(gpropname2, "rtrTitle"));
+		WebElement appleapp9 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp9.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
+		// Sortify:U.S.Citizenship
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "stileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "stileele"));
+		verifyExactText(getprop(gpropname2, "sheaderele"), getpropstring(gpropname2, "sheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "sUrL"));
+		verifyTitle(getpropstring(gpropname2, "sTitle"));
+		waitTime(3000);
+		scrollToTheGivenWebElement(getPropfile(gpropname3, "caseinclude"));
+		reportStep("Appleapp do not display for Sortify game", "Fail");
+		waitTime(3000);
+
+		// Win The White House
+		navigateto(URL);
+		scrollToTheGivenWebElement(getpropstring(gpropname2, "wtwhtileele"));
+		waitTime(2000);
+		click(getprop(gpropname2, "wtwhtileele"));
+		verifyExactText(getprop(gpropname2, "wtwhheaderele"), getpropstring(gpropname2, "wtwhheadertxt"));
+		verifyUrlOfThePage(URL + getpropstring(gpropname2, "wtwhUrL"));
+		verifyTitle(getpropstring(gpropname2, "wtwhTitle"));
+		WebElement appleapp10 = propElement(getPropfile(gpropname3, "Appleapp"));
+		waitTime(3000);
+		if (appleapp10.isDisplayed()) {
+			scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
+			reportStep("Apple App Store button display for game", "Pass");
+		} else {
+
+			reportStep("Apple App Store button do not display", "Fail");
+		}
+
 		return this;
+
 	}
 
 	@Given("Verify click link to Apple app store Page goes to Apple app store with the correct game")
@@ -338,8 +585,6 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 		}
 		return this;
 	}
-
-
 
 	@Given("Verify Go to game page Extension pack link appears")
 	public AgrumentsWar verifyextensionpacklink() {

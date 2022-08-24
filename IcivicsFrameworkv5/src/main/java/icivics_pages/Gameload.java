@@ -53,13 +53,12 @@ public class Gameload extends ProjectSpecificMethods {
 		int tile = list.size();
 		System.out.println(tile);
 
-		for (int i = 0; i < driver.findElements(By.xpath("(//div[@class='square'])/descendant::h3[" + i + "]"))
-				.size(); i++) {
-			List<WebElement> list1 = driver
-					.findElements(By.xpath("(//div[@class='square'])/descendant::h3[" + i + "]"));
-			list1.get(i).click();
+		for(int i=0;i<tile;i++)
+		{
+			WebElement list1 = driver.findElement(By.xpath("(//div[@class='square'])/descendant::h3[" + i + "]"));
+			list1.click();
 			waitTime(3000);
-			reportStep(list1.get(i) + "is clicked", "Pass");
+			reportStep(list1 + "is clicked", "Pass");
 			switchToFrame(0);
 			WebElement loadtime = driver.findElement(By.xpath("//a[@id='clickToPlayBtn']/i"));
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
