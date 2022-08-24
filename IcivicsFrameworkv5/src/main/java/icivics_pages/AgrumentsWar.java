@@ -243,8 +243,18 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 		return this;
 	}
 
+	
 	@Given("Verify Apple App Store button appears")
 	public AgrumentsWar verifyappleapp() throws IOException {
+		String url = "/games";
+		String URL;{
+			if (Environment.equals("Stage.d9")) {
+				URL = StageURL + url;
+				navigateto(URL);
+			} else {
+				URL = Stage1URL + url;
+				navigateto(URL);
+			}
 		// Arguments war
 		navigateto(URL);
 		scrollToTheGivenWebElement(getpropstring(gpropname2, "awtileele"));
@@ -510,6 +520,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 
 		return this;
 
+	}
 	}
 
 	@Given("Verify click link to Apple app store Page goes to Apple app store with the correct game")
