@@ -5,13 +5,13 @@
     <classes>
       <class name="icivics_testcases.ArgumentsWar_Test">
         <methods>
-          <include name="C89_Verifyappleapp"/>
           <include name="setUpClass"/>
           <include name="afterMethod"/>
           <include name="tearDownClass"/>
           <include name="stopReport"/>
           <include name="beforeMethod"/>
           <include name="report"/>
+          <include name="C92_Verifygoogleplaypage"/>
           <include name="setValues"/>
           <include name="startReport"/>
         </methods>
