@@ -33,7 +33,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	String url = "/games";
 	String URL;
 
-	@Given("Launch the icivics URL")
+	@Given("Launch the icivis URL")
 	public MainsGamePage launchURL() {
 		if (Environment.equals("Stage.d9")) {
 			URL = StageURL + url;

@@ -110,6 +110,14 @@ public class ArgumentsWar_Test extends ProjectSpecificMethods {
 		extent.attachReporter(spark);
 		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifygoogleplaybutton();
 	}
+	// C92 - Link to Google play store
+
+	@Test(priority = 10)
+	public void C92_Verifygoogleplaypage() throws IOException, InterruptedException {
+		node = test.createNode("C92 - Link to Google play store");
+		extent.attachReporter(spark);
+		new AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifygoogleplaypage();
+	}
 	// C93 - Extension pack section
 
 	@Test(priority = 11)
