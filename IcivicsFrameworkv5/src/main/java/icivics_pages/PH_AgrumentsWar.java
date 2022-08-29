@@ -19,11 +19,10 @@ import projectSpecific.base.ProjectSpecificMethods;
 public class PH_AgrumentsWar extends ProjectSpecificMethods {
 	public String gpropname1 = "PlayHub/Maingamespage";
 	public String gpropname2 = "PlayHub/gametile";
-
 	public String gpropname3 = "PlayHub/Argumentwars";
 
-	public PH_AgrumentsWar(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
-			String Stage1URL) {
+	public PH_AgrumentsWar(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment,
+			String StageURL, String Stage1URL) {
 		this.driver = driver;
 		this.node = node;
 		this.prop = prop;
@@ -197,13 +196,13 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 		WebElement assign = propElement(getPropfile(gpropname3, "Assignbutton"));
 		assign.click();
 		waitTime(7000);
-		WebElement createassignment = propElement(getPropfile(gpropname3, "Createassignmentlink"));
+		WebElement noclasses = propElement(getPropfile(gpropname3, "NoClasses"));
 		waitTime(3000);
-		if (createassignment.isDisplayed()) {
+		if (noclasses.isDisplayed()) {
 			waitTime(3000);
-			reportStep("Popup dialog do not appears with message that the teacher has no classes", "Fail");
-		} else {
 			reportStep("Popup dialog appears with message that the teacher has no classes", "Pass");
+		} else {
+			reportStep("Popup dialog do not appears with message that the teacher has no classes", "Fail");
 
 		}
 		return this;
@@ -211,23 +210,42 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 
 	@Given("Verify click link to assign Popup dialog appears with form to assign the game")
 	public PH_AgrumentsWar verifyassignform() {
-		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
-		signinbutton.click();
-		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
-		signinlink.click();
-		WebElement username = propElement(getPropfile(gpropname3, "Username"));
+		String url = "/user/login";
+		if (Environment.equals("Stage.d9")) {
+			navigateto(StageURL + url);
+		} else {
+			navigateto(Stage1URL + url);
+		}
+		waitTime(2000);
+		WebElement signinwithgooglebutton = propElement(getPropfile(gpropname1, "Signin"));
+		signinwithgooglebutton.click();
 		waitTime(3000);
-		username.sendKeys("Bronze Speaker 1r4e");
-		WebElement password = propElement(getPropfile(gpropname3, "Password"));
+		WebElement emailfield = propElement(getPropfile(gpropname1, "Email"));
 		waitTime(3000);
-		password.sendKeys("i898qrCiPK9Hwgb");
+		emailfield.sendKeys("amatt.teacher24@gedu.demo.icivics.org");
 		waitTime(3000);
-		WebElement loginbutton = propElement(getPropfile(gpropname3, "Loginbutton"));
+		WebElement nextbutton = propElement(getPropfile(gpropname1, "Next"));
+		nextbutton.click();
 		waitTime(3000);
-		loginbutton.click();
+		WebElement pwdfield = propElement(getPropfile(gpropname1, "Password"));
 		waitTime(3000);
-		navigateto(URL);
-		waitTime(5000);
+		pwdfield.sendKeys("Freedom17@");
+		waitTime(3000);
+		WebElement nextbutton1 = propElement(getPropfile(gpropname1, "Next1"));
+		nextbutton1.click();
+		waitTime(3000);
+		String url1 = "/games/argument-wars";
+		String URL;
+
+		if (Environment.equals("Stage.d9")) {
+			URL = StageURL + url1;
+			navigateto(URL);
+		} else {
+			URL = Stage1URL + url1;
+			navigateto(URL);
+		}
+		waitTime(3000);
+
 		WebElement assign = propElement(getPropfile(gpropname3, "Assignbutton"));
 		assign.click();
 		waitTime(7000);
@@ -1190,7 +1208,6 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 		waitTime(5000);
 		scrollToTheGivenWebElement(getPropfile(gpropname3, "Areueducator"));
 		reportStep("Googleplay store button do not display for Counties Work game", "Fail");
-		
 
 		// Court Quest
 		navigateto(URL);
@@ -1537,7 +1554,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 		if (learningobj.isDisplayed()) {
 			learningobj.click();
 			waitTime(3000);
-			reportStep("Learning objectives section display", "Pass");
+			reportStep("Learning objectives section display for teacher", "Pass");
 		} else {
 			reportStep("Learning objectives section do not display", "Fail");
 		}

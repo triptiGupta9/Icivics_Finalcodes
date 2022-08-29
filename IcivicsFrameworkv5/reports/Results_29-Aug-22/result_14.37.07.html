@@ -1,0 +1,943 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>ICIVICS TEST REPORT</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">ICIVICS AUTOMATION DASHBOARD</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Aug 29, 2022 02:37:07 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Venkat</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Smoke</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author="Venkat"
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">Mainsgamepage</p>
+            <p class="text-sm">
+              <span>2:37:07 PM</span> / <span>00:02:46:625</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Mainsgamepage</h5>
+<span class='badge badge-success'>08.29.2022 2:37:07 PM</span>
+<span class='badge badge-danger'>08.29.2022 2:39:54 PM</span>
+<span class='badge badge-default'>00:02:46:625</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div>  <div class="mt-4">  <div class="accordion" role="tablist">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li><span class='badge badge-default'>32:44:324</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="2"><span>C73 - Click on game tile</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:37:25 PM</td>
+        <td>
+          The Element Argument Wars clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.37_695322768.jpg' src="./../Screenshots/29-Aug-22/14.37_695322768.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:37:25 PM</td>
+        <td>
+          The expected text contains the actual Argument Wars
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.37_559810635.jpg' src="./../Screenshots/29-Aug-22/14.37_559810635.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:37:26 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/argument-wars url as same as the https://staging.d9.icivics.org/games/argument-wars actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.37_235350827.jpg' src="./../Screenshots/29-Aug-22/14.37_235350827.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:37:36 PM</td>
+        <td>
+          The Element Branches of Power clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.37_536401291.jpg' src="./../Screenshots/29-Aug-22/14.37_536401291.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:37:37 PM</td>
+        <td>
+          The expected text contains the actual Branches of Power
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.37_858947268.jpg' src="./../Screenshots/29-Aug-22/14.37_858947268.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:37:37 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/branches-power url as same as the https://staging.d9.icivics.org/games/branches-power actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.37_242180870.jpg' src="./../Screenshots/29-Aug-22/14.37_242180870.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:37:47 PM</td>
+        <td>
+          The Element Cast Your Vote clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.37_259209366.jpg' src="./../Screenshots/29-Aug-22/14.37_259209366.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:37:48 PM</td>
+        <td>
+          The expected text contains the actual Cast Your Vote
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.37_195605412.jpg' src="./../Screenshots/29-Aug-22/14.37_195605412.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:37:48 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/cast-your-vote url as same as the https://staging.d9.icivics.org/games/cast-your-vote actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.37_306041770.jpg' src="./../Screenshots/29-Aug-22/14.37_306041770.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:01 PM</td>
+        <td>
+          The Element Convene the Council clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_383360088.jpg' src="./../Screenshots/29-Aug-22/14.38_383360088.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:02 PM</td>
+        <td>
+          The expected text contains the actual Convene the Council
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_376372000.jpg' src="./../Screenshots/29-Aug-22/14.38_376372000.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:02 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/convene-council url as same as the https://staging.d9.icivics.org/games/convene-council actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_824238791.jpg' src="./../Screenshots/29-Aug-22/14.38_824238791.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:10 PM</td>
+        <td>
+          The Element Counties Work clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_656196352.jpg' src="./../Screenshots/29-Aug-22/14.38_656196352.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:10 PM</td>
+        <td>
+          The expected text contains the actual Counties Work
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_145492182.jpg' src="./../Screenshots/29-Aug-22/14.38_145492182.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:11 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/counties-work url as same as the https://staging.d9.icivics.org/games/counties-work actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_530951577.jpg' src="./../Screenshots/29-Aug-22/14.38_530951577.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:23 PM</td>
+        <td>
+          The Element Counties Work: Texas clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_81744454.jpg' src="./../Screenshots/29-Aug-22/14.38_81744454.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:23 PM</td>
+        <td>
+          The expected text contains the actual Counties Work: Texas
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_330222841.jpg' src="./../Screenshots/29-Aug-22/14.38_330222841.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:23 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/counties-work-texas url as same as the https://staging.d9.icivics.org/games/counties-work-texas actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_664458244.jpg' src="./../Screenshots/29-Aug-22/14.38_664458244.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:36 PM</td>
+        <td>
+          The Element Court Quest clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_843052070.jpg' src="./../Screenshots/29-Aug-22/14.38_843052070.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:37 PM</td>
+        <td>
+          The expected text contains the actual Court Quest
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_895977881.jpg' src="./../Screenshots/29-Aug-22/14.38_895977881.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:37 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/court-quest url as same as the https://staging.d9.icivics.org/games/court-quest actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_843857189.jpg' src="./../Screenshots/29-Aug-22/14.38_843857189.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:47 PM</td>
+        <td>
+          The Element Do I Have a Right? clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_585561630.jpg' src="./../Screenshots/29-Aug-22/14.38_585561630.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:47 PM</td>
+        <td>
+          The expected text contains the actual Do I Have a Right?
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_578027151.jpg' src="./../Screenshots/29-Aug-22/14.38_578027151.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:47 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/do-i-have-right url as same as the https://staging.d9.icivics.org/games/do-i-have-right actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_256246505.jpg' src="./../Screenshots/29-Aug-22/14.38_256246505.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:55 PM</td>
+        <td>
+          The Element Executive Command clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_626500981.jpg' src="./../Screenshots/29-Aug-22/14.38_626500981.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:55 PM</td>
+        <td>
+          The expected text contains the actual Executive Command
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_828162002.jpg' src="./../Screenshots/29-Aug-22/14.38_828162002.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:38:55 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/executive-command url as same as the https://staging.d9.icivics.org/games/executive-command actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.38_665010424.jpg' src="./../Screenshots/29-Aug-22/14.38_665010424.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:03 PM</td>
+        <td>
+          The Element Immigration Nation clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_314865031.jpg' src="./../Screenshots/29-Aug-22/14.39_314865031.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:03 PM</td>
+        <td>
+          The expected text contains the actual Immigration Nation
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_535170887.jpg' src="./../Screenshots/29-Aug-22/14.39_535170887.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:04 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/immigration-nation url as same as the https://staging.d9.icivics.org/games/immigration-nation actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_179823069.jpg' src="./../Screenshots/29-Aug-22/14.39_179823069.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:15 PM</td>
+        <td>
+          The Element LawCraft clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_69309825.jpg' src="./../Screenshots/29-Aug-22/14.39_69309825.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:16 PM</td>
+        <td>
+          The expected text contains the actual LawCraft
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_237293508.jpg' src="./../Screenshots/29-Aug-22/14.39_237293508.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:16 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/lawcraft url as same as the https://staging.d9.icivics.org/games/lawcraft actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_740954139.jpg' src="./../Screenshots/29-Aug-22/14.39_740954139.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:23 PM</td>
+        <td>
+          The Element NewsFeed Defenders clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_819073622.jpg' src="./../Screenshots/29-Aug-22/14.39_819073622.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:23 PM</td>
+        <td>
+          The expected text contains the actual NewsFeed Defenders
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_19450936.jpg' src="./../Screenshots/29-Aug-22/14.39_19450936.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:23 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/newsfeed-defenders url as same as the https://staging.d9.icivics.org/games/newsfeed-defenders actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_191022003.jpg' src="./../Screenshots/29-Aug-22/14.39_191022003.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:39:28 PM</td>
+        <td>
+          People's Pie should not be included
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_475522098.jpg' src="./../Screenshots/29-Aug-22/14.39_475522098.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:35 PM</td>
+        <td>
+          The Element Race to Ratify clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_292541895.jpg' src="./../Screenshots/29-Aug-22/14.39_292541895.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:36 PM</td>
+        <td>
+          The expected text contains the actual Race to Ratify
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_38969455.jpg' src="./../Screenshots/29-Aug-22/14.39_38969455.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:36 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/race-ratify url as same as the https://staging.d9.icivics.org/games/race-ratify actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_791588854.jpg' src="./../Screenshots/29-Aug-22/14.39_791588854.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:46 PM</td>
+        <td>
+          The Element Sortify: U.S. Citizenship clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_538632360.jpg' src="./../Screenshots/29-Aug-22/14.39_538632360.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:46 PM</td>
+        <td>
+          The expected text contains the actual Sortify: U.S. Citizenship
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_227008269.jpg' src="./../Screenshots/29-Aug-22/14.39_227008269.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:46 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/sortify-us-citizenship url as same as the https://staging.d9.icivics.org/games/sortify-us-citizenship actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_235495457.jpg' src="./../Screenshots/29-Aug-22/14.39_235495457.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:53 PM</td>
+        <td>
+          The Element Win the White House clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_330467134.jpg' src="./../Screenshots/29-Aug-22/14.39_330467134.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:53 PM</td>
+        <td>
+          The expected text contains the actual Win the White House
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_284054344.jpg' src="./../Screenshots/29-Aug-22/14.39_284054344.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:54 PM</td>
+        <td>
+          The expected https://staging.d9.icivics.org/games/win-white-house url as same as the https://staging.d9.icivics.org/games/win-white-house actual url.
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/29-Aug-22/14.39_639831373.jpg' src="./../Screenshots/29-Aug-22/14.39_639831373.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">Smoke</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Smoke</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:37:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Mainsgamepage</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">Venkat</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Venkat</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:37:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Mainsgamepage</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Aug 29, 2022 02:37:07 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Aug 29, 2022 02:39:54 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
+<div>
+<small data-tooltip='100%'><b>1</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='97%'><b>45</b> events passed</small></div>
+<div>
+<small data-tooltip='2%'><b>1</b> events failed,
+<b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Mainsgamepage":166.625
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>Venkat</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>Smoke</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 1,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 45,
+failEvents: 1,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 0
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

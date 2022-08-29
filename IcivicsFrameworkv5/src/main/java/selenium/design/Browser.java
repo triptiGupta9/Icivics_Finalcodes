@@ -1,5 +1,6 @@
 package selenium.design;
 
+import java.awt.AWTException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.List;
@@ -188,6 +189,10 @@ public interface Browser {
 	public RemoteWebDriver navigateto(String url);
 
 	public RemoteWebDriver startApp1(String browser);
+
+	public void zoomout() throws IOException, AWTException;
+
+	public void zoomin() throws IOException, AWTException;
 
 	
 }

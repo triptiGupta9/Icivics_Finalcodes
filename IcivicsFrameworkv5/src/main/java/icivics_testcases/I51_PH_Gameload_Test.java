@@ -1,5 +1,6 @@
 package icivics_testcases;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.annotations.BeforeTest;
@@ -23,7 +24,7 @@ public class I51_PH_Gameload_Test extends ProjectSpecificMethods {
 
 
 	@Test(priority = 0)
-	public void C73_Verifymainsgamepage() throws IOException, InterruptedException {
+	public void C73_Verifymainsgamepage() throws IOException, InterruptedException, AWTException {
 		node = test.createNode("C83-Game load");
 		extent.attachReporter(spark);
 		new PH_Gameload(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifygameload1();

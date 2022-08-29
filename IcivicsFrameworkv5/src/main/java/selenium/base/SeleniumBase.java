@@ -1,5 +1,8 @@
 package selenium.base;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -2044,4 +2047,30 @@ public class SeleniumBase extends Reporter implements Browser, Element {
 	
 		return null;
 	}
+	@Override
+	public void zoomout() throws IOException, AWTException{
+		Robot robot = new Robot();
+		waitTime(5000);
+	
+	for (int i = 0; i < 4; i++) {
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_SUBTRACT);
+		robot.keyRelease(KeyEvent.VK_SUBTRACT);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+	}
+	}
+	@Override
+	public void zoomin() throws IOException, AWTException{
+		Robot robot = new Robot();
+		waitTime(5000);
+	
+		for (int i = 0; i < 3; i++) {
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_ADD);
+			robot.keyRelease(KeyEvent.VK_ADD);
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+		}
+	}
 }
+
+
