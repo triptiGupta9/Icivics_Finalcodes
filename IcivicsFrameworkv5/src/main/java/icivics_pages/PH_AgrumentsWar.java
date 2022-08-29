@@ -16,13 +16,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
 
-public class AgrumentsWar extends ProjectSpecificMethods {
+public class PH_AgrumentsWar extends ProjectSpecificMethods {
 	public String gpropname1 = "PlayHub/Maingamespage";
 	public String gpropname2 = "PlayHub/gametile";
 
 	public String gpropname3 = "PlayHub/Argumentwars";
 
-	public AgrumentsWar(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
+	public PH_AgrumentsWar(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
 			String Stage1URL) {
 		this.driver = driver;
 		this.node = node;
@@ -36,7 +36,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	String URL;
 
 	@Given("Launch the icivis game Argumentwar URL")
-	public AgrumentsWar launchURL() {
+	public PH_AgrumentsWar launchURL() {
 		if (Environment.equals("Stage.d9")) {
 			URL = StageURL + url;
 			navigateto(URL);
@@ -49,7 +49,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Then("Verify Link to leaderboard and achievements appears")
-	public AgrumentsWar verifylink() {
+	public PH_AgrumentsWar verifylink() {
 		WebElement leaderboardachievementlink = propElement(getPropfile(gpropname3, "Leaderboard&Achievementlink"));
 		if (leaderboardachievementlink.isDisplayed()) {
 			reportStep("Leaderboard and achievements link display", "Pass");
@@ -60,7 +60,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Popup dialog appears for leaderboard and achievements")
-	public AgrumentsWar verifylinkpopup() {
+	public PH_AgrumentsWar verifylinkpopup() {
 		WebElement leaderboardachievementlink = propElement(getPropfile(gpropname3, "Leaderboard&Achievementlink"));
 		leaderboardachievementlink.click();
 		waitTime(12000);
@@ -69,7 +69,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Game loads within iFrame")
-	public AgrumentsWar verifyload() {
+	public PH_AgrumentsWar verifyload() {
 
 		switchToFrame(0);
 		WebElement loadtime = propElement(getPropfile(gpropname3, "LoadTime"));
@@ -81,7 +81,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify for logged in as an educator download teacher resources and assign buttons appear")
-	public AgrumentsWar verifydownloadteacherresourcesandassignbuttons() {
+	public PH_AgrumentsWar verifydownloadteacherresourcesandassignbuttons() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -113,7 +113,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify for logged in as an Student download teacher resources and assign buttons appear")
-	public AgrumentsWar verifydownloadteacherresourcesandassignbuttonsforstudent() {
+	public PH_AgrumentsWar verifydownloadteacherresourcesandassignbuttonsforstudent() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -137,7 +137,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify click link to download teacher resources Popup dialog appears with links to teacher resources")
-	public AgrumentsWar verifydownloadteacherresourcesandassignclick() {
+	public PH_AgrumentsWar verifydownloadteacherresourcesandassignclick() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -168,7 +168,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify click link to assign Popup dialog appears with message that the teacher has no classes")
-	public AgrumentsWar verifyassignpopup() {
+	public PH_AgrumentsWar verifyassignpopup() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -210,7 +210,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify click link to assign Popup dialog appears with form to assign the game")
-	public AgrumentsWar verifyassignform() {
+	public PH_AgrumentsWar verifyassignform() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -244,7 +244,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Apple App Store button appears")
-	public AgrumentsWar verifyappleapp() throws IOException {
+	public PH_AgrumentsWar verifyappleapp() throws IOException {
 		String url = "/games";
 		String URL;
 		{
@@ -500,7 +500,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify click link to Apple app store Page goes to Apple app store with the correct game")
-	public AgrumentsWar verifyappleapppage() throws IOException {
+	public PH_AgrumentsWar verifyappleapppage() throws IOException {
 		String url = "/games";
 		String URL;
 		{
@@ -820,7 +820,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Google Play Store button appears")
-	public AgrumentsWar verifygoogleplaybutton() throws IOException {
+	public PH_AgrumentsWar verifygoogleplaybutton() throws IOException {
 		String url = "/games";
 		String URL;
 		{
@@ -1071,7 +1071,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify click link to Google play store Page goes to Google play store with the correct game")
-	public AgrumentsWar verifygoogleplaypage() throws IOException {
+	public PH_AgrumentsWar verifygoogleplaypage() throws IOException {
 		String url = "/games";
 		String URL;
 		{
@@ -1384,7 +1384,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Go to game page Extension pack link appears")
-	public AgrumentsWar verifyextensionpacklink() {
+	public PH_AgrumentsWar verifyextensionpacklink() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -1412,7 +1412,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 		return this;
 	}
 
-	public AgrumentsWar verifyextensionpacklinkforsortifygame() {
+	public PH_AgrumentsWar verifyextensionpacklinkforsortifygame() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -1441,7 +1441,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Go to game page not logged Extension pack link DOES NOT appear")
-	public AgrumentsWar verifyextensionpacklinkforanonymoususer() {
+	public PH_AgrumentsWar verifyextensionpacklinkforanonymoususer() {
 		scrollToTheGivenWebElement(getPropfile(gpropname3, "caseinclude"));
 		waitTime(3000);
 		reportStep("Extension pack link do not display for an anonymous user", "Pass");
@@ -1449,7 +1449,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Then("Verify logged in as a student Extension pack link DOES NOT appear")
-	public AgrumentsWar verifyextensionpacklinkforastudent() {
+	public PH_AgrumentsWar verifyextensionpacklinkforastudent() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -1475,7 +1475,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify click link to extension pack Page goes to lesson plan containing game extension pack")
-	public AgrumentsWar verifyextensionpacklinkclick() {
+	public PH_AgrumentsWar verifyextensionpacklinkclick() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -1514,7 +1514,7 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Go to game page Learning objectives section appears")
-	public AgrumentsWar verifylearningobjectivessection() {
+	public PH_AgrumentsWar verifylearningobjectivessection() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
@@ -1545,14 +1545,14 @@ public class AgrumentsWar extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Go to game page not logged in Learning objectives section DOES NOT appear")
-	public AgrumentsWar verifylearningobjectivessectionasananonymoususer() {
+	public PH_AgrumentsWar verifylearningobjectivessectionasananonymoususer() {
 		scrollToTheGivenWebElement(getPropfile(gpropname3, "Icivicslogo"));
 		reportStep("Learning objectives section do not display for anonymous user", "Pass");
 		return this;
 	}
 
 	@Then("Verify Go to game page logged in as a student Learning objectives section DOES NOT appear")
-	public AgrumentsWar verifylearningobjectivessectionasstudent() {
+	public PH_AgrumentsWar verifylearningobjectivessectionasstudent() {
 		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
 		signinbutton.click();
 		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));

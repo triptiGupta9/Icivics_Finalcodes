@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -16,11 +15,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
 
-public class MainsGamePage extends ProjectSpecificMethods {
+public class PH_MainsGamePage extends ProjectSpecificMethods {
 	public String gpropname1 = "PlayHub/Maingamespage";
 	public String gpropname2 = "PlayHub/gametile";
 
-	public MainsGamePage(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
+	public PH_MainsGamePage(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
 			String Stage1URL) {
 		this.driver = driver;
 		this.node = node;
@@ -34,7 +33,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	String URL;
 
 	@Given("Launch the icivis URL")
-	public MainsGamePage launchURL() {
+	public PH_MainsGamePage launchURL() {
 		if (Environment.equals("Stage.d9")) {
 			URL = StageURL + url;
 			navigateto(URL);
@@ -47,17 +46,22 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Then("Verify Game carousel appears with 5-6 games")
-	public MainsGamePage Verifygamecarousel() {
+	public PH_MainsGamePage Verifygamecarousel() {
 
 		List<WebElement> carouseldots = propElement1(getPropfile(gpropname1, "Carouseldots"));
 		int number = carouseldots.size();
-		System.out.println(number);
+		if(number>=5&&number<=6) {
+		reportStep(number + " games are displayed in the carousel", "Pass");
+		}else {
+			reportStep("only "+ number +" games are displayed in the carousel", "Fail");
+		}
 
-		for (int i = 0; i < number; i++) {
+		for (int i = 0; i <= number; i++) {
 			carouseldots.get(i).click();
 			waitTime(3000);
-			reportStep("verified that game carousel display with 5-6 games", "Pass");
-
+			List<WebElement> CGameTitle = propElement1(getPropfile(gpropname1, "CarouselTitle"));
+			String Gtitle = CGameTitle.get(i).getText();
+			reportStep(Gtitle +" Game is Displayed in the Carousel, when clicked on the dots", "Pass");
 		}
 
 		return this;
@@ -65,14 +69,16 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Carousel goes to previous game")
-	public MainsGamePage Verifyleftcarousel() {
+	public PH_MainsGamePage Verifyleftcarousel() {
 		WebElement leftcarousel = propElement(getPropfile(gpropname1, "LeftCarousel"));
-		reportStep("Before clicking game name ", "Pass");
+		String GameTitle1 = propElement(getPropfile(gpropname1, "CarouselTitle1")).getText();
+		reportStep(GameTitle1 +" is the Game Title Before clicking the left button on carousel", "Pass");
+		
 		if (leftcarousel.isDisplayed()) {
 			leftcarousel.click();
 			waitTime(3000);
-			reportStep("After Clicking Carousel goes to previous game successfully", "Pass");
-
+			String GameTitle2 = propElement(getPropfile(gpropname1, "CarouselTitle5")).getText();
+			reportStep(GameTitle2 +" is the Game Title After clicking the left button on carousel", "Pass");
 		} else {
 			reportStep("Carousel is in the same game", "Fail");
 		}
@@ -80,13 +86,16 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Carousel goes to next game")
-	public MainsGamePage Verifyrightcarousel() {
+	public PH_MainsGamePage Verifyrightcarousel() {
 		WebElement rightcarousel = propElement(getPropfile(gpropname1, "RightCarousel"));
-		reportStep("Before clicking game name ", "Pass");
+		String GameTitle1 = propElement(getPropfile(gpropname1, "CarouselTitle1")).getText();
+		reportStep(GameTitle1 +" is the Game Title Before clicking the right button on carousel", "Pass");
+		
 		if (rightcarousel.isDisplayed()) {
 			rightcarousel.click();
 			waitTime(3000);
-			reportStep("After Clicking Carousel goes to next game successfully", "Pass");
+			String GameTitle2 = propElement(getPropfile(gpropname1, "CarouselTitle2")).getText();
+			reportStep(GameTitle2 +" is the Game Title After clicking the right button on carousel", "Pass");
 
 		} else {
 			reportStep("Carousel is in the same game", "Fail");
@@ -95,11 +104,11 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Game carousel dots")
-	public MainsGamePage Verifycarouseldots() {
+	public PH_MainsGamePage Verifycarouseldots() {
 
 		List<WebElement> carouseldots = propElement1(getPropfile(gpropname1, "Carouseldots"));
 		int number = carouseldots.size();
-		System.out.println(number);
+		//System.out.println(number);
 		String Yellowcolor = "rgba(255, 208, 91, 1)";
 
 		for (int i = 0; i < number; i++) {
@@ -125,7 +134,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Carousel goes the 3rd game")
-	public MainsGamePage Verifycarouseldots3rdgame() {
+	public PH_MainsGamePage Verifycarouseldots3rdgame() {
 		List<WebElement> carouseldots = propElement1(getPropfile(gpropname1, "Carouseldots"));
 		int number = carouseldots.size();
 		String Yellowcolor = "rgba(255, 208, 91, 1)";
@@ -149,7 +158,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Banner to register as a student appears")
-	public MainsGamePage Verifyregisterasastudentbanner() {
+	public PH_MainsGamePage Verifyregisterasastudentbanner() {
 		WebElement registerbanner = propElement(getPropfile(gpropname1, "RegisterBanner"));
 		waitTime(3000);
 		if (registerbanner.isDisplayed()) {
@@ -163,7 +172,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify when login as a student Banner to register as a student DOES NOT appear")
-	public MainsGamePage Verifyloginasastudentregisterasastudentbanner() {
+	public PH_MainsGamePage Verifyloginasastudentregisterasastudentbanner() {
 		String url = "/user/login";
 		if (Environment.equals("Stage.d9")) {
 			navigateto(StageURL + url);
@@ -207,7 +216,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@And("Verify when login as a teacher Banner to register as a student DOES NOT appear")
-	public MainsGamePage Verifyloginasteacherregisterasastudentbanner() {
+	public PH_MainsGamePage Verifyloginasteacherregisterasastudentbanner() {
 		String url = "/user/login";
 		if (Environment.equals("Stage.d9")) {
 			navigateto(StageURL + url);
@@ -252,7 +261,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Goes to link /user/register?role=student&email=1")
-	public MainsGamePage Verifylregisterbannerbuttonclick() {
+	public PH_MainsGamePage Verifylregisterbannerbuttonclick() {
 
 		WebElement registerbannerbutton = propElement(getPropfile(gpropname1, "Registerbannerbutton"));
 		String parentWindow = driver.getWindowHandle();
@@ -276,7 +285,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Game tile appears for each game and Each tile contains Image Title of game Expected play time Short description")
-	public MainsGamePage Verifygamestitles() {
+	public PH_MainsGamePage Verifygamestitles() {
 		List<WebElement> Tilelist = propElement1(getPropfile(gpropname1, "Tilelist"));
 		System.out.println(Tilelist.size());
 		for (int i = 0; i < Tilelist.size(); i++) {
@@ -297,7 +306,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Click on game tile")
-	public MainsGamePage Verifygamestitlesclick() throws IOException {
+	public PH_MainsGamePage Verifygamestitlesclick() throws IOException {
 
 		// Arguments war
 		navigateto(URL);
@@ -449,7 +458,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Green tile with teacher links appears after all games")
-	public MainsGamePage Verifygreentilewithteacherlink() {
+	public PH_MainsGamePage Verifygreentilewithteacherlink() {
 		String greencolor = "rgba(0, 178, 124, 1)";
 		WebElement Teachertile = propElement(getPropfile(gpropname1, "Teachertile"));
 		waitTime(3000);
@@ -467,7 +476,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify on clicking teach button goes to teachers")
-	public MainsGamePage Verifyteachbuttonclick() {
+	public PH_MainsGamePage Verifyteachbuttonclick() {
 		WebElement Teachbutton = propElement(getPropfile(gpropname1, "Teacherbutton"));
 
 		if (Teachbutton.isDisplayed()) {
@@ -483,7 +492,7 @@ public class MainsGamePage extends ProjectSpecificMethods {
 	}
 
 	@Given("Verify Click get started on teachers tile goes to getstarted")
-	public MainsGamePage Verifygetstartedbuttonclick() {
+	public PH_MainsGamePage Verifygetstartedbuttonclick() {
 		WebElement getstartedbutton = propElement(getPropfile(gpropname1, "Getstartedbutton"));
 
 		if (getstartedbutton.isDisplayed()) {

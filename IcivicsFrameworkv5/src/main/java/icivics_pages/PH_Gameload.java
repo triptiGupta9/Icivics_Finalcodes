@@ -16,11 +16,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
 
-public class Gameload extends ProjectSpecificMethods {
+public class PH_Gameload extends ProjectSpecificMethods {
 	public String gpropname1 = "PlayHub/Maingamespage";
 	public String gpropname2 = "PlayHub/gametile";
 
-	public Gameload(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
+	public PH_Gameload(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL,
 			String Stage1URL) {
 		this.driver = driver;
 		this.node = node;
@@ -34,7 +34,7 @@ public class Gameload extends ProjectSpecificMethods {
 	String URL;
 
 	@Given("Launch the icivics URL")
-	public Gameload launchURL() {
+	public PH_Gameload launchURL() {
 		if (Environment.equals("Stage.d9")) {
 			URL = StageURL + url;
 			navigateto(URL);
@@ -47,13 +47,13 @@ public class Gameload extends ProjectSpecificMethods {
 	}
 
 	@Then("Verify Game loads for all the games within iFrame")
-	public Gameload verifygameload1() {
+	public PH_Gameload verifygameload1() {
 
 		List<WebElement> list = driver.findElements(By.xpath("//div[@class='square']"));
 		int tile = list.size();
 		System.out.println(tile);
 
-		for(int i=0;i<tile;i++)
+		for(int i=1;i<=10;i++)
 		{
 			WebElement list1 = driver.findElement(By.xpath("(//div[@class='square'])/descendant::h3[" + i + "]"));
 			list1.click();
@@ -65,10 +65,8 @@ public class Gameload extends ProjectSpecificMethods {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='clickToPlayBtn']/i")));
 			click(loadtime);
 			reportStep("Play button clicked", "Pass");
-
 			driver.navigate().back();
-
-			break;
+			waitTime(3000);
 		}
 		return this;
 

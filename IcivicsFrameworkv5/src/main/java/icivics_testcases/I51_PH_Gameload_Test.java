@@ -5,11 +5,11 @@ import java.io.IOException;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import icivics_pages.Gameload;
+import icivics_pages.PH_Gameload;
 
 import projectSpecific.base.ProjectSpecificMethods;
 
-public class Gameload_Test extends ProjectSpecificMethods {
+public class I51_PH_Gameload_Test extends ProjectSpecificMethods {
 
 	@BeforeTest
 	public void setValues() {
@@ -26,7 +26,7 @@ public class Gameload_Test extends ProjectSpecificMethods {
 	public void C73_Verifymainsgamepage() throws IOException, InterruptedException {
 		node = test.createNode("C83-Game load");
 		extent.attachReporter(spark);
-		new Gameload(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifygameload1();
+		new PH_Gameload(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifygameload1();
 	} 
 
 }
