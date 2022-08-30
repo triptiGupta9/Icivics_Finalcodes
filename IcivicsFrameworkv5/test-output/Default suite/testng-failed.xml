@@ -9,10 +9,10 @@
           <include name="afterMethod"/>
           <include name="tearDownClass"/>
           <include name="stopReport"/>
+          <include name="C73_Verifybannerasateacherlogin"/>
           <include name="setValues"/>
           <include name="beforeMethod"/>
           <include name="report"/>
-          <include name="C73_Verifybannerasastudentlogin"/>
           <include name="startReport"/>
         </methods>
       </class> <!-- icivics_testcases.I52_PH_MainsGamePage_Test -->

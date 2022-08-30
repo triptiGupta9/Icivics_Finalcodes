@@ -26,10 +26,10 @@
           <include name="tearDownClass"/>
           <include name="stopReport"/>
           <include name="setValues"/>
+          <include name="C88_Verifyassignform"/>
           <include name="beforeMethod"/>
           <include name="report"/>
           <include name="startReport"/>
-          <include name="C87_Verifyassignpopup"/>
         </methods>
       </class> <!-- icivics_testcases.I50_PH_ArgumentsWar_Test -->
     </classes>
