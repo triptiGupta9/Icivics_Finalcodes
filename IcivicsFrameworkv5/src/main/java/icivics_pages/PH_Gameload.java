@@ -59,36 +59,25 @@ public class PH_Gameload extends ProjectSpecificMethods {
 			navigateto(Stage1URL + url);
 		}
 		waitTime(2000);
-		WebElement signinwithgooglebutton = propElement(getPropfile(gpropname1, "Signin"));
-		signinwithgooglebutton.click();
+		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
+		signinbutton.click();
+		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
+		signinlink.click();
+		WebElement username = propElement(getPropfile(gpropname3, "Username"));
 		waitTime(3000);
-		WebElement emailfield = propElement(getPropfile(gpropname1, "Email"));
+		username.sendKeys("Bronze Speaker 1r4e");
+		WebElement password = propElement(getPropfile(gpropname3, "Password"));
 		waitTime(3000);
-		emailfield.sendKeys("amatt.teacher26@gedu.demo.icivics.org");
-
-		WebElement nextbutton = propElement(getPropfile(gpropname1, "Next"));
-		nextbutton.click();
+		password.sendKeys("i898qrCiPK9Hwgb");
 		waitTime(3000);
-		WebElement pwdfield = propElement(getPropfile(gpropname1, "Password"));
+		WebElement loginbutton = propElement(getPropfile(gpropname3, "Loginbutton"));
 		waitTime(3000);
-		pwdfield.sendKeys("Freedom17@");
+		loginbutton.click();
 		waitTime(3000);
-		WebElement nextbutton1 = propElement(getPropfile(gpropname1, "Next1"));
-		nextbutton1.click();
-		waitTime(3000);
-		String url1 = "/games";
-		String URL;
-
-		if (Environment.equals("Stage.d9")) {
-			URL = StageURL + url1;
-			navigateto(URL);
-		} else {
-			URL = Stage1URL + url1;
-			navigateto(URL);
-		}
-		waitTime(3000);
-		// Arguments war
 		navigateto(URL);
+		waitTime(5000);
+		// Arguments war
+	/*	navigateto(URL);
 		scrollToTheGivenWebElement(getpropstring(gpropname2, "awtileele"));
 		waitTime(2000);
 		click(getprop(gpropname2, "awtileele"));
@@ -96,7 +85,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime);
 		waitTime(3000);
 		zoomout();
@@ -113,7 +102,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime1 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime1);
 		waitTime(3000);
 		zoomout();
@@ -130,7 +119,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime2 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		waitTime(2000);
 		click(loadtime2);
 		waitTime(3000);
@@ -148,7 +137,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime3 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime3);
 		waitTime(3000);
 		zoomout();
@@ -164,7 +153,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime4 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime4);
 		waitTime(3000);
 		zoomout();
@@ -180,7 +169,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime5 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait5.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait5.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime5);
 		waitTime(3000);
 		zoomout();
@@ -196,7 +185,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime6 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait6 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait6.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait6.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime6);
 		waitTime(3000);
 		zoomout();
@@ -212,7 +201,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime7 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait7 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait7.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait7.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime7);
 		waitTime(3000);
 		zoomout();
@@ -229,7 +218,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime8 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait8.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait8.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime8);
 		waitTime(3000);
 		zoomout();
@@ -246,7 +235,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime9 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime9);
 		waitTime(3000);
 		zoomout();
@@ -263,7 +252,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime10 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait10 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime10);
 		waitTime(3000);
 		zoomout();
@@ -279,7 +268,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime11 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait11 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait11.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait11.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime11);
 		waitTime(3000);
 		zoomout();
@@ -309,7 +298,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime12 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait12 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait12.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait12.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime12);
 		waitTime(3000);
 		zoomout();
@@ -325,7 +314,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime13 = propElement(getPropfile(gpropname3, "LoadTime1"));
 		WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait13.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@id='menuButtons']//div)[2]")));
+		wait13.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Sortifystartbutton"))));
 		click(loadtime13);
 		waitTime(3000);
 		zoomout();
@@ -342,7 +331,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		switchToFrame(0);
 		WebElement loadtime14 = propElement(getPropfile(gpropname3, "LoadTime"));
 		WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(120));
-		wait14.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='clickToPlayBtn']/i")));
+		wait14.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getPropfile(gpropname2, "Playbutton"))));
 		click(loadtime14);
 		waitTime(3000);
 		zoomout();

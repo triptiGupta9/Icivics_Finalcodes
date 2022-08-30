@@ -204,8 +204,9 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 
 		WebElement registerbanner = propElement(getPropfile(gpropname1, "RegisterBanner"));
 		waitTime(3000);
+		String bannertext = registerbanner.getText();
 		scrollToTheGivenWebElement(getPropfile(gpropname1, "Dots"));
-		if (registerbanner.isDisplayed()) {
+		if (bannertext.contains("Register as a Student")) {
 
 			reportStep("Banner to register as a student display", "Pass");
 		} else {
@@ -252,12 +253,20 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 		}
 
 		waitTime(3000);
+		WebElement registerbanner = propElement(getPropfile(gpropname1, "RegisterBanner"));
+		waitTime(3000);
 		scrollToTheGivenWebElement(getPropfile(gpropname1, "Dots"));
 		waitTime(3000);
+		String bannertext = registerbanner.getText();
+		scrollToTheGivenWebElement(getPropfile(gpropname1, "Dots"));
+		if (bannertext.contains("Register as a Student")) {
 
-		reportStep("Banner to register as a student do not display for Teachers", "Pass");
+			reportStep("Banner to register as a student display", "Pass");
+		} else {
+			reportStep("Banner to register as a student do not display", "Fail");
+		}
+
 		return this;
-
 	}
 
 	@Given("Verify Goes to link user register?role=student&email=1")

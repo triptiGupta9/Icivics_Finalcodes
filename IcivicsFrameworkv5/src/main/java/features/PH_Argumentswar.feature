@@ -16,7 +16,7 @@ Given Verify for logged in as an educator download teacher resources and assign 
 
 Scenario: C85 - Educator buttons
 Given Verify for logged in as an Student download teacher resources and assign buttons appear
-
+Then Verify for logged in as an anonymous user download teacher resources and assign buttons appear
 Scenario: C86 - Download teacher resources
 Given Verify click link to download teacher resources Popup dialog appears with links to teacher resources
 
