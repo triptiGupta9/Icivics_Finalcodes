@@ -18,7 +18,7 @@ public class I52_PH_MainsGamePage_Test extends ProjectSpecificMethods {
 		dataSheetName = "Icivics_GoogleIntegration";
 	}
 
-	// C539 - Game carousel
+	// C73 - Game carousel
 
 	@Test(priority = 0)
 	public void C73_Verifymainsgamepage() throws IOException, InterruptedException {

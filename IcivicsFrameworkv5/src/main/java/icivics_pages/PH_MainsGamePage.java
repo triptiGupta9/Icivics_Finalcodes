@@ -18,6 +18,7 @@ import projectSpecific.base.ProjectSpecificMethods;
 public class PH_MainsGamePage extends ProjectSpecificMethods {
 	public String gpropname1 = "PlayHub/Maingamespage";
 	public String gpropname2 = "PlayHub/gametile";
+	public String gpropname3 = "PlayHub/Argumentwars";
 
 	public PH_MainsGamePage(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment,
 			String StageURL, String Stage1URL) {
@@ -158,7 +159,7 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 		waitTime(3000);
 		if (registerbanner.isDisplayed()) {
 			registerbanner.click();
-			reportStep(text + "-Banner to register as a student display", "Pass");
+			reportStep(text + " - Banner to register as a student display", "Pass");
 		} else {
 			reportStep("Banner to register as a student do not display", "Fail");
 		}
@@ -216,22 +217,21 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 		} else {
 			navigateto(Stage1URL + url);
 		}
-		WebElement signinwithgooglebutton = propElement(getPropfile(gpropname1, "Signin"));
-		signinwithgooglebutton.click();
+		WebElement signinbutton = propElement(getPropfile(gpropname3, "Signin"));
+		signinbutton.click();
+		WebElement signinlink = propElement(getPropfile(gpropname3, "Signinlink"));
+		signinlink.click();
+		WebElement username = propElement(getPropfile(gpropname3, "Username"));
 		waitTime(3000);
-		WebElement emailfield = propElement(getPropfile(gpropname1, "Email"));
+		username.sendKeys("Bronze Speaker 1r4e");
+		WebElement password = propElement(getPropfile(gpropname3, "Password"));
 		waitTime(3000);
-		emailfield.sendKeys("amatt.teacher26@gedu.demo.icivics.org");
-
-		WebElement nextbutton = propElement(getPropfile(gpropname1, "Next"));
-		nextbutton.click();
+		password.sendKeys("i898qrCiPK9Hwgb");
 		waitTime(3000);
-		WebElement pwdfield = propElement(getPropfile(gpropname1, "Password"));
-
-		pwdfield.sendKeys("Freedom17@");
+		WebElement loginbutton = propElement(getPropfile(gpropname3, "Loginbutton"));
 		waitTime(3000);
-		WebElement nextbutton1 = propElement(getPropfile(gpropname1, "Next1"));
-		nextbutton1.click();
+		loginbutton.click();
+		waitTime(3000);
 
 		String url1 = "/games";
 		String URL;
@@ -243,6 +243,7 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 			URL = Stage1URL + url1;
 			navigateto(URL);
 		}
+		waitTime(3000);
 		scrollToTheGivenWebElement(getPropfile(gpropname1, "Dots"));
 		reportStep("Banner to register as a student do not display for teacher", "Pass");
 		return this;
@@ -459,7 +460,7 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 		waitTime(3000);
 		System.out.println(cssvalue);
 		if (Teachertile.isDisplayed() && cssvalue.equals(greencolor)) {
-			reportStep(Teachertile.getText() + ":Green Tile with teacher links display after all the games ", "Pass");
+			reportStep(Teachertile.getText() + " : Green Tile with teacher links display after all the games ", "Pass");
 		} else {
 			reportStep("Green Tile with teacher links do not display", "Fail");
 		}
@@ -474,7 +475,7 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 		if (Teachbutton.isDisplayed()) {
 			Teachbutton.click();
 			verifyTitle("Teachers | iCivics");
-			reportStep(driver.getTitle() + ":On clicking teach button it redirects to teacherspage successfully",
+			reportStep(driver.getCurrentUrl() + " : On clicking teach button it redirects to teacherspage successfully",
 					"Pass");
 		} else {
 			reportStep("On clicking teach button it will not redirects to teacherspage", "Pass");
@@ -490,7 +491,7 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 		if (getstartedbutton.isDisplayed()) {
 			getstartedbutton.click();
 			verifyTitle("Get Started | iCivics");
-			reportStep(driver.getTitle() + ":On clicking teach button it redirects to teacherspage successfully",
+			reportStep(driver.getCurrentUrl() + " : On clicking teach button it redirects to teacherspage successfully",
 					"Pass");
 		} else {
 			reportStep("On clicking teach button it will not redirects to teacherspage", "Pass");

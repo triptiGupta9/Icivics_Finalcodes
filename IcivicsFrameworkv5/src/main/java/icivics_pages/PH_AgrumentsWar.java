@@ -64,17 +64,14 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 		leaderboardachievementlink.click();
 		waitTime(12000);
 		WebElement leaderboardachievementpopup = propElement(getPropfile(gpropname3, "Popup"));
-		if (leaderboardachievementpopup .isDisplayed()) {
-		waitTime(12000);
-		reportStep("Popup dialog appears for leaderboard and achievements", "Pass");
-		}else
-		{
+		if (leaderboardachievementpopup.isDisplayed()) {
+			waitTime(2000);
+			reportStep("Popup dialog appears for leaderboard and achievements", "Pass");
+		} else {
 			reportStep("Popup dialog do not appears for leaderboard and achievements", "Fail");
 		}
 		return this;
 	}
-
-	
 
 	@Given("Verify for logged in as an educator download teacher resources and assign buttons appear")
 	public PH_AgrumentsWar verifydownloadteacherresourcesandassignbuttons() {
@@ -99,7 +96,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 		WebElement assign = propElement(getPropfile(gpropname3, "Assignbutton"));
 		if (downloadteach.isDisplayed() && assign.isDisplayed()) {
 			scrollToTheGivenWebElement(getPropfile(gpropname3, "Downloadteach"));
-			reportStep("Download teacher resources and assign buttons display", "Pass");
+			reportStep("Download teacher resources and assign buttons display for login as Teacher", "Pass");
 		} else {
 			reportStep("Download teacher resources and assign buttons do not display", "Fail");
 		}
@@ -162,9 +159,11 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 		waitTime(5000);
 		WebElement downloadteach = propElement(getPropfile(gpropname3, "Downloadteach"));
 		waitTime(3000);
-		if (downloadteach.isDisplayed()) {
-			downloadteach.click();
-			waitTime(3000);
+		downloadteach.click();
+		waitTime(3000);
+		WebElement downloadteachpopup = propElement(getPropfile(gpropname3, "DownloadteachPopup"));
+		if (downloadteachpopup.isDisplayed()) {
+			waitTime(2000);
 			reportStep("Popup dialog display with links to teacher resources", "Pass");
 		} else {
 			reportStep("Popup dialog do not display with links to teacher resources", "Fail");
@@ -380,7 +379,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 			waitTime(3000);
 			if (appleapp4.isDisplayed()) {
 				scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
-				reportStep("Apple App Store button display for game", "Pass");
+				reportStep("Apple App Store button display for Court Quest game", "Pass");
 			} else {
 
 				reportStep("Apple App Store button do not display", "Fail");
@@ -395,7 +394,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 			waitTime(3000);
 			if (appleapp5.isDisplayed()) {
 				scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
-				reportStep("Apple App Store button display for game", "Pass");
+				reportStep("Apple App Store button display for Do I have a Right game", "Pass");
 			} else {
 
 				reportStep("Apple App Store button do not display", "Fail");
@@ -410,7 +409,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 			waitTime(3000);
 			if (appleapp6.isDisplayed()) {
 				scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
-				reportStep("Apple App Store button display for game", "Pass");
+				reportStep("Apple App Store button display for  Executive Command game", "Pass");
 			} else {
 
 				reportStep("Apple App Store button do not display", "Fail");
@@ -425,7 +424,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 			waitTime(3000);
 			if (appleapp7.isDisplayed()) {
 				scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
-				reportStep("Apple App Store button display for game", "Pass");
+				reportStep("Apple App Store button display for Immigrationnation game", "Pass");
 			} else {
 
 				reportStep("Apple App Store button do not display", "Fail");
@@ -450,7 +449,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 			waitTime(3000);
 			if (appleapp8.isDisplayed()) {
 				scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
-				reportStep("Apple App Store button display for game", "Pass");
+				reportStep("Apple App Store button display for NewsFeedDefenders game", "Pass");
 			} else {
 
 				reportStep("Apple App Store button do not display", "Fail");
@@ -478,7 +477,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 			waitTime(3000);
 			if (appleapp9.isDisplayed()) {
 				scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
-				reportStep("Apple App Store button display for game", "Pass");
+				reportStep("Apple App Store button display for Race to ratify game", "Pass");
 			} else {
 
 				reportStep("Apple App Store button do not display", "Fail");
@@ -503,7 +502,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 			waitTime(3000);
 			if (appleapp10.isDisplayed()) {
 				scrollToTheGivenWebElement(getPropfile(gpropname3, "Appleapp"));
-				reportStep("Apple App Store button display for game", "Pass");
+				reportStep("Apple App Store button display for  Win The White House game", "Pass");
 			} else {
 
 				reportStep("Apple App Store button do not display", "Fail");
@@ -1431,7 +1430,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 		waitTime(5000);
 		scrollToTheGivenWebElement(getPropfile(gpropname3, "caseinclude"));
 		waitTime(3000);
-		reportStep("Extension pack link do not display for an Student", "Pass");
+		reportStep("Extension pack link do not display for Student", "Pass");
 		return this;
 
 	}
@@ -1465,7 +1464,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 			WebElement gameextensionpack = propElement(getPropfile(gpropname3, "gameextensionpack"));
 			if (gameextensionpack.isDisplayed()) {
 				scrollToTheGivenWebElement(getPropfile(gpropname3, "gameextensionpack"));
-				reportStep("Page goes to lesson plan containing game's extension pack", "Pass");
+				reportStep(driver.getCurrentUrl()+" - Page goes to lesson plan containing game's extension pack", "Pass");
 			} else {
 				reportStep("Page goes to lesson plan containing game's extension pack", "Fail");
 			}
