@@ -36,13 +36,6 @@ public class I50_PH_ArgumentsWar_Test extends ProjectSpecificMethods {
 		new PH_AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifylinkpopup();
 	}
 
-	// C83 - Game load
-	@Test(priority = 2)
-	public void C83_Verifygameload() throws IOException, InterruptedException {
-		node = test.createNode("C83 - Game load");
-		extent.attachReporter(spark);
-		new PH_AgrumentsWar(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifyload();
-	}
 	// C84 - Educator buttons
 
 	@Test(priority = 3)

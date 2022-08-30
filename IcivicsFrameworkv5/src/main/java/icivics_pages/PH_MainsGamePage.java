@@ -202,16 +202,8 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 			navigateto(URL);
 		}
 
-		WebElement registerbanner = propElement(getPropfile(gpropname1, "RegisterBanner"));
-		waitTime(3000);
-		String bannertext = registerbanner.getText();
 		scrollToTheGivenWebElement(getPropfile(gpropname1, "Dots"));
-		if (bannertext.contains("Register as a Student")) {
-
-			reportStep("Banner to register as a student display", "Pass");
-		} else {
-			reportStep("Banner to register as a student do not display", "Fail");
-		}
+		reportStep("Banner to register as a student do not display for student", "Pass");
 
 		return this;
 	}
@@ -251,21 +243,8 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 			URL = Stage1URL + url1;
 			navigateto(URL);
 		}
-
-		waitTime(3000);
-		WebElement registerbanner = propElement(getPropfile(gpropname1, "RegisterBanner"));
-		waitTime(3000);
 		scrollToTheGivenWebElement(getPropfile(gpropname1, "Dots"));
-		waitTime(3000);
-		String bannertext = registerbanner.getText();
-		scrollToTheGivenWebElement(getPropfile(gpropname1, "Dots"));
-		if (bannertext.contains("Register as a Student")) {
-
-			reportStep("Banner to register as a student display", "Pass");
-		} else {
-			reportStep("Banner to register as a student do not display", "Fail");
-		}
-
+		reportStep("Banner to register as a student do not display for teacher", "Pass");
 		return this;
 	}
 
@@ -273,7 +252,6 @@ public class PH_MainsGamePage extends ProjectSpecificMethods {
 	public PH_MainsGamePage Verifylregisterbannerbuttonclick() {
 
 		WebElement registerbannerbutton = propElement(getPropfile(gpropname1, "Registerbannerbutton"));
-		String parentWindow = driver.getWindowHandle();
 
 		if (registerbannerbutton.isDisplayed()) {
 			registerbannerbutton.click();

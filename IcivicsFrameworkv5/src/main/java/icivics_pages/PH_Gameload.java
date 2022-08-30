@@ -77,7 +77,7 @@ public class PH_Gameload extends ProjectSpecificMethods {
 		navigateto(URL);
 		waitTime(5000);
 		// Arguments war
-	/*	navigateto(URL);
+		navigateto(URL);
 		scrollToTheGivenWebElement(getpropstring(gpropname2, "awtileele"));
 		waitTime(2000);
 		click(getprop(gpropname2, "awtileele"));

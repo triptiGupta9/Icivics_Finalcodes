@@ -63,21 +63,18 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 		WebElement leaderboardachievementlink = propElement(getPropfile(gpropname3, "Leaderboard&Achievementlink"));
 		leaderboardachievementlink.click();
 		waitTime(12000);
+		WebElement leaderboardachievementpopup = propElement(getPropfile(gpropname3, "Popup"));
+		if (leaderboardachievementpopup .isDisplayed()) {
+		waitTime(12000);
 		reportStep("Popup dialog appears for leaderboard and achievements", "Pass");
+		}else
+		{
+			reportStep("Popup dialog do not appears for leaderboard and achievements", "Fail");
+		}
 		return this;
 	}
 
-	@Given("Verify Game loads within iFrame")
-	public PH_AgrumentsWar verifyload() {
-
-		switchToFrame(0);
-		WebElement loadtime = propElement(getPropfile(gpropname3, "LoadTime"));
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='clickToPlayBtn']/i")));
-		click(loadtime);
-		reportStep("Play button clicked", "Pass");
-		return this;
-	}
+	
 
 	@Given("Verify for logged in as an educator download teacher resources and assign buttons appear")
 	public PH_AgrumentsWar verifydownloadteacherresourcesandassignbuttons() {
@@ -130,6 +127,7 @@ public class PH_AgrumentsWar extends ProjectSpecificMethods {
 		waitTime(5000);
 		navigateto(URL);
 		waitTime(5000);
+
 		scrollToTheGivenWebElement(getPropfile(gpropname3, "scrollelement"));
 		reportStep("Download teacher resources and assign buttons do not display for logged in as student", "Pass");
 		return this;

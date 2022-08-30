@@ -24,7 +24,7 @@ public class I51_PH_Gameload_Test extends ProjectSpecificMethods {
 
 
 	@Test(priority = 0)
-	public void C73_Verifymainsgamepage() throws IOException, InterruptedException, AWTException {
+	public void C83_Verifymainsgamepage() throws IOException, InterruptedException, AWTException {
 		node = test.createNode("C83-Game load");
 		extent.attachReporter(spark);
 		new PH_Gameload(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifygameload1();
