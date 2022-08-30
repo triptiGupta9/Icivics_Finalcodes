@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="20" total="21" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-30T13:14:38 IST" name="Default suite" finished-at="2022-08-30T13:19:41 IST" duration-ms="303579">
+  <suite started-at="2022-08-30T19:17:19 IST" name="Default suite" finished-at="2022-08-30T19:18:08 IST" duration-ms="48697">
     <groups>
     </groups>
-    <test started-at="2022-08-30T13:14:38 IST" name="Default test" finished-at="2022-08-30T13:19:41 IST" duration-ms="303579">
-      <class name="icivics_testcases.I51_PH_Gameload_Test">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.I51_PH_Gameload_Test@c430e6c]" started-at="2022-08-30T13:14:37 IST" name="startReport" finished-at="2022-08-30T13:14:38 IST" duration-ms="332" status="PASS">
+    <test started-at="2022-08-30T19:17:19 IST" name="Default test" finished-at="2022-08-30T19:18:08 IST" duration-ms="48697">
+      <class name="icivics_testcases.I50_PH_ArgumentsWar_Test">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:icivics_testcases.I50_PH_ArgumentsWar_Test@7a5ceedd]" started-at="2022-08-30T19:17:18 IST" name="startReport" finished-at="2022-08-30T19:17:19 IST" duration-ms="763" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.I51_PH_Gameload_Test@c430e6c]" started-at="2022-08-30T13:14:38 IST" name="setValues" finished-at="2022-08-30T13:14:38 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setValues()[pri:0, instance:icivics_testcases.I50_PH_ArgumentsWar_Test@7a5ceedd]" started-at="2022-08-30T19:17:19 IST" name="setValues" finished-at="2022-08-30T19:17:19 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValues -->
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:icivics_testcases.I51_PH_Gameload_Test@c430e6c]" started-at="2022-08-30T13:14:38 IST" name="setUpClass" finished-at="2022-08-30T13:14:38 IST" duration-ms="176" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:icivics_testcases.I50_PH_ArgumentsWar_Test@7a5ceedd]" started-at="2022-08-30T19:17:19 IST" name="setUpClass" finished-at="2022-08-30T19:17:19 IST" duration-ms="413" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@22d47f09]]>
+                <![CDATA[org.testng.TestRunner@1a2ac487]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.I51_PH_Gameload_Test@c430e6c]" started-at="2022-08-30T13:14:38 IST" name="report" finished-at="2022-08-30T13:14:38 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="report()[pri:0, instance:icivics_testcases.I50_PH_ArgumentsWar_Test@7a5ceedd]" started-at="2022-08-30T19:17:19 IST" name="report" finished-at="2022-08-30T19:17:19 IST" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.I51_PH_Gameload_Test@c430e6c]" started-at="2022-08-30T13:14:38 IST" name="beforeMethod" finished-at="2022-08-30T13:14:41 IST" duration-ms="3196" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:icivics_testcases.I50_PH_ArgumentsWar_Test@7a5ceedd]" started-at="2022-08-30T19:17:19 IST" name="beforeMethod" finished-at="2022-08-30T19:17:24 IST" duration-ms="4850" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="C73_Verifymainsgamepage()[pri:0, instance:icivics_testcases.I51_PH_Gameload_Test@c430e6c]" started-at="2022-08-30T13:14:41 IST" name="C73_Verifymainsgamepage" finished-at="2022-08-30T13:19:41 IST" duration-ms="299840" status="PASS">
+        <test-method signature="C82_Verifypopup()[pri:1, instance:icivics_testcases.I50_PH_ArgumentsWar_Test@7a5ceedd]" started-at="2022-08-30T19:17:24 IST" name="C82_Verifypopup" finished-at="2022-08-30T19:18:07 IST" duration-ms="43039" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- C73_Verifymainsgamepage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.I51_PH_Gameload_Test@c430e6c]" started-at="2022-08-30T13:19:41 IST" name="afterMethod" finished-at="2022-08-30T13:19:41 IST" duration-ms="322" status="PASS">
+        </test-method> <!-- C82_Verifypopup -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:icivics_testcases.I50_PH_ArgumentsWar_Test@7a5ceedd]" started-at="2022-08-30T19:18:07 IST" name="afterMethod" finished-at="2022-08-30T19:18:08 IST" duration-ms="311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.I51_PH_Gameload_Test@c430e6c]" started-at="2022-08-30T13:19:41 IST" name="tearDownClass" finished-at="2022-08-30T13:19:41 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:icivics_testcases.I50_PH_ArgumentsWar_Test@7a5ceedd]" started-at="2022-08-30T19:18:08 IST" name="tearDownClass" finished-at="2022-08-30T19:18:08 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.I51_PH_Gameload_Test@c430e6c]" started-at="2022-08-30T13:19:41 IST" name="stopReport" finished-at="2022-08-30T13:19:42 IST" duration-ms="439" status="PASS">
+        <test-method is-config="true" signature="stopReport()[pri:0, instance:icivics_testcases.I50_PH_ArgumentsWar_Test@7a5ceedd]" started-at="2022-08-30T19:18:08 IST" name="stopReport" finished-at="2022-08-30T19:18:09 IST" duration-ms="914" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopReport -->
-      </class> <!-- icivics_testcases.I51_PH_Gameload_Test -->
+      </class> <!-- icivics_testcases.I50_PH_ArgumentsWar_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
