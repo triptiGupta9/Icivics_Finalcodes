@@ -2064,7 +2064,7 @@ public class SeleniumBase extends Reporter implements Browser, Element {
 		Robot robot = new Robot();
 		waitTime(5000);
 	
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 4; i++) {
 			robot.keyPress(KeyEvent.VK_CONTROL);
 			robot.keyPress(KeyEvent.VK_ADD);
 			robot.keyRelease(KeyEvent.VK_ADD);
