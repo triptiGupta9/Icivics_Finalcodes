@@ -60,8 +60,8 @@ public class SeleniumBase extends Reporter implements Browser, Element {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 			wait.until(ExpectedConditions.elementToBeClickable(ele));
 			text = ele.getText();
-			ele.click();
 			reportStep("The Element " + text + " clicked", "pass");
+			ele.click();
 		} catch (StaleElementReferenceException e) {
 			reportStep("The Element " + text + " could not be clicked", "fail");
 			throw new RuntimeException();
