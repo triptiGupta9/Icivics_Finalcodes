@@ -6,7 +6,7 @@
 	</listeners>
 	<test thread-count="1" parallel="false" name="PlayHub_Testscripts" preserve-order="true">
 		<classes>
-			<class name="icivics_testcases.I50_PlayHub_ArgumentsWar_Test" />
+			<class name="icivics_testcases.I50_PlayHub_Individual_Game_ArgumentsWar_Test" />
 			<class name="icivics_testcases.I51_PlayHub_MainsGamePage_Test" />
 			<class name="icivics_testcases.I52_PlayHub_Gameload_Test" />
 		</classes>

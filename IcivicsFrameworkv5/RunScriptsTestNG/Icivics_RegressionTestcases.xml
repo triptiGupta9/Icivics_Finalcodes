@@ -32,7 +32,7 @@
 			<class name="icivics_testcases.I43_GoogleIntegration_Pg2TeacherRegistration_Test" />
 			<class name="icivics_testcases.I44_GoogleIntegration_Pg3TeacherRegistration_Test" />
 			<class name="icivics_testcases.I45_GoogleIntegration_StudentRegistration_Test" />
-			<class name="icivics_testcases.I50_PlayHub_ArgumentsWar_Test" />
+			<class name="icivics_testcases.I50_PlayHub_Individual_Game_ArgumentsWar_Test" />
 			<class name="icivics_testcases.I51_PlayHub_MainsGamePage_Test" />
 			<class name="icivics_testcases.I52_PlayHub_Gameload_Test" />
 		</classes>
