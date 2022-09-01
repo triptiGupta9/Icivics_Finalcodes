@@ -181,10 +181,15 @@ public class PlayHub_MainsGamePage extends ProjectSpecificMethods {
 		}
 		
 		propElement(getPropfile(gpropname1, "Signin")).click();
+		waitTime(2000);
 		propElement(getPropfile(gpropname1, "Email")).sendKeys("amatt.student1@gedu.demo.icivics.org");
+		waitTime(2000);
 		propElement(getPropfile(gpropname1, "Next")).click();
+		waitTime(2000);
 		propElement(getPropfile(gpropname1, "Password")).sendKeys("Freedom17@");
+		waitTime(2000);
 		propElement(getPropfile(gpropname1, "Next1")).click();
+		waitTime(2000);
 		String url1 = "/games";
 		if (Environment.equals("Stage.d9")) {
 			navigateto(StageURL + url1);
@@ -210,11 +215,15 @@ public class PlayHub_MainsGamePage extends ProjectSpecificMethods {
 			navigateto(Stage1URL + url);
 		}
 		propElement(getPropfile(gpropname3, "Signin")).click();
+		waitTime(2000);
 		propElement(getPropfile(gpropname3, "Signinlink")).click();
 		waitTime(3000);
 		propElement(getPropfile(gpropname3, "Username")).sendKeys("Bronze Speaker 1r4e");
+		waitTime(2000);
 		propElement(getPropfile(gpropname3, "Password")).sendKeys("i898qrCiPK9Hwgb");
+		waitTime(2000);
 		propElement(getPropfile(gpropname3, "Loginbutton")).click();
+		waitTime(2000);
 
 		String url1 = "/games";
 		String URL;

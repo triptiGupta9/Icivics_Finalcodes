@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 1, 2022 05:50:14 PM</span></a>
+<a href="#"><span class="badge badge-primary">Sep 2, 2022 12:18:04 AM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,16 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -66,13 +76,391 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Venkat</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Smoke</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author="Venkat"
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">Individual Games Pages - ArgumentsWar</p>
+            <p class="text-sm">
+              <span>12:18:05 AM</span> / <span>00:16:15:987</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Individual Games Pages - ArgumentsWar</h5>
+<span class='badge badge-success'>09.02.2022 12:18:05 AM</span>
+<span class='badge badge-danger'>09.02.2022 12:34:21 AM</span>
+<span class='badge badge-default'>00:16:15:987</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div>  <div class="mt-4">  <div class="accordion" role="tablist">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li><span class='badge badge-default'>46:13:295</span></li>
+              <li><span><i class="fa fa-paperclip"></i></span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <a class="node " id="2"><span>C92 - Link to Google play store</span></a>
+            <div class="node-attr">
+<span class="badge badge-pill badge-default">Venkat</span>
+<span class="badge badge-pill badge-default">Smoke</span>            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:19:20 AM</td>
+        <td>
+          The Element Argument Wars clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.19_907545492.jpg' src="./../Screenshots/02-Sep-22/00.19_907545492.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:19:46 AM</td>
+        <td>
+          Google play store button do not display for Argument war game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.19_683561748.jpg' src="./../Screenshots/02-Sep-22/00.19_683561748.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:20:36 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.20_287889837.jpg' src="./../Screenshots/02-Sep-22/00.20_287889837.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:20:43 AM</td>
+        <td>
+          On clicking googleplay store  link Page goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.20_147184856.jpg' src="./../Screenshots/02-Sep-22/00.20_147184856.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:21:32 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.21_106604517.jpg' src="./../Screenshots/02-Sep-22/00.21_106604517.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:21:38 AM</td>
+        <td>
+          On clicking googleplay store  link Page goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.21_779608376.jpg' src="./../Screenshots/02-Sep-22/00.21_779608376.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:22:27 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.22_768835946.jpg' src="./../Screenshots/02-Sep-22/00.22_768835946.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:22:34 AM</td>
+        <td>
+          On clicking googleplay store  link Page goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.22_663025990.jpg' src="./../Screenshots/02-Sep-22/00.22_663025990.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:23:22 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.23_164411725.jpg' src="./../Screenshots/02-Sep-22/00.23_164411725.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:23:57 AM</td>
+        <td>
+          On clicking googleplay store store link Page do not goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.23_558913578.jpg' src="./../Screenshots/02-Sep-22/00.23_558913578.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:24:49 AM</td>
+        <td>
+          Google play store button do not display for Counties Work game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.24_634180089.jpg' src="./../Screenshots/02-Sep-22/00.24_634180089.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:25:39 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.25_669425990.jpg' src="./../Screenshots/02-Sep-22/00.25_669425990.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:25:46 AM</td>
+        <td>
+          On clicking googleplay store  link Page goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.25_453438072.jpg' src="./../Screenshots/02-Sep-22/00.25_453438072.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:26:38 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.26_293924702.jpg' src="./../Screenshots/02-Sep-22/00.26_293924702.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:26:46 AM</td>
+        <td>
+          On clicking googleplay store  link Page goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.26_242190370.jpg' src="./../Screenshots/02-Sep-22/00.26_242190370.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:27:38 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.27_354308501.jpg' src="./../Screenshots/02-Sep-22/00.27_354308501.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:27:45 AM</td>
+        <td>
+          On clicking googleplay store  link Page goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.27_83145866.jpg' src="./../Screenshots/02-Sep-22/00.27_83145866.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:28:33 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.28_188478721.jpg' src="./../Screenshots/02-Sep-22/00.28_188478721.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:28:40 AM</td>
+        <td>
+          On clicking googleplay store  link Page goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.28_194899153.jpg' src="./../Screenshots/02-Sep-22/00.28_194899153.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:29:33 AM</td>
+        <td>
+          Google play store button do not display for Lawcraft game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.29_72303468.jpg' src="./../Screenshots/02-Sep-22/00.29_72303468.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:30:29 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.30_195591075.jpg' src="./../Screenshots/02-Sep-22/00.30_195591075.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:31:03 AM</td>
+        <td>
+          On clicking googleplay store store link Page do not goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.31_398674189.jpg' src="./../Screenshots/02-Sep-22/00.31_398674189.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:31:29 AM</td>
+        <td>
+          People's Pie should not be included
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.31_101232434.jpg' src="./../Screenshots/02-Sep-22/00.31_101232434.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:32:20 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.32_246884611.jpg' src="./../Screenshots/02-Sep-22/00.32_246884611.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:32:27 AM</td>
+        <td>
+          On clicking googleplay store  link Page goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.32_715459240.jpg' src="./../Screenshots/02-Sep-22/00.32_715459240.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:33:20 AM</td>
+        <td>
+          Google play store button do not display for Sortify:U.S.Citizenship game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.33_414246807.jpg' src="./../Screenshots/02-Sep-22/00.33_414246807.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:34:14 AM</td>
+        <td>
+          The Element  clicked
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.34_859884978.jpg' src="./../Screenshots/02-Sep-22/00.34_859884978.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:34:21 AM</td>
+        <td>
+          On clicking googleplay store  link Page goes to googleplay store store with the correct game
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./../Screenshots/02-Sep-22/00.34_39877593.jpg' src="./../Screenshots/02-Sep-22/00.34_39877593.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -82,18 +470,116 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">Smoke</p>
+<p class="duration text-sm">0 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Smoke</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:18:05 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Individual Games Pages - ArgumentsWar</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">Venkat</p>
+<p class="duration text-sm">0 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Venkat</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>00:18:05 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Individual Games Pages - ArgumentsWar</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 1, 2022 05:50:14 PM</h3>
+<h3>Sep 2, 2022 12:18:04 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 1, 2022 05:52:00 PM</h3>
+<h3>Sep 2, 2022 12:34:22 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -105,12 +591,12 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-4">
 <div class="card">
 <div class="card-header">
 <h6 class="card-title">Tests</h6>
@@ -126,8 +612,48 @@
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='100%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
+<div>
+<small data-tooltip='100%'><b>1</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='75%'><b>21</b> events passed</small></div>
+<div>
+<small data-tooltip='25%'><b>7</b> events failed,
+<b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -143,21 +669,57 @@
 </div></div>
 <script>
 var timeline = {
+"Individual Games Pages - ArgumentsWar":975.987
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>Venkat</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>Smoke</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 </div>
 </div>
 <script>
 var statusGroup = {
 parentCount: 5,
 passParent: 0,
-failParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
 passChild: 0,
-failChild: 0,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
@@ -168,8 +730,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 0,
-failEvents: 0,
+passEvents: 21,
+failEvents: 7,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

@@ -26,7 +26,7 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 		this.StageURL = StageURL;
 		this.Stage1URL = Stage1URL;
 	}
-
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 	String url = "/games/argument-wars";
 	String URL;
 
@@ -250,7 +250,7 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 			waitTime(3000);
 			getprop(gpropname2, "awtileele").click();
 			waitTime(3000);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
+			
 			js.executeScript("window.scrollBy(0,450)", "");
 			if (driver.getPageSource().contains("app-link app_store")==true) {
 				reportStep("Apple App Store display for Argument war game", "Pass");
@@ -489,7 +489,8 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 			waitTime(3000);
 			click(getprop(gpropname2, "awtileele"));
 			waitTime(3000);
-			js.executeScript("window.scrollBy(0,450)", "");
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,200)", "");
 			if (driver.getPageSource().contains("app-link app_store")==true) {
 				reportStep("Apple App Store display for Argument war game", "Pass");
 				}else {
@@ -781,6 +782,7 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 			waitTime(3000);
 			getprop(gpropname2, "awtileele").click();
 			waitTime(3000);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,450)", "");
 			if (driver.getPageSource().contains("app-link play_store")==true) {
 				reportStep("Google play store display for Argument war game", "Pass");
@@ -1020,6 +1022,7 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 			waitTime(3000);
 			click(getprop(gpropname2, "awtileele"));
 			waitTime(3000);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,450)", "");
 			if (driver.getPageSource().contains("app-link play_store")==true) {
 				reportStep("Google play store display for Argument war game", "Pass");
@@ -1109,6 +1112,7 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 		waitTime(2000);
 		getprop(gpropname2, "cwttileele").click();
 		waitTime(5000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,450)", "");
 		if (driver.getPageSource().contains("app-link play_store")==true) {
 			reportStep("Google play store display for Counties Work game", "Pass");
@@ -1196,6 +1200,7 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 		waitTime(2000);
 		getprop(gpropname2, "lctileele").click();
 		waitTime(3000);
+		
 		js.executeScript("window.scrollBy(0,450)", "");
 		if (driver.getPageSource().contains("app-link play_store")==true) {
 			reportStep("Google play store display for Lawcraft game", "Pass");
