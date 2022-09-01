@@ -14,7 +14,7 @@ public class I52_PlayHub_Gameload_Test extends ProjectSpecificMethods {
 
 	@BeforeTest
 	public void setValues() {
-		testCaseName = "Mainsgamepage";
+		testCaseName = "Game Load inside the IFrame";
 		authors = "Venkat";
 		category = "Smoke";
 		dataSheetName = "Icivics_GoogleIntegration";
@@ -23,7 +23,7 @@ public class I52_PlayHub_Gameload_Test extends ProjectSpecificMethods {
 	// C83-Game load
 	@Test(priority = 0)
 	public void C83_Verifymainsgamepage() throws IOException, InterruptedException, AWTException {
-		node = test.createNode("C83-Game load");
+		node = test.createNode("C83-Game Load inside the IFrame");
 		extent.attachReporter(spark);
 		new PlayHub_Gameload(driver, node, prop, Environment, StageURL, Stage1URL).launchURL().verifygameload1();
 	} 
