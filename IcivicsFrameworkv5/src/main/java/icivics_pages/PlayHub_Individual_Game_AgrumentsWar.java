@@ -158,9 +158,9 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 			navigateto(Stage1URL + url);
 		}
 		propElement(getPropfile(gpropname1, "Signin")).click();
-		propElement(getPropfile(gpropname1, "Email")).sendKeys("amatt.teacher26@gedu.demo.icivics.org");
+		propElement(getPropfile(gpropname1, "Email")).sendKeys("amatt.teacher24@gedu.demo.icivics.org");
 		propElement(getPropfile(gpropname1, "Next")).click();
-		waitTime(2000);
+		waitTime(5000);
 		propElement(getPropfile(gpropname1, "Password")).sendKeys("Freedom17@");
 		propElement(getPropfile(gpropname1, "Next1")).click();
 		waitTime(5000);
@@ -175,11 +175,13 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 			URL = Stage1URL + url1;
 			navigateto(URL);
 		}
-		waitTime(3000);
+		waitTime(5000);
 		WebElement assign = propElement(getPropfile(gpropname3, "Assignbutton"));
+		waitTime(3000);
 		assign.click();
 		waitTime(7000);
 		WebElement noclasses = propElement(getPropfile(gpropname3, "NoClasses"));
+		waitTime(3000);
 		String text = noclasses.getText();
 		waitTime(3000);
 		if (text.contains("No Classes")) {

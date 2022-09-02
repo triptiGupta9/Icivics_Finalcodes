@@ -4,34 +4,66 @@
   <listeners>
     <listener class-name="utilities.MyTransformer"/>
   </listeners>
-  <test thread-count="5" name="Regression_Testscripts(failed)">
+  <test thread-count="5" name="Googleintegration_Testscripts(failed)">
     <classes>
-      <class name="icivics_testcases.I52_PH_MainsGamePage_Test">
+      <class name="icivics_testcases.I42_GoogleIntegration_Pg1TeacherRegistration_Test">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="C545_VerifyTeacherregistrationpage1"/>
+          <include name="afterMethod"/>
+          <include name="tearDownClass"/>
+          <include name="stopReport"/>
+          <include name="report"/>
+          <include name="beforeMethod"/>
+          <include name="setValues"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- icivics_testcases.I42_GoogleIntegration_Pg1TeacherRegistration_Test -->
+      <class name="icivics_testcases.I41_GoogleIntegration_Registration_Test">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="C544_Verifyeducatorregistrationpage1"/>
+          <include name="setValues"/>
+          <include name="afterMethod"/>
+          <include name="tearDownClass"/>
+          <include name="stopReport"/>
+          <include name="report"/>
+          <include name="beforeMethod"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- icivics_testcases.I41_GoogleIntegration_Registration_Test -->
+      <class name="icivics_testcases.I43_GoogleIntegration_Pg2TeacherRegistration_Test">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="C545_VerifyTeacherregistrationpage1"/>
+          <include name="C550_Verifyfieldswithvaliddata"/>
+          <include name="afterMethod"/>
+          <include name="C549_Verifyfieldswithinvaliddata"/>
+          <include name="C546_Verifypage2fields"/>
+          <include name="startReport"/>
+          <include name="C548_Verifyfieldswithinvaliddata"/>
+          <include name="tearDownClass"/>
+          <include name="C546_Verifybackbutton"/>
+          <include name="stopReport"/>
+          <include name="setValues"/>
+          <include name="report"/>
+          <include name="beforeMethod"/>
+          <include name="C547_Verifyfieldselection"/>
+        </methods>
+      </class> <!-- icivics_testcases.I43_GoogleIntegration_Pg2TeacherRegistration_Test -->
+      <class name="icivics_testcases.I40_GoogleIntegration_signon_Test">
         <methods>
           <include name="setUpClass"/>
           <include name="afterMethod"/>
           <include name="tearDownClass"/>
-          <include name="stopReport"/>
           <include name="setValues"/>
-          <include name="beforeMethod"/>
+          <include name="stopReport"/>
+          <include name="C541_verifyentercredentails2"/>
           <include name="report"/>
-          <include name="C73_Verifymainsgamepage"/>
+          <include name="beforeMethod"/>
           <include name="startReport"/>
         </methods>
-      </class> <!-- icivics_testcases.I52_PH_MainsGamePage_Test -->
-      <class name="icivics_testcases.I50_PH_ArgumentsWar_Test">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="afterMethod"/>
-          <include name="tearDownClass"/>
-          <include name="stopReport"/>
-          <include name="setValues"/>
-          <include name="C88_Verifyassignform"/>
-          <include name="beforeMethod"/>
-          <include name="report"/>
-          <include name="startReport"/>
-        </methods>
-      </class> <!-- icivics_testcases.I50_PH_ArgumentsWar_Test -->
+      </class> <!-- icivics_testcases.I40_GoogleIntegration_signon_Test -->
     </classes>
-  </test> <!-- Regression_Testscripts(failed) -->
+  </test> <!-- Googleintegration_Testscripts(failed) -->
 </suite> <!-- Failed suite [Suite] -->
