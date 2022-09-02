@@ -18,8 +18,8 @@ import cucumber.api.java.en.When;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class GoogleIntegration_Pg1TeacherRegistration extends ProjectSpecificMethods {
-	public String gpropname1 = "GoogleIntegration/GoogleIntegration_SignOn";
-	public String gpropname2 = "GoogleIntegration/GoogleIntegration_Registration";
+	public String gpropname1 = "GoogleIntegration/GoogleSignOn";
+	public String gpropname2 = "GoogleIntegration/GoogleRegistration";
 	public String gpropname3 = "GoogleIntegration/Page1TeacherRegistration";
 
 	public GoogleIntegration_Pg1TeacherRegistration(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL, String Stage1URL) {

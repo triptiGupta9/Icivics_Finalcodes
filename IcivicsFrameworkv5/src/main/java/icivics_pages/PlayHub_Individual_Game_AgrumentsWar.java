@@ -26,7 +26,7 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 		this.StageURL = StageURL;
 		this.Stage1URL = Stage1URL;
 	}
-	JavascriptExecutor js = (JavascriptExecutor) driver;
+	
 	String url = "/games/argument-wars";
 	String URL;
 
@@ -76,11 +76,13 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 		propElement(getPropfile(gpropname3, "Username")).sendKeys("Bronze Speaker 1r4e");
 		propElement(getPropfile(gpropname3, "Password")).sendKeys("i898qrCiPK9Hwgb");
 		propElement(getPropfile(gpropname3, "Loginbutton")).click();
+		waitTime(3000);
 		navigateto(URL);
-		waitTime(2000);
+		waitTime(7000);
 		WebElement downloadteach = propElement(getPropfile(gpropname3, "Downloadteach"));
 		WebElement assign = propElement(getPropfile(gpropname3, "Assignbutton"));
 		if (downloadteach.isDisplayed() && assign.isDisplayed()) {
+			waitTime(3000);
 			scrollToTheGivenWebElement(getPropfile(gpropname3, "Downloadteach"));
 			reportStep("Download teacher resources and assign buttons display for login as Teacher", "Pass");
 		} else {
@@ -131,8 +133,9 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 		propElement(getPropfile(gpropname3, "Username")).sendKeys("Bronze Speaker 1r4e");
 		propElement(getPropfile(gpropname3, "Password")).sendKeys("i898qrCiPK9Hwgb");
 		propElement(getPropfile(gpropname3, "Loginbutton")).click();
-		waitTime(3000);
+		waitTime(5000);
 		navigateto(URL);
+		waitTime(5000);
 		scrollToTheGivenWebElement(getPropfile(gpropname3, "Downloadteach"));
 		propElement(getPropfile(gpropname3, "Downloadteach")).click();
 		waitTime(3000);
@@ -250,7 +253,7 @@ public class PlayHub_Individual_Game_AgrumentsWar extends ProjectSpecificMethods
 			waitTime(3000);
 			getprop(gpropname2, "awtileele").click();
 			waitTime(3000);
-			
+			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,450)", "");
 			if (driver.getPageSource().contains("app-link app_store")==true) {
 				reportStep("Apple App Store display for Argument war game", "Pass");

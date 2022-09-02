@@ -16,7 +16,7 @@ import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class GoogleIntegration_SignOn extends ProjectSpecificMethods {
-	public String gpropname1 = "GoogleIntegration/GoogleIntegration_SignOn";
+	public String gpropname1 = "GoogleIntegration/GoogleSignOn";
 
 	public GoogleIntegration_SignOn(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment, String StageURL, String Stage1URL) {
 		this.driver = driver;

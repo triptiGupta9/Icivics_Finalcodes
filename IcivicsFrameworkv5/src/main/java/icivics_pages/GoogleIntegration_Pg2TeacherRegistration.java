@@ -15,8 +15,8 @@ import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class GoogleIntegration_Pg2TeacherRegistration extends ProjectSpecificMethods {
-	public String gpropname1 = "GoogleIntegration/GoogleIntegration_SignOn";
-	public String gpropname2 = "GoogleIntegration/GoogleIntegration_Registration";
+	public String gpropname1 = "GoogleIntegration/GoogleSignOn";
+	public String gpropname2 = "GoogleIntegration/GoogleRegistration";
 	public String gpropname3 = "GoogleIntegration/Page1TeacherRegistration";
 	public String gpropname4 = "GoogleIntegration/Page2TeacherRegistration";
 

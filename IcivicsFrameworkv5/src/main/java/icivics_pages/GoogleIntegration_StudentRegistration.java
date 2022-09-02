@@ -14,12 +14,12 @@ import cucumber.api.java.en.Then;
 import projectSpecific.base.ProjectSpecificMethods;
 
 public class GoogleIntegration_StudentRegistration extends ProjectSpecificMethods {
-	public String gpropname1 = "GoogleIntegration/GoogleIntegration_SignOn";
-	public String gpropname2 = "GoogleIntegration/GoogleIntegration_Registration";
+	public String gpropname1 = "GoogleIntegration/GoogleSignOn";
+	public String gpropname2 = "GoogleIntegration/GoogleRegistration";
 	public String gpropname3 = "GoogleIntegration/Page1TeacherRegistration";
 	public String gpropname4 = "GoogleIntegration/Page2TeacherRegistration";
 	public String gpropname5 = "GoogleIntegration/Page3TeacherRegistration";
-	public String gpropname6 = "GoogleIntegration/GoogleIntegration_StudentRegistration";
+	public String gpropname6 = "GoogleIntegration/GoogleStudentRegistration";
 	public String gpropname7 = "GoogleIntegration/Email";
 
 	public GoogleIntegration_StudentRegistration(RemoteWebDriver driver, ExtentTest node, Properties prop, String Environment,
